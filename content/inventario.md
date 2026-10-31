@@ -97,7 +97,10 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 
 ## Terapia física
 
-- "Terapia física y deportiva" — BIO. **Todo lo demás por confirmar**: servicios, profesional a cargo, horarios, precios, qué traer, cómo agendar (asumimos WhatsApp).
+- Servicio de "Terapia física y deportiva": **confirmado**. Fuente: biografía de Instagram @hulk.sports, consultada el 31/10/2026.
+- Relación con Fernando Cárdenas (Jr.): se presenta como terapista físico (biografía de @hulkbjj, 31/10/2026) y tiene una historia destacada "Fisioterapia" en @hulkbjj (contenido no revisado). **No está confirmado quién atiende actualmente las sesiones**; el sitio solo indica que es terapista físico, sin decir que atiende el servicio.
+- **Por confirmar**: tratamientos específicos, quién atiende, precios o paquetes, horarios y días, modalidad, disponibilidad y cupos, convenios con seguros, qué traer, cómo agendar (asumimos WhatsApp; contacto por WhatsApp o teléfono 099 677 0074).
+- Textos del sitio (tarea 1.5): botones "Consultar terapia" con mensaje de WhatsApp de consulta, descripción del servicio en `index.html` y lista "Lo que sabemos" de `horarios-y-planes.html`.
 
 ## Equipo
 
@@ -106,7 +109,7 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 | Fernando Cárdenas (Jr.) | Profesor de niños y adultos; "head coach de adultos ejecutivos, niños y adultos avanzados" | flyer y caption `C4RPywfvAto` (2024) |
 | Fernando Cárdenas (Jr.) | Head Coach de Hulk Sports | Instagram @hulkbjj (biografía), consultado el 31/10/2026. Confirmado públicamente por el propio perfil del entrenador; también figura como entrenador principal en la bio de @hulk.sports |
 | Fernando Cárdenas (Jr.) | Cinturón negro de Jiu Jitsu brasileño | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
-| Fernando Cárdenas (Jr.) | Terapista físico | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
+| Fernando Cárdenas (Jr.) | Terapista físico | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil. No confirma que sea quien atiende actualmente las sesiones de terapia de Hulk Sports |
 | Fernando Cárdenas (Jr.) | Entrenador personal certificado IFBB | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
 | Fernando Cárdenas (Jr.) | Juez IFBB de fisicoculturismo | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
 | Cristian Ruales (@cristian.ruales.3) | Profesor de adultos, "faixa preta" (cinturón negro) | flyer y caption `C4f53PPLTMs` (2024) |

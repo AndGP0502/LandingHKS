@@ -11,7 +11,7 @@
       prueba: 'Hola Hulk Sports, quiero agendar una clase de prueba de jiu-jitsu.',
       ninos: 'Hola Hulk Sports, quiero información de jiu-jitsu para niños. Edad de mi hijo/a: ',
       planes: 'Hola Hulk Sports, ¿cuáles son los precios y planes vigentes?',
-      fisio: 'Hola Hulk Sports, quiero agendar una cita de terapia física.',
+      fisio: 'Hola Hulk Sports, quiero consultar por el servicio de terapia física y deportiva.',
       gym: 'Hola Hulk Sports, quiero información del gimnasio: horario y precio.'
     },
     // Horario 2026 (flyer oficial). Día: 1 = lunes ... 5 = viernes.
