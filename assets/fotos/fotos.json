@@ -1,0 +1,155 @@
+{
+ "equipo-2025": {
+  "w": 1440,
+  "h": 988,
+  "widths": [
+   480,
+   800,
+   1200,
+   1440
+  ],
+  "src": "021_p_DSOoK5DkfZH.jpg"
+ },
+ "equipo-grande": {
+  "w": 1440,
+  "h": 799,
+  "widths": [
+   480,
+   800,
+   1200,
+   1440
+  ],
+  "src": "030_p_DOsGXe0DMdg.jpg"
+ },
+ "rolling-gi": {
+  "w": 720,
+  "h": 999,
+  "widths": [
+   480,
+   720
+  ],
+  "src": "v_16.6.jpg"
+ },
+ "drill-tatami": {
+  "w": 720,
+  "h": 1050,
+  "widths": [
+   480,
+   720
+  ],
+  "src": "v_15.5.jpg"
+ },
+ "muro-logo": {
+  "w": 720,
+  "h": 1024,
+  "widths": [
+   480,
+   720
+  ],
+  "src": "v_11.6.jpg"
+ },
+ "mma-sparring": {
+  "w": 720,
+  "h": 960,
+  "widths": [
+   480,
+   720
+  ],
+  "src": "v_21.5.jpg"
+ },
+ "gym-mancuernas": {
+  "w": 720,
+  "h": 1050,
+  "widths": [
+   480,
+   720
+  ],
+  "src": "v_25.2.jpg"
+ },
+ "bjj-mma-sala": {
+  "w": 720,
+  "h": 999,
+  "widths": [
+   480,
+   720
+  ],
+  "src": "v_23.4.jpg"
+ },
+ "femenino": {
+  "w": 1350,
+  "h": 1130,
+  "widths": [
+   480,
+   800,
+   1200,
+   1350
+  ],
+  "src": "052_p_DI1eiP-RHma.jpg"
+ },
+ "cintas-blancas": {
+  "w": 640,
+  "h": 887,
+  "widths": [
+   480,
+   640
+  ],
+  "src": "032_reel_DONPrjBDKMv.jpg"
+ },
+ "kids-fila": {
+  "w": 640,
+  "h": 636,
+  "widths": [
+   480,
+   640
+  ],
+  "src": "060_reel_DGO76u6vWvI.jpg"
+ },
+ "kids-reto": {
+  "w": 720,
+  "h": 768,
+  "widths": [
+   480,
+   720
+  ],
+  "src": "061_reel_DGEbBdSvxvQ.jpg"
+ },
+ "adultos-manana": {
+  "w": 1080,
+  "h": 588,
+  "widths": [
+   480,
+   800,
+   1080
+  ],
+  "src": "107_p_C1uebKLRFZG.jpg"
+ },
+ "adultos-noche": {
+  "w": 1080,
+  "h": 588,
+  "widths": [
+   480,
+   800,
+   1080
+  ],
+  "src": "105_p_C14mOHzLuhq.jpg"
+ },
+ "open-quito-2023": {
+  "w": 1080,
+  "h": 573,
+  "widths": [
+   480,
+   800,
+   1080
+  ],
+  "src": "113_p_CzmXkocP0qc.jpg"
+ },
+ "tatami-vacio": {
+  "w": 640,
+  "h": 658,
+  "widths": [
+   480,
+   640
+  ],
+  "src": "017_reel_DTzDlaljCh_.jpg"
+ }
+}
