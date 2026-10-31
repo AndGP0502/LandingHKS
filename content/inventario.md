@@ -81,15 +81,16 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 - Modalidades con y sin gi; horarios mañana y noche; profesores cintas negras certificados — `DPMSXSskZod` (2025).
 - Niños desde 4 años — `DJ9k5bTRQit`, `DJSJd4fvrJV` (2025). Inscripciones todo el año — `DJSJd4fvrJV`.
 - Clase de niños: calentamiento, juegos de motricidad (coordinación, equilibrio, agilidad), técnica paso a paso — `DfCxYzcxGtr` (2026).
-- Grupo femenino activo — `DNqRqmqRyjW`, `DVogGR9ERKF` (2026), `DI1eiP-RHma`.
+- Grupo femenino activo — `DNqRqmqRyjW`, `DVogGR9ERKF` (2026), `DI1eiP-RHma`. Clases mixtas y existencia o no de un horario exclusivo para mujeres: **por confirmar** (no publicado; el sitio no lo afirma).
 - "No importa si eres principiante" — `DZsvPVXPATP`.
-- MMA: "entrenamiento completo de combate, fuerza, técnica y condición física" — REEL-DUOC caption.
+- MMA: "entrenamiento completo de combate, fuerza, técnica y condición física" — REEL-DUOC caption. También figura entre los servicios (Musculación, Área de Cardio, Jiu Jitsu y MMA) — Instagram @hulk.sports, publicación fijada del 01/02/2026, consultada el 31/10/2026.
 
 ## Gimnasio
 
 - Zonas que aparecen en el recorrido 2026: área de musculación, área de cardio (caminadoras), entrenamiento funcional — REEL-DUOC (textos en video).
 - Caption 2026: musculación (fuerza, potencia, resistencia), cardio — REEL-DUOC; "instructores certificados" — `DTwNKQ2D_5A`.
 - Instalaciones (jun 2023, sede actual): 800 m², área de tren superior, tren inferior, Muay Thai, Jiu Jitsu, spinning/bailoterapia/caminadoras, cross training/funcional/TRX, cancha de básquet y ecuavóley, área verde — `Ctr1ljrv_Yy`.
+- Muay Thai: **por confirmar**. No se encontró mención en la revisión de Instagram del 31/10/2026 (bio de @hulk.sports, destacadas, publicación fijada de servicios 2026 y bio de @hulkbjj) y el README lo marca como dato por confirmar. Que no se haya encontrado no prueba que no exista. El sitio no lo presenta como servicio. Referencias históricas: logo, instalaciones 2023 y vacacional infantil 2026 (más abajo).
 - Normas del gym: **por confirmar** (no publicadas).
 
 ## Terapia física
