@@ -14,8 +14,10 @@ Diales: variación 7 · movimiento 4 · densidad 5 (la información manda).
 | `--tinta` (texto) | `#121212` | `#EDEDEA` | negro del logo |
 | `--gris` (texto 2º) | `#55585B` (6,3:1) | `#A6A8AA` (7,9:1) | |
 | `--franja` | `#141414` | `#050505` | zócalo negro |
-| `--rojo` | `#D90000` (4,8:1 sobre tatami; blanco sobre rojo 5,3:1) | `#FF4A3D` (5,4:1 sobre fondo) | logo `#E80000` medido, oscurecido para AA |
-Un solo acento. Rojo nunca para texto pequeño sobre negro (en la franja se usa blanco y el rojo como barra).
+| `--rojo` | `#D90000` (4,8:1 sobre tatami; blanco sobre rojo 5,3:1) | `#D90000` (sin cambio en oscuro) | logo `#E80000` medido, oscurecido para AA |
+| `--rojo-texto` (texto y foco) | `#D90000` | `#FF4A3D` (5,4:1 sobre fondo; cifra del brief original, no recalculada) | variante legible del rojo sobre fondo oscuro |
+Un solo acento. Rojo nunca para texto pequeño sobre negro (en la franja se usa blanco y el rojo como barra). Excepción: la hora "siguiente" de la franja "Hoy" usa `#FF6B5F`, que no es un token.
+Valores fijos fuera de tokens en el CSS: `#B80000` (hover del botón rojo), `#2A2A2A` (filos sobre negro), `#0B0B0B` y `#3A3A3A` (cinturón y fondos de video), `#E6E7E4` y `#262626` (fondo de clases MMA y sparring en claro y oscuro).
 
 ## 3. Tipografía
 **Archivo** (variable, ejes `wdth 62-125` y `wght 100-900`), autoalojada. Una familia, tres anchos = una marca, tres voces. Justificación: los flyers de la marca usan condensadas pesadas; Archivo da esa voz en `wdth 62` sin caer en Bebas/Anton, y en `wdth 100` es legible para párrafos y horarios (cifras tabulares).

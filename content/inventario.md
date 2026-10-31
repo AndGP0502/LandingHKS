@@ -2,8 +2,9 @@
 
 Extraído el 31 oct 2026 del perfil público `instagram.com/hulk.sports` (sesión de Chrome del cliente), de los archivos que el cliente pasó en el chat y del enlace de Google Maps que envió.
 Cada dato visible en el sitio sale de aquí. Fuente = código del post (`instagram.com/p/<código>` o `/reel/<código>`).
+Datos añadidos en la Etapa 1 (tareas 1.1 a 1.5): llevan fuente y fecha de consulta en cada entrada.
 
-Leyenda de fuente: **BIO** = biografía del perfil · **FLYER-2026** = imagen de horarios 2026 enviada por el cliente (`content/fuentes/flyer-horario-2026.jpg`) · **CHAT** = mensaje del cliente · **REEL-DUOC** = reel `DUOCQl_kb0m` (1 feb 2026, recorrido del local).
+Leyenda de fuente: **BIO** = biografía de @hulk.sports (la de @hulkbjj se cita aparte como "biografía de @hulkbjj") · **GOOGLE** = ficha de Google del negocio (consultada el 31/10/2026) · **FLYER-2026** = imagen de horarios 2026 enviada por el cliente (`content/fuentes/flyer-horario-2026.jpg`) · **CHAT** = mensaje del cliente · **REEL-DUOC** = reel `DUOCQl_kb0m` (1 feb 2026, recorrido del local).
 
 ## Identidad
 
@@ -14,7 +15,7 @@ Leyenda de fuente: **BIO** = biografía del perfil · **FLYER-2026** = imagen de
 | Usuario | @hulk.sports (también en Threads) | BIO |
 | TikTok | @hulk.sports | Valla del local, REEL-DUOC (seg. 29) |
 | Categoría | Gimnasio/centro de fitness | BIO |
-| Servicios en la bio | Jiu jitsu · Gimnasio · Terapia física y deportiva · Parqueaderos | BIO |
+| Servicios en la bio | Jiu jitsu · Gimnasio · Terapia física y deportiva · Parqueaderos | BIO (consultada el 31/10/2026) |
 | Logo | Círculo con "H" en forma de barra y discos, segmento rojo abajo, textos "HULK SPORTS" y "JIU JITSU · MUAY THAI & GYM" | CHAT (imagen 1), BIO |
 | Lema en fachada | "Entrenamiento de alto nivel" | REEL-DUOC (seg. 0) |
 | Fundación del equipo | Dic 2020 (celebraron 3 años en dic 2023) | `Cz_ylc8rhBM` |
@@ -29,11 +30,11 @@ Leyenda de fuente: **BIO** = biografía del perfil · **FLYER-2026** = imagen de
 | Ciudad | Quito, norte | `DKN9r-RvwKT`, `DIHnQGQvq14` |
 | Mapa | https://www.google.com/maps/search/Azahares%20e14-135%20y%20de%20las%20CLAVELINAS%20N54%2C%20sector%20el%20Eden%20detr%C3%A1s%20solca%20Quito%2C%20Ecuador/@-0.1313,-78.4644,17z | CHAT |
 | Ficha de Google | https://g.co/kgs/xuQxfrq | BIO |
-| Teléfono / WhatsApp | +593 99 677 0074 (0996770074) | `DCR46brP55c` (nov 2024), flyer de contacto `C-59DsTvhLP` |
+| Teléfono / WhatsApp | +593 99 677 0074 (0996770074). Vigencia **por confirmar** (último publicado en nov 2024) | `DCR46brP55c` (nov 2024), flyer de contacto `C-59DsTvhLP` |
 | Enlace WhatsApp antiguo | wa.me/message/WTVQU2XASAPVM1 | posts 2023-2024 |
 | Correo | **Por confirmar** | no publicado |
 | Pagos | La valla del local muestra Visa y Mastercard; en 2023 cobraron seminarios con tarjeta | REEL-DUOC (seg. 29), `C0zSyhaLWsy` |
-| Parqueadero | **Confirmado (sin detalles)**: la biografía actual de @hulk.sports lo lista como servicio ("Parqueaderos"), consultada el 31/10/2026. Los detalles "privado", "videovigilancia" y "amplio" provienen de publicaciones de 2025: vigencia **por confirmar**. Pendientes de detalle: capacidad y costo | BIO; `DPMSXSskZod` (2025), `CxvtpilOKLP` |
+| Parqueadero | **Confirmado (sin detalles)**: la biografía actual de @hulk.sports lo lista como servicio ("Parqueaderos"), consultada el 31/10/2026. Los detalles "privado", "videovigilancia" y "amplio" provienen de publicaciones de 2025: vigencia **por confirmar**. Pendientes de detalle: capacidad y costo. El sitio mantiene "privado con videovigilancia" sin marcador de pendiente (decisión de la tarea 1.4) | BIO; `DPMSXSskZod` (2025), `CxvtpilOKLP` |
 | Dirección anterior (no usar) | Calle de los Cipreses N65-91 y Eucaliptos | posts 2022-2023 |
 
 ## Horarios de clases (vigentes 2026)
@@ -90,10 +91,11 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 - Zonas que aparecen en el recorrido 2026: área de musculación, área de cardio (caminadoras), entrenamiento funcional — REEL-DUOC (textos en video).
 - Cardio: **confirmado**. Figura entre los servicios (Musculación, Área de Cardio, Jiu Jitsu y MMA) y se describe como un área orientada a mejorar el rendimiento, quemar grasa y fortalecer el corazón — Instagram @hulk.sports, publicación fijada del 01/02/2026, consultada el 31/10/2026. En el sitio se muestra "Caminadoras" (reel 2026).
 - Caption 2026: musculación (fuerza, potencia, resistencia), cardio — REEL-DUOC; "instructores certificados" — `DTwNKQ2D_5A`.
-- Instalaciones (jun 2023, sede actual): 800 m², área de tren superior, tren inferior, Muay Thai, Jiu Jitsu, spinning/bailoterapia/caminadoras, cross training/funcional/TRX, cancha de básquet y ecuavóley, área verde — `Ctr1ljrv_Yy`.
+- Instalaciones (jun 2023, sede actual): 800 m², área de tren superior, tren inferior, Muay Thai, Jiu Jitsu, spinning/bailoterapia/caminadoras, cross training/funcional/TRX, cancha de básquet y ecuavóley, área verde — `Ctr1ljrv_Yy`. Son datos antiguos: el sitio aún muestra "tren superior y tren inferior" y "cross training y TRX" sin nota de 2023, y "cancha de básquet y ecuavóley" y "área verde" con la nota "Listada en 2023". Su vigencia está **por confirmar**.
 - Spinning: **por confirmar**. Evidencia: historia destacada "SPINNING" en @hulk.sports (contenido y fecha sin verificar, consultada el 31/10/2026) y la lista de instalaciones de jun 2023 (más arriba). No figura en la publicación de servicios de 2026 ni en la biografía del negocio. Existe evidencia de que se ofreció en algún momento, no de que siga vigente. El sitio no lo presenta como servicio; no está en la pizarra ni en los filtros.
 - Muay Thai: **por confirmar**. No se encontró mención en la revisión de Instagram del 31/10/2026 (bio de @hulk.sports, destacadas, publicación fijada de servicios 2026 y bio de @hulkbjj) y el README lo marca como dato por confirmar. Que no se haya encontrado no prueba que no exista. El sitio no lo presenta como servicio. Referencias históricas: logo, instalaciones 2023 y vacacional infantil 2026 (más abajo).
 - Normas del gym: **por confirmar** (no publicadas).
+- "Peso libre y máquinas" aparece en el sitio (tarjeta Gimnasio y sección Gimnasio); **fuente no documentada**.
 
 ## Terapia física
 
@@ -114,7 +116,7 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 | Fernando Cárdenas (Jr.) | Juez IFBB de fisicoculturismo | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
 | Cristian Ruales (@cristian.ruales.3) | Profesor de adultos, "faixa preta" (cinturón negro) | flyer y caption `C4f53PPLTMs` (2024) |
 
-Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fernando Cárdenas: **resuelto**, cinturón negro de Jiu Jitsu brasileño (Instagram @hulkbjj, 31/10/2026). En el sitio se muestra como "Fernando Cárdenas"; las fuentes lo llaman "Cárdenas Jr." en @hulkbjj.
+Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fernando Cárdenas: **resuelto**, cinturón negro de Jiu Jitsu brasileño (Instagram @hulkbjj, 31/10/2026). En el sitio aparece como "Fernando Cárdenas" (tarjeta de Profesores) y como "Fernando Cárdenas Jr." (sección de terapia); @hulkbjj lo nombra "Fernando Cárdenas Jr.". Unificar el nombre queda **pendiente**.
 
 ## Resultados y eventos publicados por la marca
 
@@ -158,4 +160,5 @@ Fotos procesadas en `assets/fotos/` (fuente recortada en `assets/fotos/fuente/`)
 | rolling-gi, drill-tatami, muro-logo, mma-sparring, gym-mancuernas, bjj-mma-sala | fotogramas de REEL-DUOC |
 
 Videos en `assets/videos/` (todos de REEL-DUOC, tramos sin texto encima, sin audio): `hero.mp4` (9,8 s), `bjj.mp4`, `mma.mp4`.
+Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `rolling-gi` (480 y 720 px), `tatami-vacio-480`, `equipo-2025-1440` y `femenino-1350`; logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`.
 Descartados: flyers con texto grande, imágenes marcadas "Contenido de IA" (`DNorfKQvL8e`), posts de colaboración de otras cuentas, destacadas (tienen ~250 semanas y son de la sede anterior).
