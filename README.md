@@ -56,7 +56,7 @@ Los mensajes prellenados por servicio están en `CONFIG.mensajes` (general, prue
 ## Editar contenido
 
 - **Horario:** está escrito en `horarios-y-planes.html` (bloque `id="pizarra"`, un `<li class="clase">` por clase con `data-tipo` y `data-hora`) y repetido en `CONFIG.clases` de `js/main.js` (lo usa la franja "Hoy" de la página 1 y el archivo .ics). Cambia los dos. El resumen sin JS de la franja está en `index.html` (`id="hoy-lista"`).
-- **Horario del gym** ("abierto ahora"): `CONFIG.gym` en `js/main.js`, en minutos desde medianoche (300 = 05:00).
+- **Horario del gym** ("abierto ahora"): `CONFIG.gym` en `js/main.js`, en minutos desde medianoche (360 = 06:00).
 - **Precios:** sección `id="precios"` de la página 2 y el bloque "Precios 2026" de la franja en la página 1. Al tener precios confirmados, reemplaza los `<span class="pendiente" data-pendiente="precios">`.
 - **Datos pendientes:** todos llevan el atributo `data-pendiente="..."`. Para listarlos: `grep -n data-pendiente *.html`.
 - **Fotos:** agrega la imagen en `assets/fotos/` en WebP con varios anchos y copia el patrón `srcset` de una foto existente. Siempre con `alt`, `width` y `height`.
@@ -77,7 +77,7 @@ Las carpetas `content/`, `docs/` y `assets/fotos/fuente/` no son necesarias en p
 2. **Clase de prueba:** si sigue siendo gratis (se anunció así en feb 2025).
 3. **Terapia física:** servicios, profesional a cargo, días y horas, valor por sesión, qué traer, cómo se agenda.
 4. **Horarios extra 2026:** si siguen el BJJ ejecutivo de 11:00 (L-V) y el de 13:00 (L-M-V, 2x1).
-5. **Horario del gimnasio:** confirmar L-V 05:00-21:00 y sáb/feriados 08:00-14:00 (publicado nov 2024) y si abre domingo.
+5. **Horario del gimnasio:** confirmar L-V 06:00-21:00, sábado 08:00-14:00 y domingo cerrado (referencial según Google, 31 oct 2026).
 6. **Open mat de sábado** (en 2023: 08:00, $5 invitados).
 7. **Correo electrónico** de contacto.
 8. **Grado de Fernando Cárdenas** y si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima.

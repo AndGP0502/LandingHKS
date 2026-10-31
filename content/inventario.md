@@ -57,7 +57,8 @@ Otros horarios anunciados en 2026 que **no** están en el flyer (se muestran com
 | 13:00 L-M-V | Nuevo horario desde el 22 de junio (2026), promo 2x1 solo en ese horario | `DZsvPVXPATP` |
 | 06:00 / 17:00 / 18:30 | Confirmación de horarios adultos y kids (nov 2025) | `DQyC1iDDF3k` |
 
-Horario del gimnasio (último publicado, **nov 2024**): L-V 05:00-21:00; sábados y feriados 08:00-14:00. Fuente `DCR46brP55c`. Antes (2024): L-V 06:00-21:00, sáb 08:00-14:00 (`C-59DsTvhLP`).
+Horario del gimnasio (vigente en el sitio, **por confirmar**): L-V 06:00-21:00; sábado 08:00-14:00; domingo cerrado. Fuente: ficha de Google de "hulksports jiu jitsu & fitness Gym", consultada el 31 oct 2026; Google indica que puede variar en feriados (no se implementa lógica de feriados). Pendiente de confirmación con el cliente.
+Histórico (reemplazado): nov 2024, L-V 05:00-21:00; sábados y feriados 08:00-14:00, fuente `DCR46brP55c`. Antes (2024): L-V 06:00-21:00, sáb 08:00-14:00 (`C-59DsTvhLP`).
 Open mat sábados 08:00, invitados $5 — publicado dic 2023 (`C1ulPt7R55E`), **por confirmar**.
 
 ## Precios y promociones (ninguno confirmado para hoy)

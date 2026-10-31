@@ -22,8 +22,8 @@
       { d: 4, h: '06:00', n: 'BJJ No-Gi', t: 'nogi' }, { d: 4, h: '17:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 4, h: '18:30', n: 'BJJ Gi', t: 'gi' }, { d: 4, h: '20:00', n: 'MMA', t: 'mma' },
       { d: 5, h: '06:00', n: 'BJJ Gi', t: 'gi' }, { d: 5, h: '17:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 5, h: '18:30', n: 'BJJ No-Gi', t: 'nogi' }, { d: 5, h: '20:00', n: 'Sparring', t: 'sparring' }
     ],
-    // Horario del gimnasio publicado en nov 2024. [abre, cierra] en minutos. 0 = domingo.
-    gym: { 1: [300, 1260], 2: [300, 1260], 3: [300, 1260], 4: [300, 1260], 5: [300, 1260], 6: [480, 840] }
+    // Horario referencial del gimnasio según Google (31 oct 2026), por confirmar. [abre, cierra] en minutos. Domingo (0) cerrado: sin entrada.
+    gym: { 1: [360, 1260], 2: [360, 1260], 3: [360, 1260], 4: [360, 1260], 5: [360, 1260], 6: [480, 840] }
   };
 
   var DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
@@ -80,7 +80,7 @@
     } else {
       titulo.textContent = 'Hoy, ' + DIAS[hoy.dia];
       var g = estadoGym();
-      lista.innerHTML = '<span>Sin clases hoy. Vuelven el lunes a las 06:00.</span><span class="mini">' + g.texto + ' (horario publicado en nov 2024).</span>';
+      lista.innerHTML = '<span>Sin clases hoy. Vuelven el lunes a las 06:00.</span><span class="mini">' + g.texto + ' (horario referencial según Google, oct 2026, <span class="pendiente" data-pendiente="horario-gym">por confirmar</span>).</span>';
     }
   }
 
@@ -96,7 +96,7 @@
     var estado = document.getElementById('estado');
     var g2 = estadoGym();
     estado.innerHTML = '<span class="chip-estado' + (g2.abierto ? ' abierto' : '') + '">' + (g2.abierto ? 'Abierto' : 'Cerrado') + '</span>' +
-      '<span>Hoy es ' + DIAS[hoy.dia] + '. ' + g2.texto + '.</span><span class="nota">Según el horario del gym publicado en nov 2024.</span>';
+      '<span>Hoy es ' + DIAS[hoy.dia] + '. ' + g2.texto + '.</span><span class="nota">Horario referencial según Google (oct 2026), <span class="pendiente" data-pendiente="horario-gym">por confirmar</span>.</span>';
 
     var botones = document.querySelectorAll('[data-filtro]');
     var resumen = document.getElementById('filtro-resumen');
