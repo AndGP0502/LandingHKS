@@ -33,7 +33,7 @@ Leyenda de fuente: **BIO** = biografía del perfil · **FLYER-2026** = imagen de
 | Enlace WhatsApp antiguo | wa.me/message/WTVQU2XASAPVM1 | posts 2023-2024 |
 | Correo | **Por confirmar** | no publicado |
 | Pagos | La valla del local muestra Visa y Mastercard; en 2023 cobraron seminarios con tarjeta | REEL-DUOC (seg. 29), `C0zSyhaLWsy` |
-| Parqueadero | Privado, con videovigilancia, "amplio" | `DPMSXSskZod` (2025), `CxvtpilOKLP` |
+| Parqueadero | **Confirmado (sin detalles)**: la biografía actual de @hulk.sports lo lista como servicio ("Parqueaderos"), consultada el 31/10/2026. Los detalles "privado", "videovigilancia" y "amplio" provienen de publicaciones de 2025: vigencia **por confirmar**. Pendientes de detalle: capacidad y costo | BIO; `DPMSXSskZod` (2025), `CxvtpilOKLP` |
 | Dirección anterior (no usar) | Calle de los Cipreses N65-91 y Eucaliptos | posts 2022-2023 |
 
 ## Horarios de clases (vigentes 2026)
@@ -88,8 +88,10 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 ## Gimnasio
 
 - Zonas que aparecen en el recorrido 2026: área de musculación, área de cardio (caminadoras), entrenamiento funcional — REEL-DUOC (textos en video).
+- Cardio: **confirmado**. Figura entre los servicios (Musculación, Área de Cardio, Jiu Jitsu y MMA) y se describe como un área orientada a mejorar el rendimiento, quemar grasa y fortalecer el corazón — Instagram @hulk.sports, publicación fijada del 01/02/2026, consultada el 31/10/2026. En el sitio se muestra "Caminadoras" (reel 2026).
 - Caption 2026: musculación (fuerza, potencia, resistencia), cardio — REEL-DUOC; "instructores certificados" — `DTwNKQ2D_5A`.
 - Instalaciones (jun 2023, sede actual): 800 m², área de tren superior, tren inferior, Muay Thai, Jiu Jitsu, spinning/bailoterapia/caminadoras, cross training/funcional/TRX, cancha de básquet y ecuavóley, área verde — `Ctr1ljrv_Yy`.
+- Spinning: **por confirmar**. Evidencia: historia destacada "SPINNING" en @hulk.sports (contenido y fecha sin verificar, consultada el 31/10/2026) y la lista de instalaciones de jun 2023 (más arriba). No figura en la publicación de servicios de 2026 ni en la biografía del negocio. Existe evidencia de que se ofreció en algún momento, no de que siga vigente. El sitio no lo presenta como servicio; no está en la pizarra ni en los filtros.
 - Muay Thai: **por confirmar**. No se encontró mención en la revisión de Instagram del 31/10/2026 (bio de @hulk.sports, destacadas, publicación fijada de servicios 2026 y bio de @hulkbjj) y el README lo marca como dato por confirmar. Que no se haya encontrado no prueba que no exista. El sitio no lo presenta como servicio. Referencias históricas: logo, instalaciones 2023 y vacacional infantil 2026 (más abajo).
 - Normas del gym: **por confirmar** (no publicadas).
 
