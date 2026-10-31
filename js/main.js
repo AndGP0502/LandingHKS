@@ -8,7 +8,7 @@
     zona: 'America/Guayaquil',
     mensajes: {
       general: 'Hola Hulk Sports, tengo una pregunta.',
-      prueba: 'Hola Hulk Sports, quiero agendar una clase de prueba de jiu-jitsu.',
+      prueba: 'Hola Hulk Sports, quiero consultar si tienen clases de prueba disponibles y qué horarios ofrecen.',
       ninos: 'Hola Hulk Sports, quiero información de jiu-jitsu para niños. Edad de mi hijo/a: ',
       planes: 'Hola Hulk Sports, ¿cuáles son los precios y planes vigentes?',
       fisio: 'Hola Hulk Sports, quiero consultar por el servicio de terapia física y deportiva.',
