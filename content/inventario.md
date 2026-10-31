@@ -100,10 +100,15 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 
 | Persona | Rol publicado | Fuente |
 |---|---|---|
-| Fernando Cárdenas | Profesor de niños y adultos; "head coach de adultos ejecutivos, niños y adultos avanzados" | flyer y caption `C4RPywfvAto` (2024) |
+| Fernando Cárdenas (Jr.) | Profesor de niños y adultos; "head coach de adultos ejecutivos, niños y adultos avanzados" | flyer y caption `C4RPywfvAto` (2024) |
+| Fernando Cárdenas (Jr.) | Head Coach de Hulk Sports | Instagram @hulkbjj (biografía), consultado el 31/10/2026. Confirmado públicamente por el propio perfil del entrenador; también figura como entrenador principal en la bio de @hulk.sports |
+| Fernando Cárdenas (Jr.) | Cinturón negro de Jiu Jitsu brasileño | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
+| Fernando Cárdenas (Jr.) | Terapista físico | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
+| Fernando Cárdenas (Jr.) | Entrenador personal certificado IFBB | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
+| Fernando Cárdenas (Jr.) | Juez IFBB de fisicoculturismo | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
 | Cristian Ruales (@cristian.ruales.3) | Profesor de adultos, "faixa preta" (cinturón negro) | flyer y caption `C4f53PPLTMs` (2024) |
 
-Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fernando Cárdenas: **por confirmar**.
+Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fernando Cárdenas: **resuelto**, cinturón negro de Jiu Jitsu brasileño (Instagram @hulkbjj, 31/10/2026). En el sitio se muestra como "Fernando Cárdenas"; las fuentes lo llaman "Cárdenas Jr." en @hulkbjj.
 
 ## Resultados y eventos publicados por la marca
 
