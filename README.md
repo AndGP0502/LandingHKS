@@ -6,7 +6,7 @@ Sitio de 2 páginas en HTML, CSS y JS sin frameworks ni build. Se abre con doble
 index.html                Página 1: lo esencial (hero, hoy, precios, dirección, áreas, niños, torneos, fotos)
 horarios-y-planes.html    Página 2: pizarra de horarios, precios publicados, gym, terapia, profesores, FAQ, ubicación
 css/styles.css            Tokens (colores, tipografía) y estilos
-js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, .ics, videos, mapa
+js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, videos, mapa
 assets/                   logo/, fotos/ (WebP + fuente/), videos/, fonts/, og-hulk-sports.jpg
 content/inventario.md     Cada dato del sitio con su fuente
 content/fuentes/          Flyer de horario 2026 y captura del perfil que envió el cliente
@@ -80,8 +80,8 @@ Los mensajes prellenados por servicio están en `CONFIG.mensajes` (general, prue
 
 ## Editar contenido
 
-- **Horario:** está escrito en `horarios-y-planes.html` (bloque `id="pizarra"`, un `<li class="clase">` por clase con `data-tipo` y `data-hora`) y repetido en `CONFIG.clases` de `js/main.js` (lo usa la franja "Hoy" de la página 1 y el archivo .ics). Cambia los dos. El resumen sin JS de la franja está en `index.html` (`id="hoy-lista"`).
-- **Horario del gym** ("abierto ahora"): `CONFIG.gym` en `js/main.js`, en minutos desde medianoche (360 = 06:00). Hoy: lunes a viernes 06:00 a 21:00 (`[360, 1260]`), sábado 08:00 a 14:00 (`[480, 840]`) y domingo sin entrada, que se interpreta como cerrado. Es un horario **referencial según la ficha de Google (31 oct 2026), por confirmar con el cliente**; el de nov 2024 se conserva como histórico en el inventario. No hay lógica de feriados. Los textos visibles del horario están en `index.html` (tarjeta Gimnasio) y `horarios-y-planes.html` (bloque "Horario del gimnasio").
+- **Horario:** está escrito en `horarios-y-planes.html` (bloque `id="pizarra"`, un `<li class="clase">` por clase con `data-tipo`, `data-hora` y el rango en `<span class="horas">`) y repetido en `CONFIG.clases` de `js/main.js` (`h` = inicio, `f` = fin; lo usan la franja "Hoy" de la página 1 y la marca de "siguiente clase" de la pizarra). Cambia los dos. El open mat del sábado está en `CONFIG.openMat`. El resumen sin JS de la franja está en `index.html` (`id="hoy-lista"`).
+- **Horario del gym** ("abierto ahora"): `CONFIG.gym` en `js/main.js`, en minutos desde medianoche (360 = 06:00). Hoy: lunes a viernes 06:00 a 21:00 (`[360, 1260]`), sábado 08:00 a 14:00 (`[480, 840]`) y domingo sin entrada, que se interpreta como cerrado. Es un horario **referencial según la ficha de Google (31 oct 2026), por confirmar con el cliente**; el de nov 2024 se conserva como histórico en el inventario. No hay lógica de feriados. El texto visible del horario está en `index.html` (tarjeta Gimnasio).
 - **Precios:** sección `id="precios"` de la página 2 y el bloque "Precios 2026" de la franja en la página 1. Al tener precios confirmados, reemplaza los `<span class="pendiente" data-pendiente="precios">`.
 - **Datos pendientes:** todos llevan el atributo `data-pendiente="..."`. Para listarlos: en macOS/Linux, `grep -n data-pendiente *.html`; en Windows (PowerShell), `Select-String -Path *.html -Pattern 'data-pendiente'`.
 - **Fotos:** agrega la imagen en `assets/fotos/` en WebP con varios anchos y copia el patrón `srcset` de una foto existente. Siempre con `alt`, `width` y `height`.
@@ -146,7 +146,8 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 - **Horario base:** el flyer 2026 que enviaste manda. Los horarios de 11:00 y 13:00 anunciados después aparecen aparte como "confirmar".
 - **Precios:** no hay lista vigente; se muestra "Por confirmar" y una tabla con lo último publicado, con fecha y estado (vencida / por confirmar).
 - **Video:** un solo reel (`DUOCQl_kb0m`, el que enviaste) recortado en tramos sin textos superpuestos. Las capturas fijas del mismo reel sirven de fotos del gym y del tatami.
-- **Duración de clases en el .ics:** 1 hora referencial (posts antiguos mostraban clases de 1 h). Se aclara en el archivo y en la página.
+- **Archivo .ics:** se quitó el botón "Agregar a mi calendario" de la página 2 (1 nov 2026) y con él su código.
+- **Duración de clases:** la que muestra la pizarra (06:00-07:30, 17:00-18:00, 18:30-20:00, 20:00-21:00).
 - **Tipografía:** Archivo (Google Fonts, licencia OFL) autoalojada, una sola familia con eje de ancho para las tres voces.
 - **Skills:** `frontend-design` no está instalado en este equipo y la carpeta de referencias de `impeccable` viene vacía; se aplicaron `design-taste-frontend`, `emil-design-eng` y los principios de `impeccable` (pasada única de QA con correcciones en lote).
 - **JSON-LD:** sin horarios de atención ni precios, porque no están confirmados.

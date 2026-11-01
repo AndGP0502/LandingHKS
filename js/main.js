@@ -14,20 +14,22 @@
       fisio: 'Hola Hulk Sports, quiero consultar por el servicio de terapia física y deportiva.',
       gym: 'Hola Hulk Sports, quiero información del gimnasio: horario y precio.'
     },
-    // Horario 2026 (flyer oficial). Día: 1 = lunes ... 5 = viernes.
+    // Horario 2026 (flyer oficial). Día: 1 = lunes ... 5 = viernes. h = inicio, f = fin.
     clases: [
-      { d: 1, h: '06:00', n: 'BJJ Gi', t: 'gi' }, { d: 1, h: '17:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 1, h: '18:30', n: 'BJJ Gi', t: 'gi' }, { d: 1, h: '20:00', n: 'MMA', t: 'mma' },
-      { d: 2, h: '06:00', n: 'BJJ No-Gi', t: 'nogi' }, { d: 2, h: '17:00', n: 'BJJ No-Gi Kids', t: 'ninos' }, { d: 2, h: '18:30', n: 'BJJ No-Gi', t: 'nogi' }, { d: 2, h: '20:00', n: 'MMA', t: 'mma' },
-      { d: 3, h: '06:00', n: 'BJJ Gi', t: 'gi' }, { d: 3, h: '17:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 3, h: '18:30', n: 'BJJ Gi', t: 'gi' }, { d: 3, h: '20:00', n: 'MMA', t: 'mma' },
-      { d: 4, h: '06:00', n: 'BJJ No-Gi', t: 'nogi' }, { d: 4, h: '17:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 4, h: '18:30', n: 'BJJ Gi', t: 'gi' }, { d: 4, h: '20:00', n: 'MMA', t: 'mma' },
-      { d: 5, h: '06:00', n: 'BJJ Gi', t: 'gi' }, { d: 5, h: '17:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 5, h: '18:30', n: 'BJJ No-Gi', t: 'nogi' }, { d: 5, h: '20:00', n: 'Sparring', t: 'sparring' }
+      { d: 1, h: '06:00', f: '07:30', n: 'BJJ Gi', t: 'gi' }, { d: 1, h: '17:00', f: '18:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 1, h: '18:30', f: '20:00', n: 'BJJ Gi', t: 'gi' }, { d: 1, h: '20:00', f: '21:00', n: 'MMA', t: 'mma' },
+      { d: 2, h: '06:00', f: '07:30', n: 'BJJ No-Gi', t: 'nogi' }, { d: 2, h: '17:00', f: '18:00', n: 'BJJ No-Gi Kids', t: 'ninos' }, { d: 2, h: '18:30', f: '20:00', n: 'BJJ No-Gi', t: 'nogi' }, { d: 2, h: '20:00', f: '21:00', n: 'MMA', t: 'mma' },
+      { d: 3, h: '06:00', f: '07:30', n: 'BJJ Gi', t: 'gi' }, { d: 3, h: '17:00', f: '18:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 3, h: '18:30', f: '20:00', n: 'BJJ Gi', t: 'gi' }, { d: 3, h: '20:00', f: '21:00', n: 'MMA', t: 'mma' },
+      { d: 4, h: '06:00', f: '07:30', n: 'BJJ No-Gi', t: 'nogi' }, { d: 4, h: '17:00', f: '18:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 4, h: '18:30', f: '20:00', n: 'BJJ Gi', t: 'gi' }, { d: 4, h: '20:00', f: '21:00', n: 'MMA', t: 'mma' },
+      { d: 5, h: '06:00', f: '07:30', n: 'BJJ Gi', t: 'gi' }, { d: 5, h: '17:00', f: '18:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 5, h: '18:30', f: '20:00', n: 'BJJ No-Gi', t: 'nogi' }, { d: 5, h: '20:00', f: '21:00', n: 'Sparring', t: 'sparring' }
     ],
     // Horario del gimnasio. [abre, cierra] en minutos. Domingo (0) cerrado: sin entrada.
-    gym: { 1: [360, 1260], 2: [360, 1260], 3: [360, 1260], 4: [360, 1260], 5: [360, 1260], 6: [480, 840] }
+    gym: { 1: [360, 1260], 2: [360, 1260], 3: [360, 1260], 4: [360, 1260], 5: [360, 1260], 6: [480, 840] },
+    openMat: '08:00' // sábados
   };
 
   var DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
   var reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ahorro = !!(navigator.connection && navigator.connection.saveData);
 
   // ---- WhatsApp: todos los enlaces salen de CONFIG ------------------------
   document.querySelectorAll('a[data-wa]').forEach(function (a) {
@@ -38,13 +40,12 @@
   // ---- Hora local de Quito -----------------------------------------------
   function ahora() {
     var partes = new Intl.DateTimeFormat('en-US', {
-      timeZone: CONFIG.zona, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
-      year: 'numeric', month: '2-digit', day: '2-digit'
+      timeZone: CONFIG.zona, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
     }).formatToParts(new Date());
     var p = {};
     partes.forEach(function (x) { p[x.type] = x.value; });
     var dia = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday);
-    return { dia: dia, min: parseInt(p.hour, 10) * 60 + parseInt(p.minute, 10), y: +p.year, m: +p.month, d: +p.day };
+    return { dia: dia, min: parseInt(p.hour, 10) * 60 + parseInt(p.minute, 10) };
   }
   function aMin(h) { var s = h.split(':'); return +s[0] * 60 + +s[1]; }
   function aHora(m) { return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
@@ -72,16 +73,17 @@
       var marcada = false, html = '<ul>';
       deHoy.forEach(function (c) {
         var cls = '';
-        if (aMin(c.h) + 60 <= hoy.min) cls = 'pasada';
+        if (aMin(c.f) <= hoy.min) cls = 'pasada';
         else if (!marcada) { cls = 'siguiente'; marcada = true; }
         var nota = cls === 'siguiente' ? (aMin(c.h) <= hoy.min ? '(en curso)' : '(próxima)') : '';
-        html += '<li class="' + cls + '"><time>' + c.h + '</time> ' + c.n + (nota ? ' <span class="sr-only">' + nota + '</span>' : '') + '</li>';
+        html += '<li class="' + cls + '"><span class="horas"><time>' + c.h + '</time>-<time>' + c.f + '</time></span> ' + c.n + (nota ? ' <span class="sr-only">' + nota + '</span>' : '') + '</li>';
       });
       lista.innerHTML = html + '</ul>';
     } else {
       titulo.textContent = 'Hoy, ' + DIAS[hoy.dia];
       var g = estadoGym();
-      lista.innerHTML = '<span>Sin clases hoy. Vuelven el lunes a las 06:00.</span><span class="mini">' + g.texto + '.</span>';
+      var sinClases = hoy.dia === 6 ? 'Open mat a las ' + CONFIG.openMat + '. Clases regulares el lunes desde las 06:00.' : 'Sin clases hoy. Vuelven el lunes a las 06:00.';
+      lista.innerHTML = '<span>' + sinClases + '</span><span class="mini">' + g.texto + '.</span>';
     }
   }
 
@@ -91,7 +93,9 @@
     var diaHoy = pizarra.querySelector('.dia[data-dia="' + hoy.dia + '"]');
     if (diaHoy) {
       diaHoy.classList.add('es-hoy');
-      var sig = Array.prototype.find.call(diaHoy.querySelectorAll('.clase'), function (li) { return aMin(li.dataset.hora) + 60 > hoy.min; });
+      var fin = {};
+      CONFIG.clases.forEach(function (c) { if (c.d === hoy.dia) fin[c.h] = aMin(c.f); });
+      var sig = Array.prototype.find.call(diaHoy.querySelectorAll('.clase'), function (li) { return (fin[li.dataset.hora] || aMin(li.dataset.hora) + 60) > hoy.min; });
       if (sig) sig.classList.add('siguiente');
     }
     var estado = document.getElementById('estado');
@@ -118,55 +122,28 @@
       });
     });
 
-    // .ics con las clases del filtro activo
-    var ics = document.getElementById('bajar-ics');
-    if (ics) ics.addEventListener('click', function () {
-      var BY = ['', 'MO', 'TU', 'WE', 'TH', 'FR'];
-      var base = Date.UTC(hoy.y, hoy.m - 1, hoy.d);
-      var sello = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-      var L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Hulk Sports//Horario 2026//ES', 'CALSCALE:GREGORIAN', 'X-WR-CALNAME:Hulk Sports',
-        'BEGIN:VTIMEZONE', 'TZID:America/Guayaquil', 'BEGIN:STANDARD', 'DTSTART:19700101T000000', 'TZOFFSETFROM:-0500', 'TZOFFSETTO:-0500', 'TZNAME:-05', 'END:STANDARD', 'END:VTIMEZONE'];
-      CONFIG.clases.filter(function (c) { return coincide(c.t); }).forEach(function (c, i) {
-        var dif = (c.d - hoy.dia + 7) % 7;
-        var f = new Date(base + dif * 86400000);
-        var ymd = f.getUTCFullYear() + String(f.getUTCMonth() + 1).padStart(2, '0') + String(f.getUTCDate()).padStart(2, '0');
-        var ini = aMin(c.h), fin = ini + 60;
-        L.push('BEGIN:VEVENT', 'UID:hulk-' + c.d + '-' + c.h.replace(':', '') + '-' + i + '@hulksports', 'DTSTAMP:' + sello,
-          'DTSTART;TZID=America/Guayaquil:' + ymd + 'T' + aHora(ini).replace(':', '') + '00',
-          'DTEND;TZID=America/Guayaquil:' + ymd + 'T' + aHora(fin).replace(':', '') + '00',
-          'RRULE:FREQ=WEEKLY;BYDAY=' + BY[c.d], 'SUMMARY:' + c.n + ' · Hulk Sports',
-          'LOCATION:Pasaje Azahares E14-135 y De las Clavelinas\\, El Edén\\, Quito',
-          'DESCRIPTION:Horario 2026. Duración referencial de 1 hora. Confirma cambios por WhatsApp.', 'END:VEVENT');
-      });
-      L.push('END:VCALENDAR');
-      var url = URL.createObjectURL(new Blob([L.join('\r\n')], { type: 'text/calendar' }));
-      var a = document.createElement('a');
-      a.href = url; a.download = 'hulk-sports-horario-' + filtro + '.ics';
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
-    });
   }
 
-  // ---- Videos: el del hero arranca si no hay movimiento reducido ---------
+  // ---- Videos: arrancan al verse y se pausan fuera de pantalla ----------
+  // Sin animación si hay movimiento reducido o ahorro de datos: queda el póster.
   function cargar(v) { if (!v.src && v.dataset.src) { v.src = v.dataset.src; } }
-  var heroV = document.getElementById('video-hero');
-  if (heroV && !reducir) {
-    cargar(heroV);
-    heroV.addEventListener('playing', function () { var p = heroV.parentNode.querySelector('.poster'); if (p) p.style.visibility = 'hidden'; }, { once: true });
-    heroV.play().catch(function () {});
+  function reproducir(v) {
+    cargar(v);
+    v.play().then(function () { var img = v.parentNode.querySelector('img'); if (img) img.style.visibility = 'hidden'; }).catch(function () {});
   }
-  var secV = document.querySelectorAll('.video-seccion');
-  if (secV.length && !reducir && 'IntersectionObserver' in window) {
-    var ioV = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        var v = e.target;
-        if (e.isIntersecting) {
-          cargar(v);
-          v.play().then(function () { var img = v.parentNode.querySelector('img'); if (img) img.style.visibility = 'hidden'; }).catch(function () {});
-        } else if (!v.paused) v.pause();
-      });
-    }, { rootMargin: '200px 0px' });
-    secV.forEach(function (v) { ioV.observe(v); });
+  var videos = document.querySelectorAll('#video-hero, .video-seccion');
+  if (videos.length && !reducir && !ahorro) {
+    var heroV = document.getElementById('video-hero');
+    if (heroV) reproducir(heroV); // está en pantalla al cargar: no espera al observer
+    if ('IntersectionObserver' in window) {
+      var ioV = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting) reproducir(e.target);
+          else if (!e.target.paused) e.target.pause();
+        });
+      }, { rootMargin: '200px 0px' });
+      videos.forEach(function (v) { ioV.observe(v); });
+    }
   }
 
   // ---- Revelado de imágenes al entrar al viewport -----------------------
@@ -192,6 +169,11 @@
         bts.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
       });
     });
+  });
+
+  // ---- Enlaces externos: avisa que abren otra pestaña ---------------------
+  document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+    a.insertAdjacentHTML('beforeend', '<span class="sr-only"> (abre en otra pestaña)</span>');
   });
 
   // ---- Mapa bajo demanda --------------------------------------------------

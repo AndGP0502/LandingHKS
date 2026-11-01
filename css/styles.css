@@ -51,7 +51,6 @@
     --franja: #050505;
     --franja-texto: #edede9;
     --franja-gris: #9c9fa1;
-    --rojo: #d90000;
     --rojo-texto: #ff4a3d;
     --cinta: #f2f2ee;
     --cinturon-filo: #6b6e70;
@@ -114,6 +113,9 @@ p { margin: 0; }
 }
 
 .nota { color: var(--gris); font-size: var(--t-14); }
+.con-filo { border-top: 1px solid var(--filo); }
+.pila { display: grid; gap: var(--pila-gap, 20px); align-content: start; }
+.pila > .btn { justify-self: start; }
 
 /* ---------- Botones ---------- */
 .btn {
@@ -197,8 +199,8 @@ p { margin: 0; }
 .franja .pendiente { color: var(--franja-gris); text-decoration-color: var(--franja-gris); }
 .franja-hoy ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
 .franja-hoy li { display: flex; gap: 10px; }
-.franja-hoy time { min-width: 3.2em; font-weight: 700; }
-.franja-hoy .siguiente time { color: #ff6b5f; }
+.franja-hoy .horas, .franja-hoy time { font-weight: 700; white-space: nowrap; }
+.franja-hoy .siguiente .horas { color: #ff6b5f; }
 .franja-hoy .pasada { color: var(--franja-gris); }
 .franja .mini { display: block; margin-top: 4px; font-size: var(--t-14); font-weight: 400; color: var(--franja-gris); }
 .franja .mini a { color: var(--franja-gris); }
@@ -269,20 +271,15 @@ p { margin: 0; }
 
 /* Niños */
 .ninos .wrap { display: grid; gap: 32px; }
-.collage { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); }
-.collage .grande { grid-column: 1 / 6; grid-row: 1; }
-.collage .chica { grid-column: 4 / 7; grid-row: 1; align-self: end; margin-bottom: -32px; border: 6px solid var(--tatami); }
-.collage img { width: 100%; height: 100%; object-fit: cover; }
 .ninos-texto { display: grid; gap: 18px; align-content: center; margin-top: 24px; }
 .ninos-texto h2 { font-size: var(--t-44); }
 .ninos-video { margin: 0; display: grid; gap: 10px; justify-items: center; }
 .ninos-video video { width: 100%; max-width: 380px; height: auto; aspect-ratio: 9 / 16; background: #0b0b0b; }
 .ninos-video figcaption { font-size: var(--t-14); color: var(--gris); max-width: 380px; width: 100%; }
 
-.pasos { margin: 0; padding: 0; list-style: none; display: grid; gap: 0; border-top: 2px solid var(--tinta); }
+.pasos { margin: 0; padding: 0; list-style: none; display: grid; gap: 0; border-top: 2px solid var(--tinta); counter-reset: paso; }
 .pasos li { display: grid; grid-template-columns: 2.4rem 1fr; padding: 12px 0; border-bottom: 1px solid var(--filo); }
 .pasos li::before { counter-increment: paso; content: counter(paso); font-stretch: 62%; font-weight: 800; font-size: 1.4rem; color: var(--rojo-texto); line-height: 1.1; }
-.pasos { counter-reset: paso; }
 @media (min-width: 900px) {
   .ninos .wrap { grid-template-columns: 6fr 5fr; gap: 64px; align-items: center; }
   .ninos-texto { margin-top: 0; }
@@ -297,6 +294,7 @@ p { margin: 0; }
 .libro li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--filo); }
 .libro .fecha { font-stretch: 62%; font-weight: 800; text-transform: uppercase; font-size: 1.25rem; line-height: 1.05; }
 .libro .fuente { display: inline-block; margin-top: 4px; font-size: var(--t-14); color: var(--gris); }
+.resultados-cabeza .foto-resultado { margin: 28px 0 0; }
 .foto-resultado figcaption { margin-top: 10px; font-size: var(--t-14); color: var(--gris); }
 .foto-resultado + .foto-resultado { margin: 20px 0 0; }
 @media (min-width: 900px) {
@@ -315,7 +313,6 @@ p { margin: 0; }
 .tira figure { margin: 0; scroll-snap-align: start; }
 .tira img { width: 100%; height: 300px; object-fit: cover; }
 .tira figcaption { margin-top: 8px; font-size: var(--t-14); color: var(--gris); }
-.tira .ancha { grid-column: span 1; }
 @media (min-width: 768px) {
   .tira { grid-auto-columns: 36%; padding-inline: 32px; }
   .tira img { height: 380px; }
@@ -355,7 +352,6 @@ p { margin: 0; }
 .pie ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
 .pie a { display: inline-flex; min-height: 40px; align-items: center; color: var(--franja-texto); }
 .pie address { font-style: normal; line-height: 1.5; }
-.pie-legal { grid-column: 1 / -1; border-top: 1px solid #2a2a2a; padding-top: 20px; font-size: var(--t-14); color: var(--franja-gris); }
 @media (min-width: 900px) { .pie .wrap { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
 
 /* ---------- Barra móvil ---------- */
@@ -417,7 +413,7 @@ p { margin: 0; }
   display: grid; grid-template-columns: 4.2rem 1fr; align-items: baseline; gap: 2px 10px;
   transition: opacity 160ms ease;
 }
-.clase time { font-weight: 800; font-size: 1.15rem; font-stretch: 75%; grid-row: span 2; }
+.clase .horas { font-weight: 800; font-size: 1.15rem; font-stretch: 75%; grid-row: span 2; }
 .clase .nombre { font-weight: 800; font-stretch: 62%; text-transform: uppercase; font-size: 1.35rem; line-height: 1; }
 .clase .nivel { font-size: var(--t-14); color: var(--gris); }
 .clase[data-tipo="mma"], .clase[data-tipo="sparring"] { background: #e6e7e4; }
@@ -427,22 +423,12 @@ p { margin: 0; }
 @media (max-width: 899px) { .dia.es-hoy { order: -1; } }
 @media (min-width: 900px) { .pizarra { grid-template-columns: repeat(5, 1fr); gap: 10px; } }
 
-.pizarra-pie { margin-top: 20px; display: grid; gap: 20px; }
-.extra-horarios { border: 1px dashed var(--gris); padding: 18px 18px 20px; display: grid; gap: 10px; }
-.extra-horarios h3 { font-size: var(--t-19); }
-.extra-horarios ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 6px; }
-.gym-horas { display: grid; gap: 10px; }
-.gym-horas h3 { font-size: var(--t-19); }
-.gym-horas dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; }
-.gym-horas dt { font-weight: 700; }
-.gym-horas dd { margin: 0; }
-.ics-wrap { display: none; }
-.js .ics-wrap { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-@media (min-width: 900px) { .pizarra-pie { grid-template-columns: 1fr 1fr auto; align-items: start; } }
-
 /* Precios */
 .precios .wrap { display: grid; gap: 36px; }
 .precio-grande { font-size: var(--t-76); font-stretch: 62%; font-weight: 800; text-transform: uppercase; line-height: 0.92; }
+.precios h3 { font-size: var(--t-19); margin-top: 12px; }
+.tabla-scroll { overflow-x: auto; }
+.tabla-scroll .nota { margin-top: 12px; }
 .precio-grande .pendiente { color: var(--rojo-texto); text-decoration-color: var(--rojo-texto); font-weight: 800; }
 .historial { width: 100%; border-collapse: collapse; }
 .historial caption { text-align: left; font-weight: 700; font-size: var(--t-19); padding-bottom: 12px; }
@@ -465,6 +451,8 @@ p { margin: 0; }
 /* Gym página 2 */
 .gym2 { background: var(--placa); border-block: 1px solid var(--filo); }
 .gym2 .wrap { display: grid; gap: 32px; }
+.gym2 h2 { font-weight: 700; }
+.gym2 .pila { --pila-gap: 18px; }
 .metros { font-size: var(--t-76); font-weight: 750; font-stretch: 100%; line-height: 1; letter-spacing: -0.02em; }
 .metros small { font-size: var(--t-19); font-weight: 500; letter-spacing: 0; color: var(--gris); display: block; margin-top: 6px; }
 .zonas-lista { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 24px; border-top: 2px solid var(--tinta); }
@@ -474,13 +462,16 @@ p { margin: 0; }
 .gym2 figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .gym2 figcaption { margin-top: 8px; font-size: var(--t-14); color: var(--gris); }
 .gym-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media (min-width: 900px) { .gym-fotos { grid-template-columns: 1fr; gap: 20px; } }
-@media (min-width: 900px) { .gym2 .wrap { grid-template-columns: 4fr 5fr 3fr; gap: 48px; align-items: start; } }
+@media (min-width: 900px) {
+  .gym-fotos { grid-template-columns: 1fr; gap: 20px; }
+  .gym2 .wrap { grid-template-columns: 4fr 5fr 3fr; gap: 48px; align-items: start; }
+}
 
 /* Terapia */
 .terapia .wrap { display: grid; gap: 28px; }
 .terapia h2 { font-size: var(--t-44); font-stretch: 118%; font-weight: 300; line-height: 1.08; max-width: 18ch; }
 .terapia .columnas { display: grid; gap: 28px; }
+.terapia .pila { --pila-gap: 16px; }
 .terapia-marca { font-size: var(--t-19); font-stretch: 118%; font-weight: 500; letter-spacing: 0.02em; margin-top: -12px; }
 .terapia-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .terapia-fotos figure { margin: 0; }
@@ -540,6 +531,8 @@ p { margin: 0; }
 .mapa { position: relative; aspect-ratio: 4 / 3; background: var(--franja); color: var(--franja-texto); overflow: hidden; }
 .mapa img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
 .mapa .mapa-capa { position: absolute; inset: 0; display: grid; place-content: center; gap: 12px; text-align: center; padding: 20px; }
+.mapa-capa .voz-golpe { font-size: var(--t-33); }
+.mapa-capa a { color: inherit; }
 .mapa iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .mapa:has(iframe)::before { content: "Cargando mapa…"; position: absolute; inset: 0; display: grid; place-content: center; font-size: var(--t-16); }
 .mapa button { display: none; }
