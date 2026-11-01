@@ -39,15 +39,6 @@
   ],
   "src": "v_15.5.jpg"
  },
- "muro-logo": {
-  "w": 720,
-  "h": 1024,
-  "widths": [
-   480,
-   720
-  ],
-  "src": "v_11.6.jpg"
- },
  "mma-sparring": {
   "w": 720,
   "h": 960,
@@ -190,5 +181,70 @@
    720
   ],
   "src": "muro-cinturones.jpg"
+ },
+ "noche-equipo": {
+  "w": 1200,
+  "h": 900,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "src": "noche-equipo.jpg"
+ },
+ "fisio-sala": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   960
+  ],
+  "src": "fisio-sala.jpg"
+ },
+ "fisio-camillas": {
+  "w": 1280,
+  "h": 960,
+  "widths": [
+   480,
+   800,
+   1280
+  ],
+  "src": "fisio-camillas.jpg"
+ },
+ "gym-pecho-biceps": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   960
+  ],
+  "src": "gym-pecho-biceps.jpg"
+ },
+ "gym-piso-principal": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   960
+  ],
+  "src": "gym-piso-principal.jpg"
+ },
+ "profe-chito-vera": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   960
+  ],
+  "src": "profe-chito-vera.jpg"
+ },
+ "mayton-perea-azul": {
+  "w": 900,
+  "h": 1200,
+  "widths": [
+   480,
+   900
+  ],
+  "src": "mayton-perea-azul.jpg"
  }
 }

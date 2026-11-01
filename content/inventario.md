@@ -116,13 +116,15 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 | Fernando Cárdenas (Jr.) | Juez IFBB de fisicoculturismo | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
 | Fernando Cárdenas Jr. | Cinturón negro **2.º Dan** de jiu-jitsu brasileño | Documento facilitado por el equipo de Hulk Sports (octubre 2026): "Biografía de Fernando Cárdenas", secciones Biografía y Perfil profesional. **Confirmado por el equipo**; publicado en el sitio. Año de obtención del grado: por confirmar |
 | Fernando Cárdenas Jr. | Trabaja en Hulk Sports **desde 2020** como Head Coach | Documento del equipo (octubre 2026), sección "Enseñanza y liderazgo deportivo"; indicación del equipo, 31/10/2026: Hulk Sports lleva aproximadamente 6 años. Coincide con "Fundación del equipo: dic 2020" (arriba). **Confirmado**; el sitio dice "desde 2020" y no afirma una fecha de fundación |
-| Fernando Cárdenas Jr. | "Tecnólogo especialista en fisioterapia" | Indicación del equipo de Hulk Sports, 31/10/2026. **Por confirmar el título exacto; no publicado**: el sitio sigue diciendo "terapista físico" hasta confirmarlo. La biografía lo describe de otras formas (ver pendientes abajo) |
+| Fernando Cárdenas Jr. | **Tecnólogo en fisioterapia** (publicado) | Indicación del usuario, 01/11/2026. Antes: el equipo indicó "tecnólogo especialista en fisioterapia" (31/10/2026). |
+| Fernando Cárdenas Jr. | Entrenador y preparador físico profesional | Indicación del usuario, 01/11/2026 |
+| Fernando Cárdenas Jr. | Compite en fisicoculturismo (foto `profe-fisicoculturismo`, número 73) | Foto enviada por el usuario, 01/11/2026 |
 | Cristian Ruales (@cristian.ruales.3) | Profesor de adultos, "faixa preta" (cinturón negro) | flyer y caption `C4f53PPLTMs` (2024) |
 
 Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fernando Cárdenas: **resuelto**, cinturón negro de Jiu Jitsu brasileño (Instagram @hulkbjj, 31/10/2026). El nombre quedó **unificado** como "Fernando Cárdenas Jr." en todo el sitio (octubre 2026), igual que en @hulkbjj y en el encabezado de la biografía del equipo.
 
 **Pendientes y contradicciones de los documentos del equipo (octubre 2026; "Biografía de Fernando Cárdenas" y "Servicios de fisioterapia para tu página web")**. Son material de consulta; los documentos no se guardan en el proyecto y los datos personales que traen (edad, segundo apellido, otra formación y correo personal) se descartan para la web y no se registran aquí.
-- **Título profesional:** el equipo indicó "tecnólogo especialista en fisioterapia" (31/10/2026); la biografía lo llama "fisioterapeuta" y dice "egresado" de Terapia Física (egresado no equivale a titulado). Falta el nombre exacto del título. No se usa "fisioterapeuta" ni "licenciado".
+- **Título profesional:** resuelto el 01/11/2026. El usuario confirmó "tecnólogo en fisioterapia" y así se publica.
 - **IFBB:** el sitio lo muestra (Instagram @hulkbjj); la biografía no lo menciona y habla de formación como instructor de Fisicoculturismo y Fitness. Confirmar si son credenciales distintas y si siguen vigentes.
 - **Maestro:** la biografía escribe "Di Piero", un flyer de Instagram "Di Pierro" y este inventario "Soluço". Confirmar la escritura antes de publicar el linaje.
 - **Edad de las clases infantiles:** el sitio dice desde 4 años (Instagram 2025); la biografía dice que Fernando enseña a niños desde los 5. Confirmar la edad mínima.
@@ -170,10 +172,10 @@ Fotos procesadas en `assets/fotos/` (fuente recortada en `assets/fotos/fuente/`)
 | adultos-noche | `C14mOHzLuhq` |
 | open-quito-2023 | `CzmXkocP0qc` |
 | tatami-vacio | `DTzDlaljCh_` |
-| rolling-gi, drill-tatami, muro-logo, mma-sparring, gym-mancuernas, bjj-mma-sala | fotogramas de REEL-DUOC |
+| rolling-gi, drill-tatami, mma-sparring, gym-mancuernas, bjj-mma-sala | fotogramas de REEL-DUOC |
 
 Videos en `assets/videos/` (todos de REEL-DUOC, tramos sin texto encima, sin audio): `hero.mp4` (9,8 s), `bjj.mp4`, `mma.mp4`.
-Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `rolling-gi` (480 y 720 px), `tatami-vacio-480`, `equipo-2025-1440` y `femenino-1350`; logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`.
+Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `rolling-gi` (480 y 720 px), `tatami-vacio-480`, `equipo-2025-1440`, `femenino-1350`, `gym-mancuernas` (480 y 720 px, reemplazada por `gym-piso-principal` el 01/11/2026) y `bjj-mma-sala` (480 y 720 px, reemplazada por las fotos del gimnasio el 01/11/2026); logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`.
 
 ### Material entregado por el equipo (octubre 2026)
 
@@ -186,5 +188,32 @@ Fotos del local entregadas por el equipo del proyecto (fuente: material entregad
 | muro-medallas | Cuatro cuadros de medallas | Solo los cuadros (sin la tira de fotos de niños) | `index.html`, Torneos y seminarios |
 | muro-cinturones | Soporte de cinturones con placa | Solo el soporte (sin certificados ni equipo de oficina) | `horarios-y-planes.html`, Profesores |
 
-Video de una clase infantil (`Video Kids octubre .MOV`, 355 MB): **no se usa ni se copia al proyecto**. Pendiente de la autorización de publicación de los menores y de su optimización.
+### Material entregado por el usuario (1 de noviembre de 2026)
+
+Siete fotos enviadas en el chat del proyecto, con indicación de dónde va cada una. Originales sin modificar en `assets/fotos/fuente/`; en el sitio, WebP sin ampliar la resolución.
+
+| Archivo | Contenido (según el usuario) | Dónde se usa |
+|---|---|---|
+| noche-equipo | Equipo del horario de la noche | `index.html`, galería: "Horario de la noche", foto 1 (se muestra primero; `adultos-noche` queda como foto 2) |
+| fisio-camillas | Sala de terapia física | `index.html`, tarjeta Terapia; `horarios-y-planes.html`, Terapia |
+| fisio-sala | Sala de terapia física | `horarios-y-planes.html`, Terapia |
+| gym-pecho-biceps | Área de pecho y bíceps del gimnasio | `horarios-y-planes.html`, Gimnasio |
+| gym-piso-principal | Piso principal: musculación de tren superior e inferior | `index.html`, tarjeta Gimnasio; `horarios-y-planes.html`, Gimnasio |
+| profe-chito-vera | Fernando Cárdenas Jr. con Marlon "Chito" Vera | `horarios-y-planes.html`, Profesores, Trayectoria |
+| mayton-perea-azul | Mayton Perea con su certificado de cinturón azul | `horarios-y-planes.html`, Profesores, Trayectoria |
+
+Datos nuevos indicados por el usuario (01/11/2026), publicados:
+- El gimnasio tiene **dos pisos**, con área de cardio incluida.
+- Página 2: se quitó la nota "dato publicado en 2023 al estrenar la sede actual" de los 800 m² y la columna "Por confirmar" de Terapia (pedido del usuario, 01/11/2026). Los pendientes de terapia siguen en el README.
+- El servicio de terapia física y deportiva se llama **Rehabilitación Integral** (confirmado por el usuario el 01/11/2026; el mural de la sala dice "BIC Rehabilitación Integral", pero el usuario pidió quitar "BIC" del sitio).
+- Fernando Cárdenas Jr. fue **head coach de Marlon "Chito" Vera**, peleador de UFC, en su pelea de exhibición de jiu-jitsu en Ecuador.
+- **Mayton Perea**, alumno de Fernando Cárdenas Jr., fue graduado a cinturón azul por él en Hulk Sports y es **actual peleador de UFC**. El certificado de la foto dice "Hulk Sports, certificado, cinturón azul de jiu jitsu brasileño, Mayton Perea", firmado por Fernando Cárdenas.
+
+Visto en las fotos, **por confirmar y no publicado**:
+- La credencial de Fernando en la foto con Chito Vera dice "VERA-ALDO" y "COMMISSION". Confirmar el rol exacto en ese evento y si se puede nombrar el evento.
+- Bicicletas de spinning en el piso principal (foto `gym-piso-principal`): se nombran en "Cardio" de la página 2 por ser visibles; la clase de spinning sigue por confirmar.
+
+Retirada del sitio (01/11/2026, a pedido del usuario): `muro-logo` ("La pared del tatami", fotograma de REEL-DUOC). Archivos eliminados; recuperables desde el historial de git.
+
+Video promocional de la clase infantil (`Video Kids octubre .MOV`, 355 MB, 1:26): **se publica desde el 01/11/2026 a pedido del usuario** en la sección de niños de `index.html`, como `assets/videos/ninos-promo.mp4` (H.264 de 540 × 960, 30 fps, con audio, 10,5 MB, carga solo al darle play). Póster `ninos-promo-poster.webp` (flyer "Los niños llegando al tatami", original en `assets/fotos/fuente/`). Aparecen menores: la autorización de los padres para publicarlos es responsabilidad del cliente.
 Descartados: flyers con texto grande, imágenes marcadas "Contenido de IA" (`DNorfKQvL8e`), posts de colaboración de otras cuentas, destacadas (tienen ~250 semanas y son de la sede anterior).

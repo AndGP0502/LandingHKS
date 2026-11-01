@@ -106,6 +106,9 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 - Servicios cardio y MMA (publicación fijada de @hulk.sports del 01/02/2026); existencia de parqueadero, sin detalles (biografía de @hulk.sports, 31/10/2026).
 - Fernando Cárdenas Jr.: Head Coach de Hulk Sports (trabaja en Hulk Sports desde 2020) y cinturón negro 2.º Dan de jiu-jitsu brasileño (biografía facilitada por el equipo, octubre 2026; el año de obtención sigue por confirmar). Terapista físico, entrenador personal certificado IFBB y juez IFBB de fisicoculturismo (biografía de @hulkbjj, 31/10/2026). Que sea terapista físico **no confirma** quién atiende las sesiones de terapia.
 - Existencia de un grupo femenino activo en jiu-jitsu.
+- Fernando Cárdenas Jr.: tecnólogo en fisioterapia, entrenador y preparador físico profesional (indicación del usuario, 01/11/2026).
+- Nombre del servicio de terapia: Rehabilitación Integral (confirmado por el usuario, 01/11/2026; sin "BIC", a pedido del usuario).
+- Gimnasio de dos pisos con área de cardio; Fernando Cárdenas Jr. fue head coach de Marlon "Chito" Vera en su pelea de exhibición de jiu-jitsu en Ecuador y graduó a cinturón azul a Mayton Perea, actual peleador de UFC (indicación del usuario, 01/11/2026).
 - Horario de clases 2026 (flyer enviado por el cliente) y dirección.
 
 ### Histórico o vencido (se conserva, no se muestra como vigente)
@@ -132,7 +135,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 5. **Equipo:**
    - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima.
    - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
-   - Título profesional exacto de Fernando Cárdenas Jr. El equipo indicó «tecnólogo especialista en fisioterapia», pero la biografía lo describe como «egresado» de Terapia Física: **no se publica** hasta confirmarlo.
+   - Rol exacto de Fernando en el evento de Chito Vera: la credencial de la foto dice "VERA-ALDO" y "COMMISSION"; el sitio dice "head coach" según lo indicado.
 6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usó la versión de 192 px que enviaste).
 7. **Publicación:** dominio (reemplazar `TU-DOMINIO` en `sitemap.xml` y `robots.txt`, y poner `canonical` y `og:image` absolutos).
 

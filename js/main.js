@@ -22,7 +22,7 @@
       { d: 4, h: '06:00', n: 'BJJ No-Gi', t: 'nogi' }, { d: 4, h: '17:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 4, h: '18:30', n: 'BJJ Gi', t: 'gi' }, { d: 4, h: '20:00', n: 'MMA', t: 'mma' },
       { d: 5, h: '06:00', n: 'BJJ Gi', t: 'gi' }, { d: 5, h: '17:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 5, h: '18:30', n: 'BJJ No-Gi', t: 'nogi' }, { d: 5, h: '20:00', n: 'Sparring', t: 'sparring' }
     ],
-    // Horario referencial del gimnasio según Google (31 oct 2026), por confirmar. [abre, cierra] en minutos. Domingo (0) cerrado: sin entrada.
+    // Horario del gimnasio. [abre, cierra] en minutos. Domingo (0) cerrado: sin entrada.
     gym: { 1: [360, 1260], 2: [360, 1260], 3: [360, 1260], 4: [360, 1260], 5: [360, 1260], 6: [480, 840] }
   };
 
@@ -74,13 +74,14 @@
         var cls = '';
         if (aMin(c.h) + 60 <= hoy.min) cls = 'pasada';
         else if (!marcada) { cls = 'siguiente'; marcada = true; }
-        html += '<li class="' + cls + '"><time>' + c.h + '</time> ' + c.n + (cls === 'siguiente' ? ' <span class="sr-only">(próxima)</span>' : '') + '</li>';
+        var nota = cls === 'siguiente' ? (aMin(c.h) <= hoy.min ? '(en curso)' : '(próxima)') : '';
+        html += '<li class="' + cls + '"><time>' + c.h + '</time> ' + c.n + (nota ? ' <span class="sr-only">' + nota + '</span>' : '') + '</li>';
       });
       lista.innerHTML = html + '</ul>';
     } else {
       titulo.textContent = 'Hoy, ' + DIAS[hoy.dia];
       var g = estadoGym();
-      lista.innerHTML = '<span>Sin clases hoy. Vuelven el lunes a las 06:00.</span><span class="mini">' + g.texto + ' (horario referencial según Google, oct 2026, <span class="pendiente" data-pendiente="horario-gym">por confirmar</span>).</span>';
+      lista.innerHTML = '<span>Sin clases hoy. Vuelven el lunes a las 06:00.</span><span class="mini">' + g.texto + '.</span>';
     }
   }
 
@@ -96,7 +97,7 @@
     var estado = document.getElementById('estado');
     var g2 = estadoGym();
     estado.innerHTML = '<span class="chip-estado' + (g2.abierto ? ' abierto' : '') + '">' + (g2.abierto ? 'Abierto' : 'Cerrado') + '</span>' +
-      '<span>Hoy es ' + DIAS[hoy.dia] + '. ' + g2.texto + '.</span><span class="nota">Horario referencial según Google (oct 2026), <span class="pendiente" data-pendiente="horario-gym">por confirmar</span>.</span>';
+      '<span>Hoy es ' + DIAS[hoy.dia] + '. ' + g2.texto + '.</span>';
 
     var botones = document.querySelectorAll('[data-filtro]');
     var resumen = document.getElementById('filtro-resumen');
@@ -180,13 +181,29 @@
     }
   }
 
+  // ---- Fotos con alternativa: los botones cambian la foto visible ---------
+  document.querySelectorAll('[data-alterna]').forEach(function (fig) {
+    var fotos = fig.querySelectorAll('.alterna-fotos img');
+    var bts = fig.querySelectorAll('[data-foto]');
+    bts.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = +b.dataset.foto;
+        fotos.forEach(function (f, j) { f.classList.toggle('activa', j === i); });
+        bts.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      });
+    });
+  });
+
   // ---- Mapa bajo demanda --------------------------------------------------
   var bMapa = document.querySelector('[data-mapa]');
   if (bMapa) bMapa.addEventListener('click', function () {
     var f = document.createElement('iframe');
     f.src = bMapa.dataset.mapa; f.title = 'Mapa de Hulk Sports en El Edén, Quito';
     f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade';
-    document.getElementById('mapa').appendChild(f);
+    var caja = document.getElementById('mapa');
+    caja.appendChild(f);
+    // La fachada sale del DOM para que el botón no quede enfocable debajo del mapa.
+    caja.querySelectorAll('img, .mapa-capa').forEach(function (el) { el.remove(); });
     f.focus();
-  });
+  }, { once: true });
 })();

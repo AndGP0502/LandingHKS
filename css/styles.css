@@ -37,6 +37,7 @@
 
   --barra-movil: 64px;
   --alto-top: 64px;
+  --cinturon-filo: #3a3a3a;
   color-scheme: light dark;
 }
 
@@ -53,6 +54,7 @@
     --rojo: #d90000;
     --rojo-texto: #ff4a3d;
     --cinta: #f2f2ee;
+    --cinturon-filo: #6b6e70;
   }
 }
 
@@ -212,7 +214,7 @@ p { margin: 0; }
 }
 
 /* ---------- La punta del cinturón (firma 2) ---------- */
-.cinturon { display: inline-flex; align-items: stretch; height: 22px; flex: 0 1 150px; min-width: 104px; background: #0b0b0b; outline: 1px solid #3a3a3a; }
+.cinturon { display: inline-flex; align-items: stretch; height: 22px; flex: 0 1 150px; min-width: 104px; background: #0b0b0b; outline: 1px solid var(--cinturon-filo); }
 .cinturon .cuerpo { flex: 1; min-width: 48px; }
 .cinturon .punta { display: flex; align-items: stretch; gap: 4px; padding: 0 7px; background: var(--rojo); }
 .cinturon .punta i { width: 5px; background: var(--cinta); margin-block: 3px; }
@@ -220,6 +222,7 @@ p { margin: 0; }
 .dato-cinturon dt { font-weight: 700; }
 .dato-cinturon dd { margin: 0; display: flex; align-items: center; gap: 12px; }
 .dato-cinturon .n { font-weight: 700; white-space: nowrap; }
+@media (max-width: 359px) { .dato-cinturon .n { white-space: normal; } .cinturon { min-width: 0; } .cinturon .cuerpo { min-width: 20px; } }
 
 /* ---------- Secciones generales ---------- */
 .sec { padding-block: 64px; }
@@ -241,7 +244,7 @@ p { margin: 0; }
 
 .area-gym { background: var(--placa); border: 1px solid var(--filo); display: grid; }
 .area-gym .media { aspect-ratio: 4 / 3; overflow: hidden; }
-.area-gym .media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.area-gym .media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
 .area-gym .cuerpo-area { padding: 22px 20px 26px; display: grid; gap: 16px; }
 .area-gym h3 { font-size: var(--t-33); font-stretch: 100%; font-weight: 700; }
 .zonas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 2px solid var(--tinta); }
@@ -252,6 +255,7 @@ p { margin: 0; }
 .area-fisio h3 { font-size: var(--t-33); font-stretch: 118%; font-weight: 300; line-height: 1.1; }
 .area-fisio p { max-width: 42ch; }
 .area-fisio .linea { height: 1px; background: var(--tinta); width: 100%; }
+.area-fisio img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 
 @media (min-width: 900px) {
   .areas-grid { grid-template-columns: repeat(12, 1fr); grid-template-rows: auto auto; gap: 20px; }
@@ -271,6 +275,10 @@ p { margin: 0; }
 .collage img { width: 100%; height: 100%; object-fit: cover; }
 .ninos-texto { display: grid; gap: 18px; align-content: center; margin-top: 24px; }
 .ninos-texto h2 { font-size: var(--t-44); }
+.ninos-video { margin: 0; display: grid; gap: 10px; justify-items: center; }
+.ninos-video video { width: 100%; max-width: 380px; height: auto; aspect-ratio: 9 / 16; background: #0b0b0b; }
+.ninos-video figcaption { font-size: var(--t-14); color: var(--gris); max-width: 380px; width: 100%; }
+
 .pasos { margin: 0; padding: 0; list-style: none; display: grid; gap: 0; border-top: 2px solid var(--tinta); }
 .pasos li { display: grid; grid-template-columns: 2.4rem 1fr; padding: 12px 0; border-bottom: 1px solid var(--filo); }
 .pasos li::before { counter-increment: paso; content: counter(paso); font-stretch: 62%; font-weight: 800; font-size: 1.4rem; color: var(--rojo-texto); line-height: 1.1; }
@@ -313,6 +321,20 @@ p { margin: 0; }
   .tira img { height: 380px; }
 }
 @media (min-width: 1320px) { .tira { padding-inline: calc((100vw - 1320px) / 2 + 32px); } }
+/* Foto con alternativa: sin JS se ve solo la primera */
+.alterna-fotos img + img { display: none; }
+.js .alterna-fotos img { display: none; }
+.js .alterna-fotos img.activa { display: block; animation: aparecer 220ms var(--ease-out); }
+@keyframes aparecer { from { opacity: 0.4; } to { opacity: 1; } }
+.alterna figcaption { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.alterna-botones { display: none; gap: 6px; }
+.js .alterna-botones { display: inline-flex; }
+.alterna-botones button { position: relative; padding: 0; border: 2px solid var(--filo); background: none; cursor: pointer; line-height: 0; transition: border-color 160ms ease, transform 140ms var(--ease-out); }
+.alterna-botones button:active { transform: scale(0.97); }
+.alterna-botones button[aria-pressed="true"] { border-color: var(--rojo); }
+.tira .alterna-botones img { width: 56px; height: 42px; object-fit: cover; }
+@media (hover: hover) { .alterna-botones button:hover { border-color: var(--tinta); } .alterna-botones button[aria-pressed="true"]:hover { border-color: var(--rojo); } }
+@media (prefers-reduced-motion: reduce) { .js .alterna-fotos img.activa { animation: none; } }
 .galeria-cabeza { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 20px; }
 .galeria-cabeza h2 { font-size: var(--t-33); }
 
@@ -450,25 +472,49 @@ p { margin: 0; }
 .zonas-lista small { display: block; font-weight: 400; color: var(--gris); }
 .gym2 figure { margin: 0; }
 .gym2 figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.gym2 figcaption { margin-top: 8px; font-size: var(--t-14); color: var(--gris); }
+.gym-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (min-width: 900px) { .gym-fotos { grid-template-columns: 1fr; gap: 20px; } }
 @media (min-width: 900px) { .gym2 .wrap { grid-template-columns: 4fr 5fr 3fr; gap: 48px; align-items: start; } }
 
 /* Terapia */
 .terapia .wrap { display: grid; gap: 28px; }
 .terapia h2 { font-size: var(--t-44); font-stretch: 118%; font-weight: 300; line-height: 1.08; max-width: 18ch; }
 .terapia .columnas { display: grid; gap: 28px; }
+.terapia-marca { font-size: var(--t-19); font-stretch: 118%; font-weight: 500; letter-spacing: 0.02em; margin-top: -12px; }
+.terapia-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.terapia-fotos figure { margin: 0; }
+.terapia-fotos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (min-width: 900px) { .terapia-fotos { gap: 20px; } }
 .terapia h3 { font-size: var(--t-14); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-stretch: 110%; padding-bottom: 10px; border-bottom: 1px solid var(--tinta); }
 .terapia ul { list-style: none; margin: 0; padding: 0; }
 .terapia li { padding: 12px 0; border-bottom: 1px solid var(--filo); font-stretch: 110%; font-weight: 350; }
-@media (min-width: 900px) { .terapia .columnas { grid-template-columns: 1fr 1fr 1fr; gap: 40px; } }
+@media (min-width: 900px) { .terapia .columnas { grid-template-columns: 1fr 1fr; gap: 40px; } }
 
 /* Equipo */
 .equipo .wrap { display: grid; gap: 28px; }
 .profes { display: grid; gap: 16px; }
-.profe { border-top: 6px solid var(--tinta); padding-top: 16px; display: grid; gap: 8px; }
+.profe { border-top: 6px solid var(--tinta); padding-top: 16px; display: grid; gap: 8px; align-content: start; }
 .profe h3 { font-size: var(--t-33); font-stretch: 62%; font-weight: 800; text-transform: uppercase; }
 .profe .rol { font-weight: 600; }
 .equipo figure { margin: 24px 0 0; max-width: 420px; }
 .equipo figcaption { margin-top: 10px; font-size: var(--t-14); color: var(--gris); }
+.logros { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid var(--filo); }
+.logros li { padding: 10px 0 10px 18px; border-bottom: 1px solid var(--filo); position: relative; }
+.logros li::before { content: ""; position: absolute; left: 0; top: 1.05em; width: 8px; height: 3px; background: var(--rojo); }
+.trayectoria { display: grid; gap: 16px; }
+.trayectoria h3 { font-size: var(--t-25); font-stretch: 62%; font-weight: 800; text-transform: uppercase; }
+.trayectoria-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.equipo .trayectoria figure { margin: 0; max-width: none; }
+.trayectoria img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.trayectoria-fotos figure:nth-child(3) { grid-column: 1 / -1; }
+.trayectoria-fotos figure:nth-child(3) img { aspect-ratio: 4 / 3; object-position: 50% 15%; }
+@media (min-width: 900px) {
+  .trayectoria { grid-column: 2; }
+  .trayectoria-fotos { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .trayectoria-fotos figure:nth-child(3) { grid-column: auto; }
+  .trayectoria-fotos figure:nth-child(3) img { aspect-ratio: 3 / 4; }
+}
 @media (min-width: 768px) { .profes { grid-template-columns: 1fr 1fr; gap: 32px; } }
 @media (min-width: 900px) { .equipo .wrap { grid-template-columns: 4fr 8fr; gap: 56px; } }
 
@@ -495,6 +541,7 @@ p { margin: 0; }
 .mapa img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
 .mapa .mapa-capa { position: absolute; inset: 0; display: grid; place-content: center; gap: 12px; text-align: center; padding: 20px; }
 .mapa iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.mapa:has(iframe)::before { content: "Cargando mapa…"; position: absolute; inset: 0; display: grid; place-content: center; font-size: var(--t-16); }
 .mapa button { display: none; }
 .js .mapa button { display: inline-flex; }
 .redes { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
@@ -519,6 +566,7 @@ p { margin: 0; }
 @media print {
   .top, .barra-movil, .hero-medio, .galeria, video { display: none !important; }
   body { padding: 0; background: #fff; color: #000; }
+  .js [data-revelar] { clip-path: none !important; }
 }
 
 /* Tablet: evita que el video vertical ocupe toda la pantalla */
