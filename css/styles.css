@@ -110,7 +110,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 
 :focus-visible { outline: 3px solid var(--rojo-texto); outline-offset: 3px; }
 /* Sobre negro o rojo el anillo rojo no se distingue: va en el color de texto de la franja */
-.franja :focus-visible, .area-bjj :focus-visible, .barra-movil :focus-visible { outline-color: var(--franja-texto); }
+.franja :focus-visible, .area-bjj :focus-visible, .barra-movil :focus-visible, .mapa-capa :focus-visible { outline-color: var(--franja-texto); }
 .barra-movil a:focus-visible { outline-offset: -3px; }
 
 /* Área de toque ampliada sin mover el texto: el enlace pequeño crece solo por su zona clicable */
@@ -503,12 +503,13 @@ p { margin: 0; }
 .dia ol { list-style: none; margin: 0; padding: 0 8px 8px; display: grid; gap: 6px; }
 .clase {
   background: var(--placa); color: var(--tinta); padding: 10px 12px 11px;
-  display: grid; grid-template-columns: 4.2rem 1fr; align-items: baseline; gap: 2px 10px;
+  display: grid; grid-template-columns: 1fr auto; grid-template-areas: "horas nivel" "nombre nombre";
+  align-items: baseline; gap: 2px 10px;
   transition: opacity 160ms ease;
 }
-.clase .horas { font-weight: 800; font-size: 1.15rem; font-stretch: 75%; grid-row: span 2; }
-.clase .nombre { font-weight: 800; font-stretch: 62%; text-transform: uppercase; font-size: 1.35rem; line-height: 1; }
-.clase .nivel { font-size: var(--t-14); color: var(--gris); }
+.clase .horas { grid-area: horas; font-weight: 800; font-size: 1.15rem; font-stretch: 75%; white-space: nowrap; }
+.clase .nombre { grid-area: nombre; font-weight: 800; font-stretch: 62%; text-transform: uppercase; font-size: 1.35rem; line-height: 1; }
+.clase .nivel { grid-area: nivel; justify-self: end; font-size: var(--t-14); color: var(--gris); }
 .clase[data-tipo="mma"], .clase[data-tipo="sparring"] { background: var(--clase-mma); }
 .clase.siguiente { box-shadow: inset 6px 0 0 var(--rojo); }
 .clase.apagada { opacity: 0.16; }
@@ -615,7 +616,7 @@ p { margin: 0; }
 .faq summary::after { content: "+"; font-weight: 400; font-size: 1.6rem; line-height: 1; transition: transform 200ms var(--ease-out); }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq details > div { padding: 0 0 18px; max-width: 64ch; display: grid; gap: 8px; }
-@media (min-width: 900px) { .faq .wrap { grid-template-columns: 4fr 8fr; gap: 56px; } }
+@media (min-width: 1200px) { .faq .wrap { grid-template-columns: 5fr 7fr; gap: 56px; } }
 
 /* Ubicación */
 .ubicacion .wrap { display: grid; gap: 28px; }
@@ -626,6 +627,8 @@ p { margin: 0; }
 .mapa .mapa-capa { position: absolute; inset: 0; display: grid; place-content: center; gap: 12px; text-align: center; padding: 20px; }
 .mapa-capa .voz-golpe { font-size: var(--t-33); }
 .mapa-capa a { color: inherit; }
+.mapa-capa .btn { background: var(--franja); color: var(--franja-texto); border-color: var(--franja-texto); }
+@media (hover: hover) and (pointer: fine) { .mapa-capa .btn:hover { background: var(--franja-texto); color: var(--franja); } }
 .mapa iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .mapa:has(iframe)::before { content: "Cargando mapa…"; position: absolute; inset: 0; display: grid; place-content: center; font-size: var(--t-16); }
 .mapa button { display: none; }
