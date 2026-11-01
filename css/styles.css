@@ -39,6 +39,7 @@
   --alto-top: 64px;
   --cinturon-filo: #3a3a3a;
   --clase-mma: #e6e7e4;
+  --franja-filo: var(--franja);
   color-scheme: light dark;
 }
 
@@ -58,6 +59,7 @@
     --cinta: #f2f2ee;
     --cinturon-filo: #6b6e70;
     --clase-mma: #262626;
+    --franja-filo: #2e2f30;
     color-scheme: dark;
   }
 }
@@ -74,6 +76,7 @@
   --cinta: #f2f2ee;
   --cinturon-filo: #6b6e70;
   --clase-mma: #262626;
+  --franja-filo: #2e2f30;
   color-scheme: dark;
 }
 :root[data-tema="claro"] { color-scheme: light; }
@@ -211,8 +214,9 @@ p { margin: 0; }
 @media (hover: hover) and (pointer: fine) { .tema:hover { border-color: var(--tinta); } }
 .solo-escritorio { display: none !important; }
 @media (min-width: 900px) { .solo-escritorio { display: inline-flex !important; } .solo-movil { display: none !important; } }
-/* Tablet: caben «Horarios y planes» y «Ubicación»; WhatsApp sigue en la barra fija */
-@media (min-width: 600px) and (max-width: 899px) {
+/* Tablet: caben «Horarios y planes» y «Ubicación»; WhatsApp sigue en la barra fija.
+   Los límites superiores llevan .99px (899.99, 1199.99, 767.99) para no dejar hueco con anchos fraccionarios (zoom del navegador) */
+@media (min-width: 600px) and (max-width: 899.99px) {
   .nav a > .solo-escritorio { display: inline !important; }
   .nav a > .solo-movil { display: none !important; }
   .nav a.solo-escritorio:not(.btn) { display: inline-flex !important; }
@@ -241,6 +245,8 @@ p { margin: 0; }
 
 /* ---------- La franja (firma 1) ---------- */
 .franja { background: var(--franja); color: var(--franja-texto); position: relative; }
+/* Filo interior de 1 px (solo se ve en oscuro; en claro toma el color de la franja) para separarla del fondo sin cambiar su alto */
+.franja { box-shadow: inset 0 1px 0 var(--franja-filo), inset 0 -1px 0 var(--franja-filo); }
 .franja::before {
   content: ""; position: absolute; left: 0; top: 0; width: 64px; height: 6px; background: var(--rojo);
 }
@@ -292,7 +298,7 @@ p { margin: 0; }
 /* Áreas */
 .areas-grid { display: grid; gap: 16px; margin-top: 36px; }
 .area { position: relative; overflow: hidden; }
-.area-bjj { background: var(--franja); color: var(--franja-texto); display: grid; }
+.area-bjj { background: var(--franja); color: var(--franja-texto); display: grid; border: 1px solid var(--franja-filo); }
 .area-bjj .media { aspect-ratio: 4 / 3; background: #0b0b0b; position: relative; }
 .area-bjj .media video, .area-bjj .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .area-bjj .cuerpo-area { padding: 24px 20px 28px; display: grid; gap: 18px; }
@@ -492,9 +498,9 @@ p { margin: 0; }
 .clase[data-tipo="mma"], .clase[data-tipo="sparring"] { background: var(--clase-mma); }
 .clase.siguiente { box-shadow: inset 6px 0 0 var(--rojo); }
 .clase.apagada { opacity: 0.16; }
-@media (max-width: 1199px) { .dia.es-hoy { order: -1; } }
-@media (min-width: 600px) and (max-width: 767px) { .pizarra { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 768px) and (max-width: 1199px) { .pizarra { grid-template-columns: repeat(3, 1fr); gap: 10px; } }
+@media (max-width: 1199.99px) { .dia.es-hoy { order: -1; } }
+@media (min-width: 600px) and (max-width: 767.99px) { .pizarra { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) and (max-width: 1199.99px) { .pizarra { grid-template-columns: repeat(3, 1fr); gap: 10px; } }
 @media (min-width: 1200px) { .pizarra { grid-template-columns: repeat(5, 1fr); gap: 10px; } }
 
 /* Precios */
@@ -636,7 +642,7 @@ p { margin: 0; }
 }
 
 /* Tablet: evita que el video vertical ocupe toda la pantalla */
-@media (min-width: 600px) and (max-width: 899px) {
+@media (min-width: 600px) and (max-width: 899.99px) {
   .hero-medio { aspect-ratio: 4 / 3; }
   .area-bjj .media { aspect-ratio: 16 / 10; }
 }
