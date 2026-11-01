@@ -162,20 +162,20 @@ Fotos procesadas en `assets/fotos/` (fuente recortada en `assets/fotos/fuente/`)
 
 | Archivo | Post de origen |
 |---|---|
-| equipo-2025 | `DSOoK5DkfZH` |
+| equipo-2025 | `DSOoK5DkfZH` (foto reemplazada por el usuario el 01/11/2026, ver abajo) |
 | equipo-grande | `DOsGXe0DMdg` |
 | femenino | `DI1eiP-RHma` |
-| cintas-blancas | `DONPrjBDKMv` |
+| cintas-blancas | `DONPrjBDKMv` (archivos borrados por el usuario el 01/11/2026; salió de la galería) |
 | kids-fila | `DGO76u6vWvI` |
 | kids-reto | `DGEbBdSvxvQ` |
-| adultos-manana | `C1uebKLRFZG` |
+| adultos-manana | `C1uebKLRFZG` (foto reemplazada por el usuario el 01/11/2026, ver abajo) |
 | adultos-noche | `C14mOHzLuhq` |
 | open-quito-2023 | `CzmXkocP0qc` |
 | tatami-vacio | `DTzDlaljCh_` |
 | rolling-gi, drill-tatami, mma-sparring, gym-mancuernas, bjj-mma-sala | fotogramas de REEL-DUOC |
 
 Videos en `assets/videos/` (todos de REEL-DUOC, tramos sin texto encima, sin audio): `hero.mp4` (9,8 s), `bjj.mp4`, `mma.mp4`.
-Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `rolling-gi` (480 y 720 px), `tatami-vacio-480`, `equipo-2025-1440`, `femenino-1350`, `gym-mancuernas` (480 y 720 px, reemplazada por `gym-piso-principal` el 01/11/2026) y `bjj-mma-sala` (480 y 720 px, reemplazada por las fotos del gimnasio el 01/11/2026); logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`.
+Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `rolling-gi` (480 y 720 px), `tatami-vacio-480`, `femenino-1350`, `gym-mancuernas` (480 y 720 px, reemplazada por `gym-piso-principal` el 01/11/2026) y `bjj-mma-sala` (480 y 720 px, reemplazada por las fotos del gimnasio el 01/11/2026); logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`.
 
 ### Material entregado por el equipo (octubre 2026)
 
@@ -208,6 +208,17 @@ Datos nuevos indicados por el usuario (01/11/2026), publicados:
 - El servicio de terapia física y deportiva se llama **Rehabilitación Integral** (confirmado por el usuario el 01/11/2026; el mural de la sala dice "BIC Rehabilitación Integral", pero el usuario pidió quitar "BIC" del sitio).
 - Fernando Cárdenas Jr. fue **head coach de Marlon "Chito" Vera**, peleador de UFC, en su pelea de exhibición de jiu-jitsu en Ecuador.
 - **Mayton Perea**, alumno de Fernando Cárdenas Jr., fue graduado a cinturón azul por él en Hulk Sports y es **actual peleador de UFC**. El certificado de la foto dice "Hulk Sports, certificado, cinturón azul de jiu jitsu brasileño, Mayton Perea", firmado por Fernando Cárdenas.
+
+Cuatro fotos más (01/11/2026). El usuario reemplazó dos archivos de la galería y envió dos fotos en el chat. Originales en `assets/fotos/fuente/`.
+
+| Archivo | Contenido | Dónde se usa |
+|---|---|---|
+| equipo-2025 | Foto grupal nueva del equipo, adultos de pie y alumnas y niños sentados (original: `fuente/equipo-nuevo.webp`, 1280 px) | `index.html`, galería: "El equipo." Se quitó el año del pie de foto porque no consta la fecha de la foto nueva. |
+| adultos-manana | Grupo nuevo del horario de la mañana (original: `fuente/adultos-manana-nueva.webp`, 4160 px) | `index.html`, galería: "Horario de la mañana." |
+| femenino-medallas | Alumna con cinturón azul y medallas del Jiu Jitsu Showdown y del AJP Tour South Ecuador, temporada 2025-2026 (lo que se lee en las cintas). El usuario pidió sumarla al equipo femenino. | `index.html`, galería, foto vertical junto a "Grupo femenino" |
+| equipo-nogi | Equipo de No-Gi con rashguards de Hulk (según el usuario) | `index.html`, galería: "Equipo de No-Gi." |
+
+- No se publica el nombre de la alumna de las medallas. Si es menor de edad, el permiso de su representante para publicar la foto es responsabilidad del cliente, igual que con las fotos y el video de niños.
 
 Visto en las fotos, **por confirmar y no publicado**:
 - La credencial de Fernando en la foto con Chito Vera dice "VERA-ALDO" y "COMMISSION". Confirmar el rol exacto en ese evento y si se puede nombrar el evento.

@@ -37,6 +37,29 @@
     a.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg);
   });
 
+  // ---- Tema claro / oscuro: sigue al sistema hasta que el visitante elige ----
+  var raiz = document.documentElement;
+  var temaSistema = window.matchMedia('(prefers-color-scheme: dark)');
+  var botonesTema = document.querySelectorAll('[data-tema-boton]');
+  function esOscuro() { return raiz.dataset.tema ? raiz.dataset.tema === 'oscuro' : temaSistema.matches; }
+  function pintarTema() {
+    var o = esOscuro();
+    botonesTema.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(o));
+      b.title = o ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
+    });
+  }
+  botonesTema.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var nuevo = esOscuro() ? 'claro' : 'oscuro';
+      raiz.dataset.tema = nuevo;
+      try { localStorage.setItem('tema', nuevo); } catch (e) {}
+      pintarTema();
+    });
+  });
+  if (temaSistema.addEventListener) temaSistema.addEventListener('change', pintarTema);
+  pintarTema();
+
   // ---- Hora local de Quito -----------------------------------------------
   function ahora() {
     var partes = new Intl.DateTimeFormat('en-US', {

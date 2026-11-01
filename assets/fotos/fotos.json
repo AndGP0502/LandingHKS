@@ -1,14 +1,13 @@
 {
  "equipo-2025": {
-  "w": 1440,
-  "h": 988,
+  "w": 1200,
+  "h": 800,
   "widths": [
    480,
    800,
-   1200,
-   1440
+   1200
   ],
-  "src": "021_p_DSOoK5DkfZH.jpg"
+  "src": "equipo-nuevo.webp"
  },
  "equipo-grande": {
   "w": 1440,
@@ -77,15 +76,6 @@
   ],
   "src": "052_p_DI1eiP-RHma.jpg"
  },
- "cintas-blancas": {
-  "w": 640,
-  "h": 887,
-  "widths": [
-   480,
-   640
-  ],
-  "src": "032_reel_DONPrjBDKMv.jpg"
- },
  "kids-fila": {
   "w": 640,
   "h": 636,
@@ -106,13 +96,13 @@
  },
  "adultos-manana": {
   "w": 1080,
-  "h": 588,
+  "h": 810,
   "widths": [
    480,
    800,
    1080
   ],
-  "src": "107_p_C1uebKLRFZG.jpg"
+  "src": "adultos-manana-nueva.webp"
  },
  "adultos-noche": {
   "w": 1080,
@@ -246,5 +236,24 @@
    900
   ],
   "src": "mayton-perea-azul.jpg"
+ },
+ "femenino-medallas": {
+  "w": 720,
+  "h": 960,
+  "widths": [
+   480,
+   720
+  ],
+  "src": "femenino-medallas.jpg"
+ },
+ "equipo-nogi": {
+  "w": 1200,
+  "h": 900,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "src": "equipo-nogi.jpg"
  }
 }

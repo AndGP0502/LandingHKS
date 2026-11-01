@@ -38,11 +38,14 @@
   --barra-movil: 64px;
   --alto-top: 64px;
   --cinturon-filo: #3a3a3a;
+  --clase-mma: #e6e7e4;
   color-scheme: light dark;
 }
 
+/* Modo oscuro: lo pide el sistema (si el visitante no eligió claro con el botón) o el botón.
+   Los dos bloques llevan los mismos valores: si cambias uno, cambia el otro. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-tema="claro"]) {
     --tatami: #121212;
     --placa: #1b1b1b;
     --tinta: #edede9;
@@ -54,8 +57,26 @@
     --rojo-texto: #ff4a3d;
     --cinta: #f2f2ee;
     --cinturon-filo: #6b6e70;
+    --clase-mma: #262626;
+    color-scheme: dark;
   }
 }
+:root[data-tema="oscuro"] {
+  --tatami: #121212;
+  --placa: #1b1b1b;
+  --tinta: #edede9;
+  --gris: #a6a8aa;
+  --filo: #2e2f30;
+  --franja: #050505;
+  --franja-texto: #edede9;
+  --franja-gris: #9c9fa1;
+  --rojo-texto: #ff4a3d;
+  --cinta: #f2f2ee;
+  --cinturon-filo: #6b6e70;
+  --clase-mma: #262626;
+  color-scheme: dark;
+}
+:root[data-tema="claro"] { color-scheme: light; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -176,6 +197,18 @@ p { margin: 0; }
 }
 .nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--rojo); }
 .nav .btn { min-height: 42px; padding: 8px 16px; margin-left: 8px; }
+/* Botón de tema: solo con JS. Muestra la luna en claro y el sol en oscuro */
+.tema {
+  display: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin-left: 4px; padding: 0;
+  border: 2px solid var(--gris); border-radius: 0; background: transparent; color: var(--tinta); cursor: pointer;
+  transition: border-color 160ms ease, transform 140ms var(--ease-out);
+}
+.js .tema { display: inline-flex; }
+.tema:active { transform: scale(0.97); }
+.tema svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tema .sol, .tema[aria-pressed="true"] .luna { display: none; }
+.tema[aria-pressed="true"] .sol { display: block; }
+@media (hover: hover) and (pointer: fine) { .tema:hover { border-color: var(--tinta); } }
 .solo-escritorio { display: none !important; }
 @media (min-width: 900px) { .solo-escritorio { display: inline-flex !important; } .solo-movil { display: none !important; } }
 /* Tablet: caben «Horarios y planes» y «Ubicación»; WhatsApp sigue en la barra fija */
@@ -456,8 +489,7 @@ p { margin: 0; }
 .clase .horas { font-weight: 800; font-size: 1.15rem; font-stretch: 75%; grid-row: span 2; }
 .clase .nombre { font-weight: 800; font-stretch: 62%; text-transform: uppercase; font-size: 1.35rem; line-height: 1; }
 .clase .nivel { font-size: var(--t-14); color: var(--gris); }
-.clase[data-tipo="mma"], .clase[data-tipo="sparring"] { background: #e6e7e4; }
-@media (prefers-color-scheme: dark) { .clase[data-tipo="mma"], .clase[data-tipo="sparring"] { background: #262626; } }
+.clase[data-tipo="mma"], .clase[data-tipo="sparring"] { background: var(--clase-mma); }
 .clase.siguiente { box-shadow: inset 6px 0 0 var(--rojo); }
 .clase.apagada { opacity: 0.16; }
 @media (max-width: 1199px) { .dia.es-hoy { order: -1; } }
