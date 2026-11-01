@@ -148,20 +148,46 @@
   }
 
   // ---- Videos: arrancan al verse y se pausan fuera de pantalla ----------
-  // Sin animación si hay movimiento reducido o ahorro de datos: queda el póster.
+  // Con movimiento reducido o ahorro de datos no arrancan ni se descargan: queda el póster
+  // y el visitante los reproduce con el botón. Todos tienen botón de pausa y reproducción.
   function cargar(v) { if (!v.src && v.dataset.src) { v.src = v.dataset.src; } }
   function reproducir(v) {
     cargar(v);
-    v.play().then(function () { var img = v.parentNode.querySelector('img'); if (img) img.style.visibility = 'hidden'; }).catch(function () {});
+    v.play().then(function () { var img = v.parentNode.querySelector('img'); if (img) img.style.visibility = 'hidden'; }).catch(function () { if (v._pintar) v._pintar(); });
+  }
+  // Botón de pausa y reproducción sobre el video. Refleja el estado real del video (no el que se pidió).
+  function crearControl(v) {
+    var nombre = v.id === 'video-hero' ? 'video del encabezado' : 'video de Jiu-jitsu';
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'video-control';
+    b.innerHTML = '<svg class="i-pausa" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>' +
+      '<svg class="i-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4l13 8-13 8z"/></svg>';
+    function pintar() {
+      var texto = (v.paused ? 'Reproducir ' : 'Pausar ') + nombre;
+      b.dataset.estado = v.paused ? 'pausado' : 'reproduciendo';
+      b.setAttribute('aria-label', texto);
+      b.title = texto;
+    }
+    b.addEventListener('click', function () {
+      if (v.paused) { delete v.dataset.pausaUsuario; reproducir(v); }   // sigue desde donde quedó
+      else { v.dataset.pausaUsuario = '1'; v.pause(); }                 // pausa manual: el observer no lo reanuda
+    });
+    ['play', 'pause', 'error'].forEach(function (t) { v.addEventListener(t, pintar); });
+    v._pintar = pintar;
+    v.parentNode.appendChild(b);
+    pintar();
   }
   var videos = document.querySelectorAll('#video-hero, .video-seccion');
-  if (videos.length && !reducir && !ahorro) {
+  if (videos.length) {
+    var manual = reducir || ahorro; // sin arranque automático: solo con el botón
+    videos.forEach(crearControl);
     var heroV = document.getElementById('video-hero');
-    if (heroV) reproducir(heroV); // está en pantalla al cargar: no espera al observer
+    if (heroV && !manual) reproducir(heroV); // está en pantalla al cargar: no espera al observer
     if ('IntersectionObserver' in window) {
       var ioV = new IntersectionObserver(function (es) {
         es.forEach(function (e) {
-          if (e.isIntersecting) reproducir(e.target);
+          if (e.isIntersecting) { if (!manual && !e.target.dataset.pausaUsuario) reproducir(e.target); }
           else if (!e.target.paused) e.target.pause();
         });
       }, { rootMargin: '200px 0px' });
