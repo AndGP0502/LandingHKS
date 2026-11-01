@@ -104,7 +104,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 
 - Servicio de terapia física y deportiva (biografía de @hulk.sports, 31/10/2026).
 - Servicios cardio y MMA (publicación fijada de @hulk.sports del 01/02/2026); existencia de parqueadero, sin detalles (biografía de @hulk.sports, 31/10/2026).
-- Fernando Cárdenas Jr.: Head Coach, cinturón negro de Jiu Jitsu brasileño, terapista físico, entrenador personal certificado IFBB y juez IFBB de fisicoculturismo (biografía de @hulkbjj, 31/10/2026). Que sea terapista físico **no confirma** quién atiende las sesiones de terapia.
+- Fernando Cárdenas Jr.: Head Coach de Hulk Sports (trabaja en Hulk Sports desde 2020) y cinturón negro 2.º Dan de jiu-jitsu brasileño (biografía facilitada por el equipo, octubre 2026; el año de obtención sigue por confirmar). Terapista físico, entrenador personal certificado IFBB y juez IFBB de fisicoculturismo (biografía de @hulkbjj, 31/10/2026). Que sea terapista físico **no confirma** quién atiende las sesiones de terapia.
 - Existencia de un grupo femenino activo en jiu-jitsu.
 - Horario de clases 2026 (flyer enviado por el cliente) y dirección.
 
@@ -128,8 +128,11 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
    - Parqueadero: capacidad, costo y vigencia de los detalles "privado" y "videovigilancia" (publicaciones de 2025).
    - Normas del gimnasio y qué ropa llevar a la primera clase (¿prestan kimono?).
    - Vigencia de las instalaciones listadas en 2023 (800 m², cancha de básquet y ecuavóley, área verde, "tren superior e inferior", "cross training y TRX") y fuente de "peso libre y máquinas".
-4. **Terapia física:** tratamientos, quién atiende, días y horas, valor por sesión, modalidad, disponibilidad y cupos, convenios con seguros, qué traer y cómo se agenda.
-5. **Equipo:** si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima; confirmar si el nombre se escribe "Fernando Cárdenas" o "Fernando Cárdenas Jr." (hoy el sitio usa ambas formas).
+4. **Terapia física:** servicios específicos de fisioterapia que ofrece actualmente Hulk Sports y quién los atiende (el equipo envió una propuesta de servicios que **no está confirmada** y no se publica); además, días y horas, valor por sesión, modalidad, disponibilidad y cupos, convenios con seguros, qué traer y cómo se agenda.
+5. **Equipo:**
+   - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima.
+   - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
+   - Título profesional exacto de Fernando Cárdenas Jr. El equipo indicó «tecnólogo especialista en fisioterapia», pero la biografía lo describe como «egresado» de Terapia Física: **no se publica** hasta confirmarlo.
 6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usó la versión de 192 px que enviaste).
 7. **Publicación:** dominio (reemplazar `TU-DOMINIO` en `sitemap.xml` y `robots.txt`, y poner `canonical` y `og:image` absolutos).
 
@@ -148,7 +151,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 ## Decisiones de contenido de la Etapa 1
 
 - **Tarea 1.1, horario del gimnasio:** se muestra el horario referencial de la ficha de Google (31 oct 2026), marcado "por confirmar". El de nov 2024 queda como histórico. No hay lógica de feriados ni `openingHours` en el JSON-LD.
-- **Tarea 1.2, Fernando Cárdenas Jr.:** su tarjeta muestra cinco datos tomados de la biografía de @hulkbjj (31 oct 2026). El enlace "Fuente" de la tarjeta sigue apuntando a una publicación de 2024 que solo respalda su rol de head coach. El nombre aparece con y sin "Jr." (pendiente de unificar).
+- **Tarea 1.2, Fernando Cárdenas Jr.:** su tarjeta muestra cinco datos tomados de la biografía de @hulkbjj (31 oct 2026). El enlace "Fuente" de la tarjeta sigue apuntando a una publicación de 2024 que solo respalda su rol de head coach. El nombre aparecía con y sin "Jr."; se unificó como "Fernando Cárdenas Jr." en octubre de 2026.
 - **Tarea 1.3, Muay Thai y clases mixtas:** el sitio no presenta Muay Thai como servicio vigente ni como descontinuado (por confirmar). MMA se mantiene como servicio confirmado. La FAQ solo afirma que existe un grupo femenino; las clases mixtas y un horario exclusivo quedan por confirmar.
 - **Tarea 1.4, cardio, parqueadero y spinning:** cardio se muestra como "Caminadoras". Spinning no se muestra (por confirmar) y no está en la pizarra, en `CONFIG.clases` ni en los filtros. El parqueadero mantiene el texto "privado con videovigilancia" (dato de 2025), con vigencia por confirmar.
 - **Tarea 1.5, terapia física y deportiva:** se afirma el servicio y se invita a consultar por WhatsApp (botones "Consultar terapia", mensaje `fisio` de consulta). Se dice que Fernando es terapista físico, sin afirmar que atiende las sesiones. No se agregaron tratamientos, precios, horarios ni afirmaciones de salud.
