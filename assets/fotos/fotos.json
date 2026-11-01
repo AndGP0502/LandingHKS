@@ -151,5 +151,44 @@
    640
   ],
   "src": "017_reel_DTzDlaljCh_.jpg"
+ },
+ "tatami-amplio": {
+  "w": 1080,
+  "h": 1080,
+  "widths": [
+   480,
+   800,
+   1080
+  ],
+  "src": "tatami-amplio.jpg"
+ },
+ "recepcion": {
+  "w": 1080,
+  "h": 1080,
+  "widths": [
+   480,
+   800,
+   1080
+  ],
+  "src": "recepcion.jpg"
+ },
+ "muro-medallas": {
+  "w": 1080,
+  "h": 565,
+  "widths": [
+   480,
+   800,
+   1080
+  ],
+  "src": "muro-medallas.jpg"
+ },
+ "muro-cinturones": {
+  "w": 720,
+  "h": 720,
+  "widths": [
+   480,
+   720
+  ],
+  "src": "muro-cinturones.jpg"
  }
 }

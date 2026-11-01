@@ -161,4 +161,17 @@ Fotos procesadas en `assets/fotos/` (fuente recortada en `assets/fotos/fuente/`)
 
 Videos en `assets/videos/` (todos de REEL-DUOC, tramos sin texto encima, sin audio): `hero.mp4` (9,8 s), `bjj.mp4`, `mma.mp4`.
 Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `rolling-gi` (480 y 720 px), `tatami-vacio-480`, `equipo-2025-1440` y `femenino-1350`; logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`.
+
+### Material entregado por el equipo (octubre 2026)
+
+Fotos del local entregadas por el equipo del proyecto (fuente: material entregado por el equipo, octubre 2026). Las copias recibidas miden 1200 × 1600 px y se guardan sin modificar en `assets/fotos/fuente/`; en el sitio se usan versiones recortadas en WebP, sin ampliar la resolución.
+
+| Archivo | Contenido | Recorte usado | Dónde se usa |
+|---|---|---|---|
+| tatami-amplio | Tatami con luces LED hexagonales y paredes acolchadas negras | 1:1 | `index.html`, galería, posición 1 |
+| recepcion | Mostrador de entrada con el logo y el tatami al fondo | 1:1, sin los objetos de limpieza | `index.html`, galería, posición 6 |
+| muro-medallas | Cuatro cuadros de medallas | Solo los cuadros (sin la tira de fotos de niños) | `index.html`, Torneos y seminarios |
+| muro-cinturones | Soporte de cinturones con placa | Solo el soporte (sin certificados ni equipo de oficina) | `horarios-y-planes.html`, Profesores |
+
+Video de una clase infantil (`Video Kids octubre .MOV`, 355 MB): **no se usa ni se copia al proyecto**. Pendiente de la autorización de publicación de los menores y de su optimización.
 Descartados: flyers con texto grande, imágenes marcadas "Contenido de IA" (`DNorfKQvL8e`), posts de colaboración de otras cuentas, destacadas (tienen ~250 semanas y son de la sede anterior).
