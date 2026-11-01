@@ -4,7 +4,7 @@ Sitio de 2 páginas en HTML, CSS y JS sin frameworks ni build. Se abre con doble
 
 ```
 index.html                Página 1: lo esencial (hero, hoy, precios, dirección, áreas, niños, torneos, fotos)
-horarios-y-planes.html    Página 2: pizarra de horarios, precios publicados, gym, terapia, profesores, FAQ, ubicación
+horarios-y-planes.html    Página 2: pizarra de horarios, precios (botón a WhatsApp), gym, terapia, profesores, FAQ, ubicación
 css/styles.css            Tokens (colores, tipografía) y estilos
 js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, videos, mapa
 assets/                   logo/, fotos/ (WebP + fuente/), videos/, fonts/, og-hulk-sports.jpg
@@ -114,6 +114,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 ### Histórico o vencido (se conserva, no se muestra como vigente)
 
 - Horario del gimnasio de nov 2024 (L-V 05:00-21:00; sábados y feriados 08:00-14:00) y el de 2024 anterior.
+- Ningún precio se muestra en el sitio (a pedido del usuario, 01/11/2026): las dos páginas solo invitan a preguntarlos por WhatsApp. El de $150 (3 meses Jiu-Jitsu + Gym, sep 2025) y los seminarios a $10 (2026) quedan registrados en `content/inventario.md`.
 - Precios de $140 (Black Friday 2024) y $75 (gym, hasta el 15 oct 2025), ya vencidos; $50/mes de niños (2023) y gym a $35 (sede anterior).
 - Referencias antiguas a Muay Thai (logo, instalaciones de 2023, vacacional infantil de 2026) y a spinning (instalaciones de 2023).
 
