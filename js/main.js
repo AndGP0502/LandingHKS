@@ -29,7 +29,8 @@
 
   var DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
   var reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var ahorro = !!(navigator.connection && navigator.connection.saveData);
+  var cx = navigator.connection || {};
+  var ahorro = !!cx.saveData || /(^|-)2g$|^3g$/.test(cx.effectiveType || ''); // ahorro de datos o conexión lenta
 
   // ---- WhatsApp: todos los enlaces salen de CONFIG ------------------------
   document.querySelectorAll('a[data-wa]').forEach(function (a) {
@@ -148,8 +149,9 @@
   }
 
   // ---- Videos: arrancan al verse y se pausan fuera de pantalla ----------
-  // Con movimiento reducido o ahorro de datos no arrancan ni se descargan: queda el póster
+  // Con movimiento reducido, ahorro de datos o conexión lenta no arrancan ni se descargan: queda el póster
   // y el visitante los reproduce con el botón. Todos tienen botón de pausa y reproducción.
+  // El del encabezado espera a que termine la carga de la página (o 2,5 s) y a un momento libre.
   function cargar(v) { if (!v.src && v.dataset.src) { v.src = v.dataset.src; } }
   function reproducir(v) {
     cargar(v);
@@ -183,16 +185,39 @@
     var manual = reducir || ahorro; // sin arranque automático: solo con el botón
     videos.forEach(crearControl);
     var heroV = document.getElementById('video-hero');
-    if (heroV && !manual) reproducir(heroV); // está en pantalla al cargar: no espera al observer
+    function cuandoLibre(fn) {
+      var hecho = false;
+      function ir() {
+        if (hecho) return;
+        hecho = true;
+        if ('requestIdleCallback' in window) requestIdleCallback(fn, { timeout: 1000 }); else setTimeout(fn, 200);
+      }
+      if (document.readyState === 'complete') ir();
+      else { window.addEventListener('load', ir, { once: true }); setTimeout(ir, 2500); }
+    }
+    function enPantalla(v) { var r = v.getBoundingClientRect(); return r.bottom > -200 && r.top < window.innerHeight + 200; }
+    // Arranque automático del encabezado: una sola espera pendiente, y solo si sigue cerca de la pantalla
+    function arrancarHero(v) {
+      if (v._espera) return;
+      v._espera = true;
+      cuandoLibre(function () {
+        v._espera = false;
+        if (!manual && !v.dataset.pausaUsuario && v.paused && enPantalla(v)) reproducir(v);
+      });
+    }
     if ('IntersectionObserver' in window) {
       var ioV = new IntersectionObserver(function (es) {
         es.forEach(function (e) {
-          if (e.isIntersecting) { if (!manual && !e.target.dataset.pausaUsuario) reproducir(e.target); }
-          else if (!e.target.paused) e.target.pause();
+          var v = e.target;
+          if (e.isIntersecting) {
+            if (manual || v.dataset.pausaUsuario || !v.paused) return;
+            if (v === heroV && !v.src) arrancarHero(v); else reproducir(v);
+          }
+          else if (!v.paused) v.pause();
         });
       }, { rootMargin: '200px 0px' });
       videos.forEach(function (v) { ioV.observe(v); });
-    }
+    } else if (heroV && !manual) arrancarHero(heroV);
   }
 
   // ---- Revelado de imágenes al entrar al viewport -----------------------
