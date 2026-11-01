@@ -96,6 +96,8 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 }
 
 h1, h2, h3, h4 { margin: 0; line-height: 1.05; font-weight: 700; }
+/* Reparte las líneas de los títulos para no dejar una palabra suelta al final (si no hay soporte, se ve como antes) */
+h1, h2, h3, h4, .voz-golpe { text-wrap: balance; }
 p { margin: 0; }
 
 .sr-only {
@@ -223,6 +225,9 @@ p { margin: 0; }
 .franja-hoy .pasada { color: var(--franja-gris); }
 .franja .mini { display: block; margin-top: 4px; font-size: var(--t-14); font-weight: 400; color: var(--franja-gris); }
 .franja .mini a { color: var(--franja-gris); }
+/* Último precio publicado: 16 px, solo en esta celda; $150 en el color del texto, sin más énfasis */
+.franja .mini-precio { font-size: var(--t-16); }
+.franja .mini-precio strong { color: var(--franja-texto); font-weight: 700; }
 @media (min-width: 640px) {
   .franja-datos { grid-template-columns: 1fr 1fr; }
   .franja-datos > div:nth-child(2) { border-top: 0; }
@@ -362,9 +367,9 @@ p { margin: 0; }
 /* CTA final */
 .cierre { background: var(--placa); border-top: 1px solid var(--filo); }
 .cierre .wrap { display: grid; gap: 20px; padding-block: 56px; }
-.cierre h2 { font-size: var(--t-44); max-width: 20ch; }
+.cierre h2 { font-size: var(--t-44); }
 .cierre .acciones { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
-@media (min-width: 900px) { .cierre .wrap { grid-template-columns: 1fr auto; align-items: end; padding-block: 72px; } }
+@media (min-width: 900px) { .cierre .wrap { grid-template-columns: 1fr auto; align-items: end; padding-block: 72px; } .cierre h2 { max-width: 36ch; } }
 
 /* ---------- Pie ---------- */
 .pie { padding-block: 48px 40px; }
@@ -462,18 +467,17 @@ p { margin: 0; }
 
 /* Precios */
 .precios .wrap { display: grid; gap: 36px; }
-.precio-grande { font-size: var(--t-76); font-stretch: 62%; font-weight: 800; text-transform: uppercase; line-height: 0.92; }
+.precios .pila > h2 + p { font-size: var(--t-19); }
 .precios h3 { font-size: var(--t-19); margin-top: 12px; }
 .tabla-scroll { overflow-x: auto; }
 .tabla-scroll .nota { margin-top: 12px; }
-.precio-grande .pendiente { color: var(--rojo-texto); text-decoration-color: var(--rojo-texto); font-weight: 800; }
 .historial { width: 100%; border-collapse: collapse; }
 .historial caption { text-align: left; font-weight: 700; font-size: var(--t-19); padding-bottom: 12px; }
 .historial th, .historial td { text-align: left; vertical-align: top; padding: 12px 10px 12px 0; }
 .historial thead th { font-size: var(--t-14); color: var(--gris); font-weight: 600; border-bottom: 2px solid var(--tinta); }
 .historial tbody tr + tr td, .historial tbody tr + tr th { border-top: 1px solid var(--filo); }
 .historial .monto { font-stretch: 75%; font-weight: 800; font-size: 1.35rem; white-space: nowrap; }
-.etiqueta { display: inline-block; font-size: 0.8rem; font-weight: 700; font-stretch: 85%; text-transform: uppercase; letter-spacing: 0.03em; padding: 2px 6px; border: 1px solid currentColor; white-space: nowrap; }
+.etiqueta { display: inline-block; font-size: var(--t-14); font-weight: 700; font-stretch: 85%; text-transform: uppercase; letter-spacing: 0.03em; padding: 2px 6px; border: 1px solid currentColor; white-space: nowrap; }
 .etiqueta.vencida { color: var(--gris); }
 .condiciones { display: grid; gap: 10px; margin: 0; padding-left: 1.1rem; }
 @media (max-width: 640px) {
@@ -494,7 +498,7 @@ p { margin: 0; }
 .metros small { font-size: var(--t-19); font-weight: 500; letter-spacing: 0; color: var(--gris); display: block; margin-top: 6px; }
 .zonas-lista { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 24px; border-top: 2px solid var(--tinta); }
 .zonas-lista li { break-inside: avoid; padding: 12px 0; border-bottom: 1px solid var(--filo); font-weight: 600; }
-.zonas-lista small { display: block; font-weight: 400; color: var(--gris); }
+.zonas-lista small { display: block; font-size: var(--t-14); font-weight: 400; color: var(--gris); }
 .gym2 figure { margin: 0; }
 .gym2 figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .gym2 figcaption { margin-top: 8px; font-size: var(--t-14); color: var(--gris); }
