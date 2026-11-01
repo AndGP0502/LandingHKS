@@ -59,7 +59,11 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--alto-top) + 12px); }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--alto-top) + 12px);
+  scroll-padding-bottom: calc(var(--barra-movil) + env(safe-area-inset-bottom) + 12px);
+}
 
 body {
   margin: 0;
@@ -74,13 +78,22 @@ body {
   padding-bottom: calc(var(--barra-movil) + env(safe-area-inset-bottom));
 }
 
-@media (min-width: 900px) { body { padding-bottom: 0; } }
+@media (min-width: 900px) { body { padding-bottom: 0; } html { scroll-padding-bottom: 12px; } }
 
 img, video { display: block; max-width: 100%; height: auto; }
 
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 
 :focus-visible { outline: 3px solid var(--rojo-texto); outline-offset: 3px; }
+/* Sobre negro o rojo el anillo rojo no se distingue: va en el color de texto de la franja */
+.franja :focus-visible, .area-bjj :focus-visible, .barra-movil :focus-visible { outline-color: var(--franja-texto); }
+.barra-movil a:focus-visible { outline-offset: -3px; }
+
+/* Área de toque ampliada sin mover el texto: el enlace pequeño crece solo por su zona clicable */
+.franja .mini a, .franja dd > a, .fuente, .nota a, .mapa-capa .mini a { position: relative; }
+.franja .mini a::after, .franja dd > a::after, .fuente::after, .nota a::after, .mapa-capa .mini a::after {
+  content: ""; position: absolute; inset: -15px -8px;
+}
 
 h1, h2, h3, h4 { margin: 0; line-height: 1.05; font-weight: 700; }
 p { margin: 0; }
@@ -141,7 +154,7 @@ p { margin: 0; }
   font-weight: 700; font-stretch: 85%; text-transform: uppercase; letter-spacing: 0.02em;
   text-decoration: none; border-bottom: 2px solid var(--rojo);
 }
-.enlace-flecha::after { content: "→"; transition: transform 160ms var(--ease-out); }
+.enlace-flecha::after { content: "→"; content: "→" / ""; transition: transform 160ms var(--ease-out); }
 @media (hover: hover) and (pointer: fine) { .enlace-flecha:hover::after { transform: translateX(4px); } }
 
 /* ---------- Cabecera ---------- */
@@ -326,7 +339,7 @@ p { margin: 0; }
 .alterna figcaption { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .alterna-botones { display: none; gap: 6px; }
 .js .alterna-botones { display: inline-flex; }
-.alterna-botones button { position: relative; padding: 0; border: 2px solid var(--filo); background: none; cursor: pointer; line-height: 0; transition: border-color 160ms ease, transform 140ms var(--ease-out); }
+.alterna-botones button { position: relative; padding: 0; border: 2px solid var(--gris); background: none; cursor: pointer; line-height: 0; transition: border-color 160ms ease, transform 140ms var(--ease-out); }
 .alterna-botones button:active { transform: scale(0.97); }
 .alterna-botones button[aria-pressed="true"] { border-color: var(--rojo); }
 .tira .alterna-botones img { width: 56px; height: 42px; object-fit: cover; }
@@ -349,8 +362,8 @@ p { margin: 0; }
 .pie-marca img { width: 56px; height: 56px; }
 .pie-marca strong { display: block; font-stretch: 70%; font-weight: 800; text-transform: uppercase; font-size: 1.4rem; line-height: 1; }
 .pie h2 { font-size: var(--t-14); color: var(--franja-gris); font-weight: 600; margin-bottom: 10px; }
-.pie ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
-.pie a { display: inline-flex; min-height: 40px; align-items: center; color: var(--franja-texto); }
+.pie ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.pie a { display: inline-flex; min-height: 44px; align-items: center; color: var(--franja-texto); }
 .pie address { font-style: normal; line-height: 1.5; }
 @media (min-width: 900px) { .pie .wrap { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
 
