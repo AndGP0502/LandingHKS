@@ -114,9 +114,22 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 | Fernando Cárdenas (Jr.) | Terapista físico | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil. No confirma que sea quien atiende actualmente las sesiones de terapia de Hulk Sports |
 | Fernando Cárdenas (Jr.) | Entrenador personal certificado IFBB | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
 | Fernando Cárdenas (Jr.) | Juez IFBB de fisicoculturismo | Instagram @hulkbjj (biografía), 31/10/2026. Confirmado públicamente por el propio perfil |
+| Fernando Cárdenas Jr. | Cinturón negro **2.º Dan** de jiu-jitsu brasileño | Documento facilitado por el equipo de Hulk Sports (octubre 2026): "Biografía de Fernando Cárdenas", secciones Biografía y Perfil profesional. **Confirmado por el equipo**; publicado en el sitio. Año de obtención del grado: por confirmar |
+| Fernando Cárdenas Jr. | Trabaja en Hulk Sports **desde 2020** como Head Coach | Documento del equipo (octubre 2026), sección "Enseñanza y liderazgo deportivo"; indicación del equipo, 31/10/2026: Hulk Sports lleva aproximadamente 6 años. Coincide con "Fundación del equipo: dic 2020" (arriba). **Confirmado**; el sitio dice "desde 2020" y no afirma una fecha de fundación |
+| Fernando Cárdenas Jr. | "Tecnólogo especialista en fisioterapia" | Indicación del equipo de Hulk Sports, 31/10/2026. **Por confirmar el título exacto; no publicado**: el sitio sigue diciendo "terapista físico" hasta confirmarlo. La biografía lo describe de otras formas (ver pendientes abajo) |
 | Cristian Ruales (@cristian.ruales.3) | Profesor de adultos, "faixa preta" (cinturón negro) | flyer y caption `C4f53PPLTMs` (2024) |
 
-Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fernando Cárdenas: **resuelto**, cinturón negro de Jiu Jitsu brasileño (Instagram @hulkbjj, 31/10/2026). En el sitio aparece como "Fernando Cárdenas" (tarjeta de Profesores) y como "Fernando Cárdenas Jr." (sección de terapia); @hulkbjj lo nombra "Fernando Cárdenas Jr.". Unificar el nombre queda **pendiente**.
+Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fernando Cárdenas: **resuelto**, cinturón negro de Jiu Jitsu brasileño (Instagram @hulkbjj, 31/10/2026). El nombre quedó **unificado** como "Fernando Cárdenas Jr." en todo el sitio (octubre 2026), igual que en @hulkbjj y en el encabezado de la biografía del equipo.
+
+**Pendientes y contradicciones de los documentos del equipo (octubre 2026; "Biografía de Fernando Cárdenas" y "Servicios de fisioterapia para tu página web")**. Son material de consulta; los documentos no se guardan en el proyecto y los datos personales que traen (edad, segundo apellido, otra formación y correo personal) se descartan para la web y no se registran aquí.
+- **Título profesional:** el equipo indicó "tecnólogo especialista en fisioterapia" (31/10/2026); la biografía lo llama "fisioterapeuta" y dice "egresado" de Terapia Física (egresado no equivale a titulado). Falta el nombre exacto del título. No se usa "fisioterapeuta" ni "licenciado".
+- **IFBB:** el sitio lo muestra (Instagram @hulkbjj); la biografía no lo menciona y habla de formación como instructor de Fisicoculturismo y Fitness. Confirmar si son credenciales distintas y si siguen vigentes.
+- **Maestro:** la biografía escribe "Di Piero", un flyer de Instagram "Di Pierro" y este inventario "Soluço". Confirmar la escritura antes de publicar el linaje.
+- **Edad de las clases infantiles:** el sitio dice desde 4 años (Instagram 2025); la biografía dice que Fernando enseña a niños desde los 5. Confirmar la edad mínima.
+- **Resultados competitivos 2021 a 2024 y arbitraje IBJJF (2024 a 2026), ADCC Latinoamérica y Circuito Ecuatoriano:** solo constan en la biografía; **no publicados**. Confirmar: categorías "medio" y "medio pesado", si hay dos eventos "Nova 2023" y si el Open de Quito 2024 es distinto del de nov 2023.
+- **Servicios de fisioterapia:** el documento de servicios es una **propuesta** (usa "podrías ofrecer", "mi recomendación"), no una lista confirmada; **no se publican**. Solo tiene respaldo cruzado la punción seca y la electropunción (certificación en la biografía = capacidad profesional; oferta en Hulk Sports por confirmar). La fisioterapia geriátrica es un público nuevo sin otra fuente. La línea "Hulk Sports Performance & Recovery" es una sugerencia, no existe como marca y no se usa.
+- **Quién atiende, modalidad, horarios y precios de terapia:** siguen sin confirmar.
+- **Trayectoria:** "desde 2020" aplica al equipo y a Fernando; la sede actual (El Edén) es de 2023, por lo que no se asocia el 2020 con esa ubicación.
 
 ## Resultados y eventos publicados por la marca
 
