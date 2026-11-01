@@ -176,6 +176,12 @@ p { margin: 0; }
 .nav .btn { min-height: 42px; padding: 8px 16px; margin-left: 8px; }
 .solo-escritorio { display: none !important; }
 @media (min-width: 900px) { .solo-escritorio { display: inline-flex !important; } .solo-movil { display: none !important; } }
+/* Tablet: caben «Horarios y planes» y «Ubicación»; WhatsApp sigue en la barra fija */
+@media (min-width: 600px) and (max-width: 899px) {
+  .nav a > .solo-escritorio { display: inline !important; }
+  .nav a > .solo-movil { display: none !important; }
+  .nav a.solo-escritorio:not(.btn) { display: inline-flex !important; }
+}
 
 /* ---------- Hero ---------- */
 .hero { padding-block: 28px 0; }
@@ -318,20 +324,25 @@ p { margin: 0; }
 
 /* Galería */
 .galeria { padding-block: 0 72px; }
+/* El ancho de cada foto lo da su orientación; solo se recorta en vertical, nunca por los lados (hay gente en los bordes) */
 .tira {
-  display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 12px;
+  --w-ancha: calc(100vw - 56px); --w-vertical: min(58vw, 260px); --alto-max: 300px;
+  display: grid; grid-auto-flow: column; grid-auto-columns: auto; align-items: end; gap: 12px;
   overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
-  padding: 4px 16px 16px; scrollbar-width: thin; scrollbar-color: var(--tinta) transparent;
+  padding: 4px 16px 16px; scroll-padding-inline: 16px; scrollbar-width: thin; scrollbar-color: var(--tinta) transparent;
 }
-.tira figure { margin: 0; scroll-snap-align: start; }
-.tira img { width: 100%; height: 300px; object-fit: cover; }
-.tira figcaption { margin-top: 8px; font-size: var(--t-14); color: var(--gris); }
-@media (min-width: 768px) {
-  .tira { grid-auto-columns: 36%; padding-inline: 32px; }
-  .tira img { height: 380px; }
+.tira figure { margin: 0; width: var(--w-ancha); scroll-snap-align: start; }
+.tira figure.vertical { width: var(--w-vertical); }
+.tira > figure > img, .tira .alterna-fotos img { width: 100%; height: auto; max-height: var(--alto-max); object-fit: cover; object-position: 50% 10%; }
+.tira figcaption { margin-top: 8px; min-height: 46px; font-size: var(--t-14); color: var(--gris); }
+@media (min-width: 600px) {
+  .tira { --w-ancha: 440px; --w-vertical: 250px; --alto-max: 340px; padding-inline: 32px; scroll-padding-inline: 32px; }
 }
-@media (min-width: 1320px) { .tira { padding-inline: calc((100vw - 1320px) / 2 + 32px); } }
+@media (min-width: 1100px) { .tira { --w-ancha: 560px; --w-vertical: 270px; --alto-max: 380px; } }
+@media (min-width: 1320px) { .tira { padding-inline: calc((100vw - 1320px) / 2 + 32px); scroll-padding-inline: calc((100vw - 1320px) / 2 + 32px); } }
 /* Foto con alternativa: sin JS se ve solo la primera */
+.tira .alterna-fotos { aspect-ratio: 1080 / 588; overflow: hidden; }
+.tira .alterna-fotos img { height: 100%; max-height: none; object-position: 50% 40%; }
 .alterna-fotos img + img { display: none; }
 .js .alterna-fotos img { display: none; }
 .js .alterna-fotos img.activa { display: block; animation: aparecer 220ms var(--ease-out); }
@@ -388,7 +399,18 @@ p { margin: 0; }
 .intro2 { padding-block: 36px 28px; border-bottom: 1px solid var(--filo); }
 .intro2 h1 { font-size: var(--t-58); max-width: 18ch; }
 .intro2 p { margin-top: 14px; max-width: 60ch; color: var(--gris); font-size: var(--t-19); }
-.saltos { display: flex; gap: 8px; margin-top: 24px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; }
+/* Móvil: tira con scroll. El relleno de 6 px deja sitio al anillo de foco; el de la derecha queda fuera del degradado.
+   scroll-padding de 150 px a cada lado: el navegador solo desplaza un chip que queda del todo fuera de la zona central, y entonces lo centra;
+   así, con el teclado, el chip enfocado nunca queda a medias bajo el degradado ni cortado por el borde */
+.saltos {
+  display: flex; gap: 8px; margin: 18px -6px 0; padding: 6px 44px 6px 6px; overflow-x: auto; scrollbar-width: none;
+  scroll-padding-inline: 150px;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+}
+@media (min-width: 600px) {
+  .saltos { flex-wrap: wrap; overflow: visible; margin: 24px 0 0; padding: 0 0 6px; -webkit-mask-image: none; mask-image: none; }
+}
 .saltos a {
   flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px;
   border: 1px solid var(--tinta); text-decoration: none; font-weight: 600; font-stretch: 90%;
@@ -433,8 +455,10 @@ p { margin: 0; }
 @media (prefers-color-scheme: dark) { .clase[data-tipo="mma"], .clase[data-tipo="sparring"] { background: #262626; } }
 .clase.siguiente { box-shadow: inset 6px 0 0 var(--rojo); }
 .clase.apagada { opacity: 0.16; }
-@media (max-width: 899px) { .dia.es-hoy { order: -1; } }
-@media (min-width: 900px) { .pizarra { grid-template-columns: repeat(5, 1fr); gap: 10px; } }
+@media (max-width: 1199px) { .dia.es-hoy { order: -1; } }
+@media (min-width: 600px) and (max-width: 767px) { .pizarra { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) and (max-width: 1199px) { .pizarra { grid-template-columns: repeat(3, 1fr); gap: 10px; } }
+@media (min-width: 1200px) { .pizarra { grid-template-columns: repeat(5, 1fr); gap: 10px; } }
 
 /* Precios */
 .precios .wrap { display: grid; gap: 36px; }
