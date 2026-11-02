@@ -185,7 +185,7 @@ Fotos del local entregadas por el equipo del proyecto (fuente: material entregad
 
 | Archivo | Contenido | Recorte usado | Dónde se usa |
 |---|---|---|---|
-| tatami-amplio | Tatami con luces LED hexagonales y paredes acolchadas negras | 1:1 | `index.html`, galería, posición 1 |
+| tatami-amplio | Tatami con luces LED hexagonales y paredes acolchadas negras | 1:1 | `index.html`, galería, posición 1 ("Tatami de 100 m²."); `horarios-y-planes.html`, Gimnasio, bajo la lista de zonas (sin recorte) |
 | recepcion | Mostrador de entrada con el logo y el tatami al fondo | 1:1, sin los objetos de limpieza | `index.html`, galería, posición 6 |
 | muro-medallas | Cuatro cuadros de medallas | Solo los cuadros (sin la tira de fotos de niños) | `index.html`, Torneos y seminarios |
 | muro-cinturones | Soporte de cinturones con placa | Solo el soporte (sin certificados ni equipo de oficina) | `horarios-y-planes.html`, Profesores |
@@ -206,6 +206,7 @@ Siete fotos enviadas en el chat del proyecto, con indicación de dónde va cada 
 
 Datos nuevos indicados por el usuario (01/11/2026), publicados:
 - El gimnasio tiene **dos pisos**, con área de cardio incluida.
+- El área de tatami mide **100 m²**: dato proporcionado directamente por el propietario de Hulk Sports el 01/11/2026; no es una medición independiente. Se publica en la lista de zonas y bajo ella en `horarios-y-planes.html`, y en el pie de foto de la galería de `index.html`. Los 800 m² de instalaciones siguen igual; el tatami es una parte de ese total.
 - Página 2: se quitó la nota "dato publicado en 2023 al estrenar la sede actual" de los 800 m² y la columna "Por confirmar" de Terapia (pedido del usuario, 01/11/2026). Los pendientes de terapia siguen en el README.
 - El servicio de terapia física y deportiva se llama **Rehabilitación Integral** (confirmado por el usuario el 01/11/2026; el mural de la sala dice "BIC Rehabilitación Integral", pero el usuario pidió quitar "BIC" del sitio).
 - Fernando Cárdenas Jr. fue **head coach de Marlon "Chito" Vera**, peleador de UFC, en su pelea de exhibición de jiu-jitsu en Ecuador.

@@ -534,6 +534,8 @@ p { margin: 0; }
 .gym2 figure { margin: 0; }
 .gym2 figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .gym2 figcaption { margin-top: 8px; font-size: var(--t-14); color: var(--gris); }
+.gym-tatami { max-width: 420px; margin-top: 28px; }
+.gym2 .gym-tatami img { aspect-ratio: auto; height: auto; }
 .gym-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 @media (min-width: 900px) {
   .gym-fotos { grid-template-columns: 1fr; gap: 20px; }
