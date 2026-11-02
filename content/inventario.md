@@ -64,6 +64,8 @@ Open mat sábados 08:00, invitados $5 — publicado dic 2023 (`C1ulPt7R55E`), **
 
 ## Precios y promociones (ninguno confirmado para hoy)
 
+Desde el 01/11/2026, a pedido del usuario, el sitio no muestra ningún precio de esta tabla: el inicio y la página 2 solo tienen el botón "Preguntar precios" (WhatsApp).
+
 | Fecha | Oferta | Estado | Fuente |
 |---|---|---|---|
 | sep 2025 | 3 meses Jiu-Jitsu + Gym: $150 | vigencia por confirmar | `DPMSXSskZod` (imagen) |

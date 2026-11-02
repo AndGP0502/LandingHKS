@@ -278,9 +278,8 @@ p { margin: 0; }
 .franja-hoy .pasada { color: var(--franja-gris); }
 .franja .mini { display: block; margin-top: 4px; font-size: var(--t-14); font-weight: 400; color: var(--franja-gris); }
 .franja .mini a { color: var(--franja-gris); }
-/* Último precio publicado: 16 px, solo en esta celda; $150 en el color del texto, sin más énfasis */
+/* Celda de precios: el link a WhatsApp en 16 px */
 .franja .mini-precio { font-size: var(--t-16); }
-.franja .mini-precio strong { color: var(--franja-texto); font-weight: 700; }
 @media (min-width: 640px) {
   .franja-datos { grid-template-columns: 1fr 1fr; }
   .franja-datos > div:nth-child(2) { border-top: 0; }
@@ -519,28 +518,9 @@ p { margin: 0; }
 @media (min-width: 1200px) { .pizarra { grid-template-columns: repeat(5, 1fr); gap: 10px; } }
 
 /* Precios */
-.precios .wrap { display: grid; gap: 36px; }
-.precios .pila > h2 + p { font-size: var(--t-19); }
-.precios h3 { font-size: var(--t-19); margin-top: 12px; }
-.tabla-scroll { overflow-x: auto; }
-.tabla-scroll .nota { margin-top: 12px; }
-.historial { width: 100%; border-collapse: collapse; }
-.historial caption { text-align: left; font-weight: 700; font-size: var(--t-19); padding-bottom: 12px; }
-.historial th, .historial td { text-align: left; vertical-align: top; padding: 12px 10px 12px 0; }
-.historial thead th { font-size: var(--t-14); color: var(--gris); font-weight: 600; border-bottom: 2px solid var(--tinta); }
-.historial tbody tr + tr td, .historial tbody tr + tr th { border-top: 1px solid var(--filo); }
-.historial .monto { font-stretch: 75%; font-weight: 800; font-size: 1.35rem; white-space: nowrap; }
-.etiqueta { display: inline-block; font-size: var(--t-14); font-weight: 700; font-stretch: 85%; text-transform: uppercase; letter-spacing: 0.03em; padding: 2px 6px; border: 1px solid currentColor; white-space: nowrap; }
-.etiqueta.vencida { color: var(--gris); }
-.condiciones { display: grid; gap: 10px; margin: 0; padding-left: 1.1rem; }
-@media (max-width: 640px) {
-  .historial thead { display: none; }
-  .historial tr { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 12px 0; }
-  .historial tbody tr + tr { border-top: 1px solid var(--filo); }
-  .historial td, .historial th { padding: 0; border: 0 !important; }
-  .historial .col-oferta { grid-column: 1 / -1; }
-}
-@media (min-width: 900px) { .precios .wrap { grid-template-columns: 5fr 7fr; gap: 64px; } }
+.precios .wrap { display: grid; justify-items: center; gap: 28px; text-align: center; }
+.precios .sec-titulo { max-width: none; }
+.btn-grande { width: min(100%, 380px); min-height: 64px; padding: 16px 32px; font-size: var(--t-19); }
 
 /* Gym página 2 */
 .gym2 { background: var(--placa); border-block: 1px solid var(--filo); }

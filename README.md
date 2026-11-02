@@ -4,11 +4,12 @@ Sitio de 2 páginas en HTML, CSS y JS sin frameworks ni build. Se abre con doble
 
 ```
 index.html                Página 1: lo esencial (hero, hoy, precios, dirección, áreas, niños, torneos, fotos)
-horarios-y-planes.html    Página 2: pizarra de horarios, precios publicados, gym, terapia, profesores, FAQ, ubicación
+horarios-y-planes.html    Página 2: pizarra de horarios, precios (botón a WhatsApp), gym, terapia, profesores, FAQ, ubicación
 css/styles.css            Tokens (colores, tipografía) y estilos
 js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, videos, mapa
 assets/                   logo/, fotos/ (WebP + fuente/), videos/, fonts/, og-hulk-sports.jpg
 content/inventario.md     Cada dato del sitio con su fuente
+netlify.toml              Netlify: sin build; responde 404 en los archivos internos (ver "Publicar")
 content/fuentes/          Flyer de horario 2026 y captura del perfil que envió el cliente
 docs/design-brief.md      Concepto, paleta, tipografía, elementos firma, movimiento
 ```
@@ -22,7 +23,7 @@ docs/design-brief.md      Concepto, paleta, tipografía, elementos firma, movimi
 - [x] QA: capturas a 390, 768 y 1440 px en claro y oscuro, consola sin errores, enlaces y anclas revisados, contraste AA medido, Lighthouse móvil (abajo).
 - [x] Etapa 1 (contenido): tareas 1.1 a 1.5 implementadas (horario referencial del gimnasio, perfil de Fernando Cárdenas Jr., Muay Thai y clases mixtas, cardio, parqueadero y spinning, terapia física) y registradas en `content/inventario.md`. Tarea 1.6: revisión de esta documentación.
 - [ ] Datos "por confirmar" que debe enviar el cliente (lista abajo).
-- [ ] Dominio y publicación (no se subió nada a GitHub ni a ningún hosting, por pedido del cliente).
+- [ ] Dominio (el sitio ya está en GitHub y Netlify, proyecto `hulksportsec`; falta el dominio propio).
 
 Lighthouse móvil (servidor local, 31 oct 2026):
 
@@ -90,11 +91,11 @@ Los mensajes prellenados por servicio están en `CONFIG.mensajes` (general, prue
 ## Publicar (cuando decidas)
 
 1. Reemplaza `TU-DOMINIO` en `sitemap.xml` y `robots.txt`. Opcional: pon URLs absolutas en `og:image` y agrega `<link rel="canonical" href="https://tu-dominio/...">` en cada página.
-2. **Netlify:** arrastra la carpeta `LandingHKS` a app.netlify.com/drop.
+2. **Netlify:** el proyecto `hulksportsec` publica la rama `main` de GitHub en cada push. En Build settings, "Build command" debe quedar vacío (el sitio no tiene build). `netlify.toml` fija la carpeta publicada y bloquea con 404 los archivos internos.
 3. **Vercel:** `npx vercel` dentro de la carpeta (framework: Other, sin build).
 4. **GitHub Pages:** sube la carpeta a un repo y activa Pages en la rama principal, carpeta raíz.
 
-Las carpetas `content/`, `docs/` y `assets/fotos/fuente/` no son necesarias en producción; se pueden excluir.
+Las carpetas `content/`, `docs/` y `assets/fotos/fuente/` no son necesarias en producción. En Netlify, `netlify.toml` responde 404 en esas carpetas y en `assets/fotos/fotos.json`, `README.md`, `netlify.toml` y `.gitignore`. En Vercel o GitHub Pages ese archivo no se aplica: habría que excluirlas a mano.
 
 ## Datos por confirmar (para el cliente)
 
@@ -114,6 +115,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 ### Histórico o vencido (se conserva, no se muestra como vigente)
 
 - Horario del gimnasio de nov 2024 (L-V 05:00-21:00; sábados y feriados 08:00-14:00) y el de 2024 anterior.
+- Ningún precio se muestra en el sitio (a pedido del usuario, 01/11/2026): las dos páginas solo invitan a preguntarlos por WhatsApp. El de $150 (3 meses Jiu-Jitsu + Gym, sep 2025) y los seminarios a $10 (2026) quedan registrados en `content/inventario.md`.
 - Precios de $140 (Black Friday 2024) y $75 (gym, hasta el 15 oct 2025), ya vencidos; $50/mes de niños (2023) y gym a $35 (sede anterior).
 - Referencias antiguas a Muay Thai (logo, instalaciones de 2023, vacacional infantil de 2026) y a spinning (instalaciones de 2023).
 
