@@ -135,6 +135,7 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 | Fernando Cárdenas Jr. | **Tecnólogo en fisioterapia** (publicado) | Indicación del usuario, 01/11/2026. Antes: el equipo indicó "tecnólogo especialista en fisioterapia" (31/10/2026). |
 | Fernando Cárdenas Jr. | Entrenador y preparador físico profesional | Indicación del usuario, 01/11/2026 |
 | Fernando Cárdenas Jr. | Compite en fisicoculturismo (foto `profe-fisicoculturismo`, número 73) | Foto enviada por el usuario, 01/11/2026 |
+| Fernando Cárdenas Jr. | Extensa trayectoria profesional; "vivo exponente del jiu-jitsu en la Sierra del Ecuador"; ha formado a **más de tres campeones actuales que siguen compitiendo** (publicado en su bloque de Profesores) | Indicación del usuario, 02/11/2026. Sin fuente independiente; no se indicó quiénes son esos campeones, así que el sitio no los nombra ni los vincula con "Nuestros campeones" |
 | Cristian Ruales (@cristian.ruales.3) | Profesor de adultos, "faixa preta" (cinturón negro) | flyer y caption `C4f53PPLTMs` (2024) |
 | Donovan | Publicado con el nombre «Donovan» y la etiqueta «Profesor» (el propietario lo agregó a la sección de profesores), sin otros datos | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, función (profesor de qué), grado o cinturón, certificaciones, trayectoria, foto y enlace público. No se publica ninguno de esos datos hasta que se confirmen. |
 | Diana | Instructora de gimnasio (publicada con el nombre «Diana» y ese cargo, en una tarjeta de la sección «Profesores e instructores») | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, formación, trayectoria, fotografía, enlaces públicos y horarios. No se publica ninguno de esos datos hasta que se confirmen. |
@@ -197,15 +198,15 @@ Pedido expreso del usuario (02/11/2026): publicar fotos de estos competidores de
 
 ## Fotos en las preguntas frecuentes (`horarios-y-planes.html`, `#preguntas`)
 
-Agregadas el 02/11/2026 a pedido del usuario ("fotos dentro de esa pregunta como ejemplos"). Todas son fotos que ya estaban en el proyecto; los pies de foto describen solo lo que se ve.
+Agregadas el 02/11/2026 a pedido del usuario ("fotos dentro de esa pregunta como ejemplos") y ajustadas el mismo día según sus indicaciones. Los pies de foto describen solo lo que se ve.
 
 | Pregunta | Fotos |
 |---|---|
 | ¿Puedo probar una clase…? | recepcion, adultos-manana |
-| ¿Necesito experiencia? | drill-tatami |
-| ¿Qué diferencia hay entre Gi y No-Gi? | rolling-gi (Gi), equipo-nogi (No-Gi) |
-| ¿Qué ropa llevo a la primera clase? | mma-sparring, bjj-mma-sala |
-| ¿Desde qué edad pueden entrenar los niños? | kids-fila, kids-reto |
+| ¿Necesito experiencia? | Sin foto (el usuario pidió quitarla). Texto cambiado a "No, no importa si no tienes experiencia." |
+| ¿Qué diferencia hay entre Gi y No-Gi? | gi-grupo (Gi), equipo-nogi (No-Gi). `gi-grupo` es una foto enviada por el usuario en el chat (captura de 335 × 366 px; original en `fuente/gi-grupo.png`, sin el filo de 1 px de la captura). El alt no nombra a las personas. |
+| ¿Qué ropa llevo a la primera clase? | ropa-primera-clase: pantalón calentador gris y camiseta negra, imagen enviada por el usuario (captura de 377 × 258 px; original en `fuente/ropa-primera-clase.png`, sin la franja oscura de la captura). Parece una foto de catálogo; los derechos de uso son responsabilidad del cliente. |
+| ¿Desde qué edad pueden entrenar los niños? | kids-fila (`kids-reto` se quitó a pedido del usuario) |
 | ¿Hay mujeres entrenando? | femenino, femenino-medallas (ya estaban) |
 | ¿Hay parqueadero? | **Sin foto.** Se revisaron las dos publicaciones que mencionan el parqueadero: `DPMSXSskZod` (flyer y dos videos del tatami) y `CxvtpilOKLP` (flyer), y la parte reciente de la cuadrícula de @hulk.sports. Ninguna muestra el parqueadero. Pendiente: foto del cliente. |
 | ¿Hay open mat los sábados? | tatami-vacio (no consta que sea de un open mat; el pie dice "El tatami de Hulk Sports.") |
@@ -229,7 +230,7 @@ Fotos procesadas en `assets/fotos/` (fuente recortada en `assets/fotos/fuente/`)
 | rolling-gi, drill-tatami, mma-sparring, gym-mancuernas, bjj-mma-sala | fotogramas de REEL-DUOC |
 
 Videos en `assets/videos/` (todos de REEL-DUOC, tramos sin texto encima, sin audio): `hero.mp4` (9,8 s), `bjj.mp4`, `mma.mp4`.
-Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `femenino-1350`, `gym-mancuernas` (480 y 720 px, reemplazada por `gym-piso-principal` el 01/11/2026) y `muro-cinturones` cuadrada (480 y 720 px, reemplazada por `muro-cinturones-retrato` el 02/11/2026); logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`. Desde el 02/11/2026, `rolling-gi`, `tatami-vacio-480` y `bjj-mma-sala` se usan en las preguntas frecuentes.
+Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `femenino-1350`, `gym-mancuernas` (480 y 720 px, reemplazada por `gym-piso-principal` el 01/11/2026) y `muro-cinturones` cuadrada (480 y 720 px, reemplazada por `muro-cinturones-retrato` el 02/11/2026); logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`. Desde el 02/11/2026, `tatami-vacio-480` se usa en las preguntas frecuentes; `rolling-gi`, `bjj-mma-sala` y `kids-reto` siguen sin uso.
 
 ### Material entregado por el equipo (octubre 2026)
 

@@ -616,6 +616,7 @@ p { margin: 0; }
 .coach-texto::before { content: ""; position: absolute; left: 20px; top: 0; width: 64px; height: 6px; background: var(--rojo); }
 .coach-etiqueta, .coach .trayectoria h4 { color: var(--franja-gris); }
 .coach h3 { font-size: var(--t-58); }
+.coach-bio { max-width: 60ch; font-size: var(--t-19); }
 .credenciales { list-style: none; margin: 0; padding: 0; display: grid; column-gap: 24px; }
 .credenciales li { padding: 10px 0; border-top: 1px solid #2a2a2a; font-weight: 500; }
 .logros { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--rojo); }
@@ -676,6 +677,7 @@ p { margin: 0; }
 .faq-fotos img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
 .faq-fotos .horizontal img { aspect-ratio: 4 / 3; }
 .faq-fotos .vertical img { aspect-ratio: 3 / 4; }
+.faq-fotos li:only-child img { aspect-ratio: auto; } /* una sola foto: se ve entera */
 .faq-fotos figcaption { margin-top: 8px; font-size: var(--t-14); color: var(--gris); }
 @media (min-width: 600px) { .faq-fotos { gap: 16px; } }
 @media (min-width: 1200px) { .faq .wrap { grid-template-columns: 5fr 7fr; gap: 56px; } }

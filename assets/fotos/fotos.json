@@ -319,5 +319,23 @@
   ],
   "src": "muro-cinturones.jpg",
   "recorte": "345,200,1095,1200"
+ },
+ "gi-grupo": {
+  "w": 332,
+  "h": 365,
+  "widths": [
+   332
+  ],
+  "src": "gi-grupo.png",
+  "recorte": "1,0,333,365"
+ },
+ "ropa-primera-clase": {
+  "w": 377,
+  "h": 248,
+  "widths": [
+   377
+  ],
+  "src": "ropa-primera-clase.png",
+  "recorte": "0,9,377,257"
  }
 }
