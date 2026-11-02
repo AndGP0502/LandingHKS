@@ -109,7 +109,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 - Existencia de un grupo femenino activo en jiu-jitsu.
 - Fernando Cárdenas Jr.: tecnólogo en fisioterapia, entrenador y preparador físico profesional (indicación del usuario, 01/11/2026).
 - Nombre del servicio de terapia: Rehabilitación Integral (confirmado por el usuario, 01/11/2026; sin "BIC", a pedido del usuario).
-- Gimnasio de dos pisos con área de cardio; Fernando Cárdenas Jr. fue head coach de Marlon "Chito" Vera en su pelea de exhibición de jiu-jitsu en Ecuador y graduó a cinturón azul a Mayton Perea, actual peleador de UFC (indicación del usuario, 01/11/2026).
+- Gimnasio de dos pisos con área de cardio; Fernando Cárdenas Jr. fue oficial de la comisión del evento durante la pelea de exhibición de jiu-jitsu de Marlon "Chito" Vera en Ecuador (corregido el 01/11/2026: el propietario aclaró que no fue su head coach) y graduó a cinturón azul a Mayton Perea, actual peleador de UFC (indicación del usuario, 01/11/2026).
 - Horario de clases 2026 (flyer enviado por el cliente) y dirección.
 
 ### Histórico o vencido (se conserva, no se muestra como vigente)
@@ -137,7 +137,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 5. **Equipo:**
    - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima.
    - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
-   - Rol exacto de Fernando en el evento de Chito Vera: la credencial de la foto dice "VERA-ALDO" y "COMMISSION"; el sitio dice "head coach" según lo indicado.
+   - Rol de Fernando en el evento de Chito Vera: resuelto el 01/11/2026. El propietario aclaró que fue oficial de la comisión del evento, en línea con la credencial de la foto ("COMMISSION"); no fue su head coach. Falta confirmar si se puede nombrar el evento.
 6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usa el logo oficial horizontal de 1280×620 px entregado el 01/11/2026; un vector permitiría más nitidez y fondo transparente).
 7. **Publicación:** dominio (reemplazar `TU-DOMINIO` en `sitemap.xml` y `robots.txt`, y poner `canonical` y `og:image` absolutos).
 

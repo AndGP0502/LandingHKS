@@ -211,7 +211,7 @@ Datos nuevos indicados por el usuario (01/11/2026), publicados:
 - El área de tatami mide **100 m²**: dato proporcionado directamente por el propietario de Hulk Sports el 01/11/2026; no es una medición independiente. Se publica en la lista de zonas y bajo ella en `horarios-y-planes.html`, y en el pie de foto de la galería de `index.html`. Los 800 m² de instalaciones siguen igual; el tatami es una parte de ese total.
 - Página 2: se quitó la nota "dato publicado en 2023 al estrenar la sede actual" de los 800 m² y la columna "Por confirmar" de Terapia (pedido del usuario, 01/11/2026). Los pendientes de terapia siguen en el README.
 - El servicio de terapia física y deportiva se llama **Rehabilitación Integral** (confirmado por el usuario el 01/11/2026; el mural de la sala dice "BIC Rehabilitación Integral", pero el usuario pidió quitar "BIC" del sitio).
-- Fernando Cárdenas Jr. fue **head coach de Marlon "Chito" Vera**, peleador de UFC, en su pelea de exhibición de jiu-jitsu en Ecuador.
+- Fernando Cárdenas Jr. fue **oficial de la comisión del evento** durante la pelea de exhibición de jiu-jitsu de Marlon "Chito" Vera, peleador de UFC, en Ecuador. **Corrección del 01/11/2026 (aclaración del propietario):** NO fue head coach de Chito Vera; la afirmación anterior se retiró del sitio y de la documentación. Su cargo de Head Coach de Hulk Sports no cambia.
 - **Mayton Perea**, alumno de Fernando Cárdenas Jr., fue graduado a cinturón azul por él en Hulk Sports y es **actual peleador de UFC**. El certificado de la foto dice "Hulk Sports, certificado, cinturón azul de jiu jitsu brasileño, Mayton Perea", firmado por Fernando Cárdenas.
 
 Cuatro fotos más (01/11/2026). El usuario reemplazó dos archivos de la galería y envió dos fotos en el chat. Originales en `assets/fotos/fuente/`.
@@ -226,7 +226,7 @@ Cuatro fotos más (01/11/2026). El usuario reemplazó dos archivos de la galerí
 - No se publica el nombre de la alumna de las medallas. Si es menor de edad, el permiso de su representante para publicar la foto es responsabilidad del cliente, igual que con las fotos y el video de niños.
 
 Visto en las fotos, **por confirmar y no publicado**:
-- La credencial de Fernando en la foto con Chito Vera dice "VERA-ALDO" y "COMMISSION". Confirmar el rol exacto en ese evento y si se puede nombrar el evento.
+- La credencial de Fernando en la foto con Chito Vera dice "VERA-ALDO" y "COMMISSION". Rol resuelto el 01/11/2026: oficial de la comisión del evento (aclaración del propietario). Por confirmar solo si se puede nombrar el evento.
 - Bicicletas de spinning en el piso principal (foto `gym-piso-principal`): se nombran en "Cardio" de la página 2 por ser visibles; la clase de spinning sigue por confirmar.
 
 Retirada del sitio (01/11/2026, a pedido del usuario): `muro-logo` ("La pared del tatami", fotograma de REEL-DUOC). Archivos eliminados; recuperables desde el historial de git.
