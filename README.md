@@ -132,13 +132,14 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 3. **Servicios e instalaciones:**
    - Muay Thai: no se encontró en la revisión del 31/10/2026 (esto no prueba que no exista); ¿se sigue dando?
    - Spinning: ¿sigue vigente?
-   - Parqueadero: capacidad, costo y vigencia de los detalles "privado" y "videovigilancia" (publicaciones de 2025).
+   - Parqueadero: capacidad, costo y vigencia de los detalles "privado" y "videovigilancia" (publicaciones de 2025). Falta una foto: es la única pregunta frecuente sin foto, porque @hulk.sports no tiene ninguna del parqueadero.
    - Normas del gimnasio y qué ropa llevar a la primera clase (¿prestan kimono?).
    - Vigencia de las instalaciones listadas en 2023 (800 m², cancha de básquet y ecuavóley, área verde, "tren superior e inferior", "cross training y TRX") y fuente de "peso libre y máquinas".
 4. **Terapia física:** servicios específicos de fisioterapia que ofrece actualmente Hulk Sports y quién los atiende (el equipo envió una propuesta de servicios que **no está confirmada** y no se publica); además, días y horas, valor por sesión, modalidad, disponibilidad y cupos, convenios con seguros, qué traer y cómo se agenda.
 5. **Equipo:**
    - Campeones: permiso de Britany Cárdenas (y de su representante si es menor), Mateo Cordero y Fabio para publicar sus fotos y nombres; apellido de Fabio; si "Donovan" es @donovan_cardenas.
-   - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima.
+   - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima (Cristian, Donovan y Diana no tienen foto).
+   - Donovan: su tarjeta dice "Profesor" porque el propietario lo agregó a esa sección; falta saber de qué disciplina, su apellido y su cinturón.
    - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
    - Rol de Fernando en el evento de Chito Vera: resuelto el 01/11/2026. El propietario aclaró que fue oficial de la comisión del evento, en línea con la credencial de la foto ("COMMISSION"); no fue su head coach. Falta confirmar si se puede nombrar el evento.
 6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usa el logo oficial horizontal de 1280×620 px entregado el 01/11/2026; un vector permitiría más nitidez y fondo transparente).
@@ -147,6 +148,8 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 ## Decisiones tomadas sin preguntar
 
 - **Navegador:** se usó Claude in Chrome con tu sesión de Instagram. Chrome bloqueó las descargas múltiples; las fotos y el reel se pasaron por el portapapeles en lugar de archivos.
+- **Profesores (02/11/2026):** se quitó el párrafo de introducción a pedido del usuario. Fernando va en un bloque negro con foto, grado, credenciales, logros y trayectoria; Cristian, Donovan y Diana, en tarjetas iguales debajo. El cinturón dibujado junto al grado es dato: negro con punta roja, y una tira blanca por grado (Fernando 2.º Dan, dos tiras; Cristian, sin grado publicado, ninguna). "Fundador" no se publica porque ninguna fuente lo confirma.
+- **Fotos en las preguntas frecuentes (02/11/2026):** cada respuesta muestra fotos del local que ya estaban en el proyecto (detalle en `content/inventario.md`). Las dos fotos de una respuesta quedan a la misma altura.
 - **Nuestros campeones (02/11/2026):** a pedido expreso del usuario se usaron fotos de @fabiodasilvajj (dos publicaciones que él indicó), @brit_bjj y @mateoc95. Es la única excepción a la regla de abajo; fuentes y datos en `content/inventario.md`. El permiso de imagen de los competidores es responsabilidad del cliente (Britany compite en juvenil).
 - **Cabecera:** seis enlaces (Horarios, Instalaciones, Profesores, Nuestros campeones, Preguntas frecuentes y Ubicación). Hasta 1199 px van en una segunda fila bajo el logo; en celular esa fila se desliza y un degradado a la derecha avisa que hay más.
 - **Solo contenido de @hulk.sports:** se descartaron posts de colaboración de otras cuentas, imágenes marcadas como "Contenido de IA" y las destacadas (tienen unas 250 semanas y son de la sede anterior en Cipreses).

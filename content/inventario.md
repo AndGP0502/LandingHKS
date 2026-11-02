@@ -136,8 +136,10 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 | Fernando Cárdenas Jr. | Entrenador y preparador físico profesional | Indicación del usuario, 01/11/2026 |
 | Fernando Cárdenas Jr. | Compite en fisicoculturismo (foto `profe-fisicoculturismo`, número 73) | Foto enviada por el usuario, 01/11/2026 |
 | Cristian Ruales (@cristian.ruales.3) | Profesor de adultos, "faixa preta" (cinturón negro) | flyer y caption `C4f53PPLTMs` (2024) |
-| Donovan | Publicado solo con el nombre «Donovan», en una tarjeta de profesores sin rol ni otros datos | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, función (profesor de qué), grado o cinturón, certificaciones, trayectoria, foto y enlace público. No se publica ninguno de esos datos hasta que se confirmen. |
+| Donovan | Publicado con el nombre «Donovan» y la etiqueta «Profesor» (el propietario lo agregó a la sección de profesores), sin otros datos | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, función (profesor de qué), grado o cinturón, certificaciones, trayectoria, foto y enlace público. No se publica ninguno de esos datos hasta que se confirmen. |
 | Diana | Instructora de gimnasio (publicada con el nombre «Diana» y ese cargo, en una tarjeta de la sección «Profesores e instructores») | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, formación, trayectoria, fotografía, enlaces públicos y horarios. No se publica ninguno de esos datos hasta que se confirmen. |
+
+Sección rediseñada el 02/11/2026 (pedido del usuario): se quitó el párrafo de introducción ("Fernando Cárdenas Jr. y biografía hasta la fecha (octubre de 2026)…"). Se conserva "Head Coach de Hulk Sports desde 2020" (confirmado, arriba). La palabra "fundador" de ese párrafo no se publica: ninguna fuente de este inventario la respalda.
 
 Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fernando Cárdenas: **resuelto**, cinturón negro de Jiu Jitsu brasileño (Instagram @hulkbjj, 31/10/2026). El nombre quedó **unificado** como "Fernando Cárdenas Jr." en todo el sitio (octubre 2026), igual que en @hulkbjj y en el encabezado de la biografía del equipo.
 
@@ -193,6 +195,21 @@ Pedido expreso del usuario (02/11/2026): publicar fotos de estos competidores de
 - Rojo del logo anterior: muestras dominantes `#E80000`-`#F00000` (logo) y `#E80000` (banda de flyers). Token del sitio: `#D90000` (ajustado para AA sobre fondo claro).
 - Negro y blanco del logo; tatami y paredes blancas con zócalo negro en el local (REEL-DUOC, fotos de grilla).
 
+## Fotos en las preguntas frecuentes (`horarios-y-planes.html`, `#preguntas`)
+
+Agregadas el 02/11/2026 a pedido del usuario ("fotos dentro de esa pregunta como ejemplos"). Todas son fotos que ya estaban en el proyecto; los pies de foto describen solo lo que se ve.
+
+| Pregunta | Fotos |
+|---|---|
+| ¿Puedo probar una clase…? | recepcion, adultos-manana |
+| ¿Necesito experiencia? | drill-tatami |
+| ¿Qué diferencia hay entre Gi y No-Gi? | rolling-gi (Gi), equipo-nogi (No-Gi) |
+| ¿Qué ropa llevo a la primera clase? | mma-sparring, bjj-mma-sala |
+| ¿Desde qué edad pueden entrenar los niños? | kids-fila, kids-reto |
+| ¿Hay mujeres entrenando? | femenino, femenino-medallas (ya estaban) |
+| ¿Hay parqueadero? | **Sin foto.** Se revisaron las dos publicaciones que mencionan el parqueadero: `DPMSXSskZod` (flyer y dos videos del tatami) y `CxvtpilOKLP` (flyer), y la parte reciente de la cuadrícula de @hulk.sports. Ninguna muestra el parqueadero. Pendiente: foto del cliente. |
+| ¿Hay open mat los sábados? | tatami-vacio (no consta que sea de un open mat; el pie dice "El tatami de Hulk Sports.") |
+
 ## Media descargada (solo de @hulk.sports)
 
 Fotos procesadas en `assets/fotos/` (fuente recortada en `assets/fotos/fuente/`). Recortes para quitar textos superpuestos de los flyers.
@@ -212,7 +229,7 @@ Fotos procesadas en `assets/fotos/` (fuente recortada en `assets/fotos/fuente/`)
 | rolling-gi, drill-tatami, mma-sparring, gym-mancuernas, bjj-mma-sala | fotogramas de REEL-DUOC |
 
 Videos en `assets/videos/` (todos de REEL-DUOC, tramos sin texto encima, sin audio): `hero.mp4` (9,8 s), `bjj.mp4`, `mma.mp4`.
-Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `rolling-gi` (480 y 720 px), `tatami-vacio-480`, `femenino-1350`, `gym-mancuernas` (480 y 720 px, reemplazada por `gym-piso-principal` el 01/11/2026) y `bjj-mma-sala` (480 y 720 px, reemplazada por las fotos del gimnasio el 01/11/2026); logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`.
+Recursos multimedia sin usar en el sitio (revisión del 31/10/2026; se conservan, no se eliminan): `assets/videos/mma.mp4` y `mma-poster.webp`; fotos `equipo-grande` (480, 800, 1200 y 1440 px), `femenino-1350`, `gym-mancuernas` (480 y 720 px, reemplazada por `gym-piso-principal` el 01/11/2026) y `muro-cinturones` cuadrada (480 y 720 px, reemplazada por `muro-cinturones-retrato` el 02/11/2026); logos `logo-hulk-sports.png` y `logo-hulk-sports-192.png`. Desde el 02/11/2026, `rolling-gi`, `tatami-vacio-480` y `bjj-mma-sala` se usan en las preguntas frecuentes.
 
 ### Material entregado por el equipo (octubre 2026)
 
@@ -223,7 +240,7 @@ Fotos del local entregadas por el equipo del proyecto (fuente: material entregad
 | tatami-amplio | Tatami con luces LED hexagonales y paredes acolchadas negras | 1:1 | `index.html`, galería, posición 1 ("Tatami de 100 m²."); `horarios-y-planes.html`, Gimnasio, bajo la lista de zonas (sin recorte) |
 | recepcion | Mostrador de entrada con el logo y el tatami al fondo | 1:1, sin los objetos de limpieza | `index.html`, galería, posición 6 |
 | muro-medallas | Cuatro cuadros de medallas | Solo los cuadros (sin la tira de fotos de niños) | `index.html`, Torneos y seminarios |
-| muro-cinturones | Soporte de cinturones con placa | Solo el soporte (sin certificados ni equipo de oficina) | `horarios-y-planes.html`, Profesores |
+| muro-cinturones | Soporte de cinturones con placa | Solo el soporte (sin certificados ni equipo de oficina). Desde el 02/11/2026 se usa `muro-cinturones-retrato` (3:4, recorte 345,200,1095,1200 del original; 480 y 750 px); las versiones cuadradas de 480 y 720 px quedan sin uso | `horarios-y-planes.html`, Profesores, bloque de Fernando |
 
 ### Material entregado por el usuario (1 de noviembre de 2026)
 

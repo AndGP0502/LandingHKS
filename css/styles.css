@@ -112,7 +112,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 
 :focus-visible { outline: 3px solid var(--rojo-texto); outline-offset: 3px; }
 /* Sobre negro o rojo el anillo rojo no se distingue: va en el color de texto de la franja */
-.franja :focus-visible, .area-bjj :focus-visible, .campeones :focus-visible, .barra-movil :focus-visible, .mapa-capa :focus-visible { outline-color: var(--franja-texto); }
+.franja :focus-visible, .area-bjj :focus-visible, .campeones :focus-visible, .coach :focus-visible, .barra-movil :focus-visible, .mapa-capa :focus-visible { outline-color: var(--franja-texto); }
 .barra-movil a:focus-visible { outline-offset: -3px; }
 
 /* Área de toque ampliada sin mover el texto: el enlace pequeño crece solo por su zona clicable */
@@ -604,31 +604,52 @@ p { margin: 0; }
 @media (min-width: 900px) { .terapia .columnas { grid-template-columns: 1fr 1fr; gap: 40px; } }
 
 /* Equipo */
-.equipo .wrap { display: grid; gap: 28px; }
-.profes { display: grid; gap: 16px; }
-.profe { border-top: 6px solid var(--tinta); padding-top: 16px; display: grid; gap: 8px; align-content: start; }
-.profe h3 { font-size: var(--t-33); font-stretch: 62%; font-weight: 800; text-transform: uppercase; }
-.profe .rol { font-weight: 600; }
-.equipo figure { margin: 24px 0 0; max-width: 420px; }
-.equipo figcaption { margin-top: 10px; font-size: var(--t-14); color: var(--gris); }
-.logros { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid var(--filo); }
-.logros li { padding: 10px 0 10px 18px; border-bottom: 1px solid var(--filo); position: relative; }
+.equipo .wrap { display: grid; gap: 32px; }
+.grado { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.grado .cinturon { flex: 0 0 112px; min-width: 0; }
+.coach-etiqueta, .profe-rol, .coach .trayectoria h4 { font-size: var(--t-14); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-stretch: 110%; }
+/* Head coach: bloque negro con foto, datos y trayectoria */
+.coach { display: grid; background: var(--franja); color: var(--franja-texto); border: 1px solid var(--franja-filo); }
+.coach-foto { margin: 0; }
+.coach-foto img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 25%; }
+.coach-texto { position: relative; display: grid; gap: 16px; align-content: start; padding: 36px 20px 28px; }
+.coach-texto::before { content: ""; position: absolute; left: 20px; top: 0; width: 64px; height: 6px; background: var(--rojo); }
+.coach-etiqueta, .coach .trayectoria h4 { color: var(--franja-gris); }
+.coach h3 { font-size: var(--t-58); }
+.credenciales { list-style: none; margin: 0; padding: 0; display: grid; column-gap: 24px; }
+.credenciales li { padding: 10px 0; border-top: 1px solid #2a2a2a; font-weight: 500; }
+.logros { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--rojo); }
+.logros li { padding: 10px 0 10px 18px; border-bottom: 1px solid #2a2a2a; position: relative; }
 .logros li::before { content: ""; position: absolute; left: 0; top: 1.05em; width: 8px; height: 3px; background: var(--rojo); }
-.trayectoria { display: grid; gap: 16px; }
-.trayectoria h3 { font-size: var(--t-25); font-stretch: 62%; font-weight: 800; text-transform: uppercase; }
+.coach-fuente { font-size: var(--t-14); color: var(--franja-gris); }
+.coach-fuente a { color: var(--franja-texto); }
+.coach .trayectoria { display: grid; gap: 16px; padding: 24px 20px 28px; border-top: 1px solid #2a2a2a; }
 .trayectoria-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.equipo .trayectoria figure { margin: 0; max-width: none; }
-.trayectoria img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.trayectoria figure { margin: 0; }
+.trayectoria img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+.trayectoria figcaption { margin-top: 10px; font-size: var(--t-14); color: var(--franja-gris); }
 .trayectoria-fotos figure:nth-child(3) { grid-column: 1 / -1; }
 .trayectoria-fotos figure:nth-child(3) img { aspect-ratio: 4 / 3; object-position: 50% 15%; }
+/* Resto del equipo: tarjetas iguales */
+.equipo-sub { font-size: var(--t-25); font-stretch: 62%; font-weight: 800; text-transform: uppercase; }
+.profes { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 16px; }
+.profe { display: grid; gap: 10px; align-content: start; padding: 20px; background: var(--placa); border: 1px solid var(--filo); border-top: 6px solid var(--tinta); }
+.profe-rol { color: var(--gris); }
+.profe h4 { font-size: var(--t-33); }
+@media (min-width: 600px) { .credenciales { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 768px) { .profes { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
 @media (min-width: 900px) {
-  .trayectoria { grid-column: 2; }
-  .trayectoria-fotos { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .equipo .wrap { gap: 40px; }
+  .coach { grid-template-columns: 5fr 7fr; }
+  .coach-foto { position: relative; min-height: 420px; }
+  .coach-foto img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; }
+  .coach-texto { padding: 52px 48px 44px; }
+  .coach-texto::before { left: 48px; }
+  .coach .trayectoria { grid-column: 1 / -1; gap: 20px; padding: 36px 48px 44px; }
+  .trayectoria-fotos { grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .trayectoria-fotos figure:nth-child(3) { grid-column: auto; }
-  .trayectoria-fotos figure:nth-child(3) img { aspect-ratio: 3 / 4; }
+  .trayectoria img, .trayectoria-fotos figure:nth-child(3) img { aspect-ratio: 1; object-position: 50% 25%; }
 }
-@media (min-width: 768px) { .profes { grid-template-columns: 1fr 1fr; gap: 32px; } }
-@media (min-width: 900px) { .equipo .wrap { grid-template-columns: 4fr 8fr; gap: 56px; } }
 
 /* FAQ */
 .faq { border-top: 1px solid var(--filo); }
@@ -643,11 +664,20 @@ p { margin: 0; }
 .faq summary::after { content: "+"; font-weight: 400; font-size: 1.6rem; line-height: 1; transition: transform 200ms var(--ease-out); }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq details > div { padding: 0 0 18px; max-width: 64ch; display: grid; gap: 8px; }
-.faq-fotos { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 16px; align-items: start; }
+/* Fotos de ejemplo: cada foto crece según su forma, así las dos quedan a la misma altura */
+.faq-fotos { list-style: none; margin: 8px 0 0; padding: 0; display: flex; gap: 12px; align-items: flex-start; }
+.faq-fotos li { flex: 1 1 0; min-width: 0; }
+.faq-fotos li.horizontal { flex-grow: 1.333; }
+.faq-fotos li.vertical { flex-grow: 0.75; }
+.faq-fotos li:only-child { flex: 0 1 300px; }
+.faq-fotos li.horizontal:only-child { flex-basis: 400px; }
+.faq-fotos li.vertical:only-child { flex-basis: 225px; }
 .faq-fotos figure { margin: 0; }
-.faq-fotos img { display: block; width: 100%; height: auto; border-radius: 0; }
+.faq-fotos img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.faq-fotos .horizontal img { aspect-ratio: 4 / 3; }
+.faq-fotos .vertical img { aspect-ratio: 3 / 4; }
 .faq-fotos figcaption { margin-top: 8px; font-size: var(--t-14); color: var(--gris); }
-@media (min-width: 600px) { .faq-fotos { grid-template-columns: 1fr 1fr; gap: 20px; } }
+@media (min-width: 600px) { .faq-fotos { gap: 16px; } }
 @media (min-width: 1200px) { .faq .wrap { grid-template-columns: 5fr 7fr; gap: 56px; } }
 
 /* Ubicación */

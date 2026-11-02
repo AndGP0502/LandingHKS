@@ -309,5 +309,15 @@
    800
   ],
   "src": "campeones-mateoc95-DXDYPTJDRee-portada.jpg"
+ },
+ "muro-cinturones-retrato": {
+  "w": 750,
+  "h": 1000,
+  "widths": [
+   480,
+   750
+  ],
+  "src": "muro-cinturones.jpg",
+  "recorte": "345,200,1095,1200"
  }
 }
