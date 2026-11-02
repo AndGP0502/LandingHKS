@@ -463,6 +463,12 @@ p { margin: 0; }
 .pie a { display: inline-flex; min-height: 44px; align-items: center; color: var(--franja-texto); }
 .pie address { font-style: normal; line-height: 1.5; }
 @media (min-width: 900px) { .pie .wrap { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+/* Crédito de T.O.Q: fila final del pie, esquina inferior izquierda. El azul es el de su logo en toqdev.com */
+.credito { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; padding-top: 16px; border-top: 1px solid #2a2a2a; font-size: var(--t-14); color: var(--franja-gris); }
+.credito p { display: flex; align-items: center; gap: 8px; }
+.pie .toq-logo { font-size: 1.1rem; font-weight: 800; letter-spacing: 0.06em; text-decoration: none; }
+.toq-logo span { color: #3b82f6; }
+.pie .credito ul { display: flex; flex-wrap: wrap; gap: 0 18px; }
 
 /* ---------- Barra móvil ---------- */
 .barra-movil {
