@@ -123,6 +123,7 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 | Fernando Cárdenas Jr. | Compite en fisicoculturismo (foto `profe-fisicoculturismo`, número 73) | Foto enviada por el usuario, 01/11/2026 |
 | Cristian Ruales (@cristian.ruales.3) | Profesor de adultos, "faixa preta" (cinturón negro) | flyer y caption `C4f53PPLTMs` (2024) |
 | Donovan | Publicado solo con el nombre «Donovan», en una tarjeta de profesores sin rol ni otros datos | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, función (profesor de qué), grado o cinturón, certificaciones, trayectoria, foto y enlace público. No se publica ninguno de esos datos hasta que se confirmen. |
+| Diana | Instructora de gimnasio (publicada con el nombre «Diana» y ese cargo, en una tarjeta de la sección «Profesores e instructores») | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, formación, trayectoria, fotografía, enlaces públicos y horarios. No se publica ninguno de esos datos hasta que se confirmen. |
 
 Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fernando Cárdenas: **resuelto**, cinturón negro de Jiu Jitsu brasileño (Instagram @hulkbjj, 31/10/2026). El nombre quedó **unificado** como "Fernando Cárdenas Jr." en todo el sitio (octubre 2026), igual que en @hulkbjj y en el encabezado de la biografía del equipo.
 
