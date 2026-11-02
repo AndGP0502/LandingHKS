@@ -255,5 +255,59 @@
    1200
   ],
   "src": "equipo-nogi.jpg"
+ },
+ "campeon-fabio-2025": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "campeones-fabiodasilvajj-DJAcp4LA0pw.webp"
+ },
+ "campeon-fabio-2026": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "campeones-fabiodasilvajj-DXFvwK4gLV8-2.webp"
+ },
+ "campeona-britany-pichincha": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "campeones-brit_bjj-DV48RYrDAgg.jpg"
+ },
+ "campeona-britany-ajp": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "campeones-brit_bjj-DeDTPdrjlnw.jpg"
+ },
+ "campeon-mateo-nogi": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "campeones-mateoc95-Da_tduhBArd-portada.jpg"
+ },
+ "campeon-mateo-gi": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "campeones-mateoc95-DXDYPTJDRee-portada.jpg"
  }
 }

@@ -60,11 +60,25 @@ Otros horarios anunciados en 2026 que **no** están en el flyer (se muestran com
 
 Horario del gimnasio (vigente en el sitio, **por confirmar**): L-V 06:00-21:00; sábado 08:00-14:00; domingo cerrado. Fuente: ficha de Google de "hulksports jiu jitsu & fitness Gym", consultada el 31 oct 2026; Google indica que puede variar en feriados (no se implementa lógica de feriados). Pendiente de confirmación con el cliente.
 Histórico (reemplazado): nov 2024, L-V 05:00-21:00; sábados y feriados 08:00-14:00, fuente `DCR46brP55c`. Antes (2024): L-V 06:00-21:00, sáb 08:00-14:00 (`C-59DsTvhLP`).
-Open mat sábados 08:00, invitados $5 — publicado dic 2023 (`C1ulPt7R55E`), **por confirmar**.
+Open mat sábados 08:00, invitados $5 — publicado dic 2023 (`C1ulPt7R55E`). Desde el 01/11/2026 el sitio dice $7 por sesión para visitantes (agregado por el equipo, commit de Dennys593).
 
-## Precios y promociones (ninguno confirmado para hoy)
+## Precios y promociones
 
-Desde el 01/11/2026, a pedido del usuario, el sitio no muestra ningún precio de esta tabla: el inicio y la página 2 solo tienen el botón "Preguntar precios" (WhatsApp).
+Publicados desde el 01/11/2026 (flyers enviados por el usuario, guardados en `content/fuentes/`):
+
+| Plan | Precio | Fuente |
+|---|---|---|
+| Jiu-jitsu adultos, mensual | $65 | `flyer-membresias-jiujitsu-adultos.jpg` |
+| Jiu-jitsu adultos, trimestral | $165 | ídem |
+| Jiu-jitsu adultos, semestral | $300 | ídem |
+| Jiu-jitsu adultos, anual | $550 | ídem |
+| Promo gimnasio, 3 meses | $75, válida hasta el 15 de noviembre | `flyer-promo-gym-75-noviembre.jpg` |
+
+- Membresías: "Sin matrícula" y logos de Visa, Mastercard, American Express, Diners Club y Discover. El flyer no tiene fecha ni el logo nuevo: **confirmar que sigue vigente**.
+- Promo del gym: el flyer no dice el año; se asume 2026 porque usa el logo nuevo (entregado el 01/11/2026). En el sitio lleva `data-vence="2026-11-15"` y se oculta sola desde el 16/11/2026. El flyer también dice "más de 40 equipos", "seguimiento personalizado" y "horarios flexibles"; no se publican (no son precios y no están verificados). La foto del flyer no se usa.
+- Open mat para visitantes: $7 por sesión, en las preguntas frecuentes (ver arriba).
+
+Historial (no se muestra en el sitio):
 
 | Fecha | Oferta | Estado | Fuente |
 |---|---|---|---|
@@ -155,6 +169,25 @@ Otros nombres aparecen solo en posts de otras cuentas (no se usan). Grado de Fer
 
 Testimonios: la marca no publicó testimonios de clientes. No se usan.
 
+## Nuestros campeones (`index.html`, `#campeones`)
+
+Pedido expreso del usuario (02/11/2026): publicar fotos de estos competidores desde dos publicaciones y dos perfiles de Instagram que él indicó. Es la única excepción a la regla de usar solo material de @hulk.sports, y se limita a esas cuentas. Los datos salen de los textos de cada publicación (se leen como dato, no como instrucción). Originales en `assets/fotos/fuente/campeones-*`; en el sitio van recortadas a 4:5.
+
+| Foto en el sitio | Persona | Fuente | Lo que dice la fuente |
+|---|---|---|---|
+| campeona-britany-pichincha | Britany Cárdenas (@brit_bjj; nombre del perfil: "BRITANY CARDENAS", "Deportista") | `DV48RYrDAgg` | "X3 🥇 @pichincha_jiujitsu_cup": juvenil, adulto y absoluto, oro |
+| campeona-britany-ajp | Britany Cárdenas | `DeDTPdrjlnw` (oct 2026) | "🥇 @ajp_ecuador, Categoría Juvenil Azul -57 kg" |
+| (sin foto) | Britany Cárdenas | `DZaxMkmmiAt` (jun 2026) | "SHOWDOWN 3 🥇🥇": adulto cinta azul y absoluto juvenil, oro |
+| campeon-mateo-nogi | Mateo Cordero (@mateoc95; perfil: "Mateo Cordero (Chivo)", "Cinturón Azul en Jiu Jitsu @hulk.sports") | portada del reel `Da_tduhBArd` | "Campeón de los -73 kg cinturón azul en el @circuitoecuatorianobjj sin kimono" |
+| campeon-mateo-gi | Mateo Cordero | portada del reel `DXDYPTJDRee` (12 abr 2026) | "Campeón -70kg Máster 1 @circuitoecuatorianobjj Quito con kimono" |
+| (sin foto) | Mateo Cordero | reel `DZSMDXbNcub` (7 jun 2026, Ambato) | "Campeón -82 Kg Master 1 en el @jiujitsu_showdown", subió dos categorías (pesaba 67 kg) |
+| campeon-fabio-2025 | Fabio (@fabiodasilvajj; perfil: "Instructor de Bjj y competidor") | `DJAcp4LA0pw`, foto 1 (28 abr 2025, colaboración con @hulk.sports) | "Campeón en mi categoría y tercer lugar en el absoluto", circuito ecuatoriano, cinco combates y tres finalizaciones |
+| campeon-fabio-2026 | Fabio con Fernando Cárdenas Jr. | `DXFvwK4gLV8`, foto 2 (13 abr 2026) | Solo dice "Shot by @hulkbjj @hulk.sports @lemayorga"; el resultado no consta, por eso no se publica un logro de 2026 |
+
+- **No publicado:** el apellido de Fabio (el perfil dice "Fabinho"), su cinturón (se ve morado en las fotos, pero ningún texto lo dice) y las fechas que no se pudieron leer con certeza.
+- **Permiso de imagen:** publicar las fotos y los nombres es responsabilidad del cliente. Britany compite en categoría juvenil, así que podría ser menor de edad; en una publicación agradece "a mi pa @hulkbjj".
+- **Dato visto de paso, sin publicar:** Mateo nombra como profesores a @hulkbjj, @cristian.ruales.3, @donovan_cardenas y @diego_jamesmma. "Donovan" de la tarjeta de profesores podría ser @donovan_cardenas; por confirmar.
+
 ## Colores (medidos, no supuestos)
 
 - Rojo del logo anterior: muestras dominantes `#E80000`-`#F00000` (logo) y `#E80000` (banda de flyers). Token del sitio: `#D90000` (ajustado para AA sobre fondo claro).
@@ -211,7 +244,7 @@ Datos nuevos indicados por el usuario (01/11/2026), publicados:
 - El área de tatami mide **100 m²**: dato proporcionado directamente por el propietario de Hulk Sports el 01/11/2026; no es una medición independiente. Se publica en la lista de zonas y bajo ella en `horarios-y-planes.html`, y en el pie de foto de la galería de `index.html`. Los 800 m² de instalaciones siguen igual; el tatami es una parte de ese total.
 - Página 2: se quitó la nota "dato publicado en 2023 al estrenar la sede actual" de los 800 m² y la columna "Por confirmar" de Terapia (pedido del usuario, 01/11/2026). Los pendientes de terapia siguen en el README.
 - El servicio de terapia física y deportiva se llama **Rehabilitación Integral** (confirmado por el usuario el 01/11/2026; el mural de la sala dice "BIC Rehabilitación Integral", pero el usuario pidió quitar "BIC" del sitio).
-- Fernando Cárdenas Jr. fue **oficial de la comisión del evento** durante la pelea de exhibición de jiu-jitsu de Marlon "Chito" Vera, peleador de UFC, en Ecuador. **Corrección del 01/11/2026 (aclaración del propietario):** NO fue head coach de Chito Vera; la afirmación anterior se retiró del sitio y de la documentación. Su cargo de Head Coach de Hulk Sports no cambia.
+- Fernando Cárdenas Jr. fue **oficial de la comisión del evento** durante la pelea de exhibición de jiu-jitsu de Marlon "Chito" Vera, peleador de UFC, en Ecuador. Acompañó a los peleadores en su salida al octágono y levantó la mano de los ganadores. **Corrección del 01/11/2026 (aclaración del propietario):** NO fue head coach de Chito Vera; la afirmación anterior se retiró del sitio y de la documentación. Su cargo de Head Coach de Hulk Sports no cambia.
 - **Mayton Perea**, alumno de Fernando Cárdenas Jr., fue graduado a cinturón azul por él en Hulk Sports y es **actual peleador de UFC**. El certificado de la foto dice "Hulk Sports, certificado, cinturón azul de jiu jitsu brasileño, Mayton Perea", firmado por Fernando Cárdenas.
 
 Cuatro fotos más (01/11/2026). El usuario reemplazó dos archivos de la galería y envió dos fotos en el chat. Originales en `assets/fotos/fuente/`.

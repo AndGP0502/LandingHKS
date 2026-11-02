@@ -37,6 +37,8 @@
 
   --barra-movil: 64px;
   --alto-top: 64px;
+  --fila-top: 56px; /* celular y tablet: fila del logo */
+  --fila-nav: 44px; /* celular y tablet: fila de enlaces */
   --cinturon-filo: #3a3a3a;
   --clase-mma: #e6e7e4;
   --franja-filo: var(--franja);
@@ -110,7 +112,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 
 :focus-visible { outline: 3px solid var(--rojo-texto); outline-offset: 3px; }
 /* Sobre negro o rojo el anillo rojo no se distingue: va en el color de texto de la franja */
-.franja :focus-visible, .area-bjj :focus-visible, .barra-movil :focus-visible, .mapa-capa :focus-visible { outline-color: var(--franja-texto); }
+.franja :focus-visible, .area-bjj :focus-visible, .campeones :focus-visible, .barra-movil :focus-visible, .mapa-capa :focus-visible { outline-color: var(--franja-texto); }
 .barra-movil a:focus-visible { outline-offset: -3px; }
 
 /* Área de toque ampliada sin mover el texto: el enlace pequeño crece solo por su zona clicable */
@@ -189,16 +191,18 @@ p { margin: 0; }
   background: var(--tatami);
   border-bottom: 1px solid var(--filo);
 }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: var(--alto-top); }
-.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; min-height: 44px; }
+.top .wrap { display: flex; align-items: center; gap: 12px; height: var(--alto-top); }
+.marca { display: flex; flex-shrink: 0; align-items: center; gap: 10px; text-decoration: none; min-height: 44px; }
 .marca img { height: 48px; width: auto; }
-.nav { display: flex; align-items: center; gap: 4px; }
+.nav { display: flex; align-items: center; gap: 4px; margin-left: auto; }
 .nav a:not(.btn) {
   display: inline-flex; align-items: center; min-height: 44px; padding-inline: 10px;
-  text-decoration: none; font-weight: 600; font-stretch: 90%;
+  text-decoration: none; font-weight: 600; font-stretch: 90%; white-space: nowrap;
 }
 .nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--rojo); }
-.nav .btn { min-height: 42px; padding: 8px 16px; margin-left: 8px; }
+.nav .largo { display: none; }
+@media (min-width: 1280px) { .nav .corto { display: none; } .nav .largo { display: inline; } }
+.top .btn { min-height: 42px; padding: 8px 16px; margin-left: 8px; }
 /* Botón de tema: solo con JS. Muestra la luna en claro y el sol en oscuro */
 .tema {
   display: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin-left: 4px; padding: 0;
@@ -213,13 +217,27 @@ p { margin: 0; }
 @media (hover: hover) and (pointer: fine) { .tema:hover { border-color: var(--tinta); } }
 .solo-escritorio { display: none !important; }
 @media (min-width: 900px) { .solo-escritorio { display: inline-flex !important; } .solo-movil { display: none !important; } }
-/* Tablet: caben «Horarios y planes» y «Ubicación»; WhatsApp sigue en la barra fija.
-   Los límites superiores llevan .99px (899.99, 1199.99, 767.99) para no dejar hueco con anchos fraccionarios (zoom del navegador) */
-@media (min-width: 600px) and (max-width: 899.99px) {
-  .nav a > .solo-escritorio { display: inline !important; }
-  .nav a > .solo-movil { display: none !important; }
+/* Hasta 1199 px (celular, tablet y laptops chicas): arriba el logo y el botón de tema; los seis
+   enlaces bajan a una segunda fila. En celular WhatsApp sigue en la barra fija. Los límites superiores llevan .99px (899.99, 1199.99, 767.99)
+   para no dejar hueco con anchos fraccionarios (zoom del navegador) */
+@media (max-width: 1199.99px) {
+  :root { --alto-top: calc(var(--fila-top) + var(--fila-nav)); }
+  .top .wrap { flex-wrap: wrap; height: auto; row-gap: 0; }
+  .marca { min-height: var(--fila-top); }
+  .tema { margin-left: auto; }
+  .nav {
+    order: 1; flex: 0 0 calc(100% + 32px); margin: 0 -16px; padding: 0 10px; height: var(--fila-nav);
+    border-top: 1px solid var(--filo); overflow-x: auto; scrollbar-width: none;
+  }
+  .nav a:not(.btn) { flex: none; min-height: var(--fila-nav); padding-inline: 6px; }
+  .nav.hay-mas { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 56px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 56px), transparent); }
+}
+@media (max-width: 359.99px) { .nav a:not(.btn) { padding-inline: 4px; font-size: 0.9375rem; } }
+/* Desde 600 px cabe también «Ubicación» */
+@media (min-width: 600px) and (max-width: 1199.99px) {
   .nav a.solo-escritorio:not(.btn) { display: inline-flex !important; }
 }
+@media (min-width: 768px) and (max-width: 1199.99px) { .nav { flex-basis: calc(100% + 64px); margin-inline: -32px; padding-inline: 26px; } }
 
 /* ---------- Hero ---------- */
 .hero { padding-block: 28px 0; }
@@ -277,8 +295,6 @@ p { margin: 0; }
 .franja-hoy .pasada { color: var(--franja-gris); }
 .franja .mini { display: block; margin-top: 4px; font-size: var(--t-14); font-weight: 400; color: var(--franja-gris); }
 .franja .mini a { color: var(--franja-gris); }
-/* Celda de precios: el link a WhatsApp en 16 px */
-.franja .mini-precio { font-size: var(--t-16); }
 @media (min-width: 640px) {
   .franja-datos { grid-template-columns: 1fr 1fr; }
   .franja-datos > div:nth-child(2) { border-top: 0; }
@@ -359,6 +375,20 @@ p { margin: 0; }
   .ninos .wrap { grid-template-columns: 6fr 5fr; gap: 64px; align-items: center; }
   .ninos-texto { margin-top: 0; }
 }
+
+/* Nuestros campeones: franja oscura con tres fichas */
+.campeones { background: var(--franja); color: var(--franja-texto); box-shadow: inset 0 1px 0 var(--franja-filo), inset 0 -1px 0 var(--franja-filo); }
+.campeones .wrap { display: grid; gap: 40px; }
+.campeones .sec-intro { color: var(--franja-gris); }
+.campeones-lista { display: grid; gap: 48px; }
+.campeon-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+.campeon-fotos img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.campeon h3 { font-size: var(--t-33); }
+.campeon-dato { margin-top: 8px; font-size: var(--t-14); color: var(--franja-gris); }
+.campeon-dato a { color: var(--franja-texto); }
+.campeon-logros { list-style: none; margin: 14px 0 0; padding: 0; border-top: 2px solid var(--rojo); }
+.campeon-logros li { padding: 10px 0; border-bottom: 1px solid #2a2a2a; }
+@media (min-width: 900px) { .campeones-lista { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
 
 /* Resultados */
 .resultados { border-top: 1px solid var(--filo); }
@@ -519,6 +549,22 @@ p { margin: 0; }
 /* Precios */
 .precios .wrap { display: grid; justify-items: center; gap: 28px; text-align: center; }
 .precios .sec-titulo { max-width: none; }
+.tarifas-grid { width: min(100%, 880px); display: grid; gap: 24px; text-align: left; }
+.tarifas h3, .promo-etiqueta { font-size: var(--t-14); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-stretch: 110%; }
+.tarifas h3 { padding-bottom: 10px; border-bottom: 2px solid var(--tinta); }
+.sin-corte { white-space: nowrap; }
+.tarifas-lista { list-style: none; margin: 0; padding: 0; }
+.tarifas-lista li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--filo); font-weight: 600; font-size: var(--t-19); }
+.tarifas-lista strong { font-size: var(--t-33); font-weight: 800; font-stretch: 75%; font-variant-numeric: tabular-nums; line-height: 1; }
+.tarifas-sello { display: inline-block; margin: 16px 0 10px; padding: 6px 12px; background: var(--rojo); color: var(--sobre-rojo); font-weight: 700; font-stretch: 85%; text-transform: uppercase; letter-spacing: 0.02em; }
+.promo { display: grid; align-content: start; gap: 12px; padding: 24px; background: var(--franja); color: var(--franja-texto); box-shadow: inset 0 0 0 1px var(--franja-filo); }
+.promo[hidden] { display: none; }
+.promo-etiqueta { color: #ff6b5f; }
+.promo-cifra strong { display: block; font-size: var(--t-76); font-weight: 800; font-stretch: 62%; line-height: 0.9; }
+.promo-cifra span { display: block; margin-top: 6px; font-size: var(--t-19); font-weight: 600; }
+.promo-fecha { font-size: var(--t-14); color: var(--franja-gris); }
+.precios-otros { margin-bottom: -12px; color: var(--gris); }
+@media (min-width: 768px) { .tarifas-grid { grid-template-columns: 3fr 2fr; gap: 40px; align-items: start; } }
 .btn-grande { width: min(100%, 380px); min-height: 64px; padding: 16px 32px; font-size: var(--t-19); }
 
 /* Gym página 2 */

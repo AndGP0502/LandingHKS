@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Reemplaza TU-DOMINIO por el dominio real al publicar (ver README).
-Sitemap: https://TU-DOMINIO/sitemap.xml
+Sitemap: https://hulksportsec.com/sitemap.xml

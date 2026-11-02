@@ -3,14 +3,14 @@
 Sitio de 2 páginas en HTML, CSS y JS sin frameworks ni build. Se abre con doble clic en `index.html` y se publica tal cual.
 
 ```
-index.html                Página 1: lo esencial (hero, hoy, precios, dirección, áreas, niños, torneos, fotos)
-horarios-y-planes.html    Página 2: pizarra de horarios, precios (botón a WhatsApp), gym, terapia, profesores, FAQ, ubicación
+index.html                Página 1: lo esencial (hero, hoy, precios, dirección, áreas, niños, campeones, torneos, fotos)
+horarios-y-planes.html    Página 2: pizarra de horarios, precios (membresías de jiu-jitsu, promo del gym y botón a WhatsApp), gym, terapia, profesores, FAQ, ubicación
 css/styles.css            Tokens (colores, tipografía) y estilos
 js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, videos, mapa
 assets/                   logo/ (logo oficial horizontal, monograma HS e iconos; fuente/), fotos/ (WebP + fuente/), videos/, fonts/, og-hulk-sports-nuevo.jpg
 content/inventario.md     Cada dato del sitio con su fuente
 netlify.toml              Netlify: sin build; responde 404 en los archivos internos (ver "Publicar")
-content/fuentes/          Flyer de horario 2026 y captura del perfil que envió el cliente
+content/fuentes/          Flyer de horario 2026, flyers de precios (01/11/2026) y captura del perfil que envió el cliente
 docs/design-brief.md      Concepto, paleta, tipografía, elementos firma, movimiento
 ```
 
@@ -23,7 +23,8 @@ docs/design-brief.md      Concepto, paleta, tipografía, elementos firma, movimi
 - [x] QA: capturas a 390, 768 y 1440 px en claro y oscuro, consola sin errores, enlaces y anclas revisados, contraste AA medido, Lighthouse móvil (abajo).
 - [x] Etapa 1 (contenido): tareas 1.1 a 1.5 implementadas (horario referencial del gimnasio, perfil de Fernando Cárdenas Jr., Muay Thai y clases mixtas, cardio, parqueadero y spinning, terapia física) y registradas en `content/inventario.md`. Tarea 1.6: revisión de esta documentación.
 - [ ] Datos "por confirmar" que debe enviar el cliente (lista abajo).
-- [ ] Dominio (el sitio ya está en GitHub y Netlify, proyecto `hulksportsec`; falta el dominio propio).
+- [x] Dominio: `hulksportsec.com` conectado a Netlify (01/11/2026). Falta que Netlify emita el certificado HTTPS.
+- [ ] SEO fuera del código: Google Search Console (verificar el dominio y enviar `sitemap.xml`) y reclamar la ficha de Google Maps del negocio.
 
 Lighthouse móvil (servidor local, 31 oct 2026):
 
@@ -32,7 +33,7 @@ Lighthouse móvil (servidor local, 31 oct 2026):
 | index.html | 99 | 100 | 100 | 92 → 100 al quitar el canonical relativo* |
 | horarios-y-planes.html | 100 | 100 | 100 | 92 → 100 al quitar el canonical relativo* |
 
-\* La única falla de SEO era `rel=canonical` relativo. Se quitó; vuelve a ponerlo con URL absoluta cuando haya dominio. Caché y compresión las resuelve el hosting (Netlify, Vercel y GitHub Pages ya comprimen).
+\* La única falla de SEO era `rel=canonical` relativo. Se quitó y volvió con URL absoluta al conectar el dominio (01/11/2026). Caché y compresión las resuelve el hosting (Netlify, Vercel y GitHub Pages ya comprimen).
 
 **Nota:** estos resultados son anteriores a los cambios de contenido de la Etapa 1 (tareas 1.1 a 1.5) y **no se han medido de nuevo**. Los números se conservan tal como se registraron.
 
@@ -83,14 +84,14 @@ Los mensajes prellenados por servicio están en `CONFIG.mensajes` (general, prue
 
 - **Horario:** está escrito en `horarios-y-planes.html` (bloque `id="pizarra"`, un `<li class="clase">` por clase con `data-tipo`, `data-hora` y el rango en `<span class="horas">`) y repetido en `CONFIG.clases` de `js/main.js` (`h` = inicio, `f` = fin; lo usan la franja "Hoy" de la página 1 y la marca de "siguiente clase" de la pizarra). Cambia los dos. El open mat del sábado está en `CONFIG.openMat`. El resumen sin JS de la franja está en `index.html` (`id="hoy-lista"`).
 - **Horario del gym** ("abierto ahora"): `CONFIG.gym` en `js/main.js`, en minutos desde medianoche (360 = 06:00). Hoy: lunes a viernes 06:00 a 21:00 (`[360, 1260]`), sábado 08:00 a 14:00 (`[480, 840]`) y domingo sin entrada, que se interpreta como cerrado. Es un horario **referencial según la ficha de Google (31 oct 2026), por confirmar con el cliente**; el de nov 2024 se conserva como histórico en el inventario. No hay lógica de feriados. El texto visible del horario está en `index.html` (tarjeta Gimnasio).
-- **Precios:** sección `id="precios"` de la página 2 y el bloque "Precios 2026" de la franja en la página 1. Al tener precios confirmados, reemplaza los `<span class="pendiente" data-pendiente="precios">`.
+- **Precios:** lista `tarifas-lista` en la sección `id="precios"` de la página 2 y la celda "Precios 2026" de la franja en la página 1 ($65 al mes). La promo del gym lleva `data-vence="2026-11-15"` (último día válido): `js/main.js` la oculta sola desde el día siguiente. Para una promo nueva, cambia el texto, el precio y esa fecha.
 - **Datos pendientes:** todos llevan el atributo `data-pendiente="..."`. Para listarlos: en macOS/Linux, `grep -n data-pendiente *.html`; en Windows (PowerShell), `Select-String -Path *.html -Pattern 'data-pendiente'`.
 - **Fotos:** agrega la imagen en `assets/fotos/` en WebP con varios anchos y copia el patrón `srcset` de una foto existente. Siempre con `alt`, `width` y `height`.
 - **Colores y tipografía:** tokens al inicio de `css/styles.css` (`--rojo`, `--franja`, etc.).
 
 ## Publicar (cuando decidas)
 
-1. Reemplaza `TU-DOMINIO` en `sitemap.xml` y `robots.txt`. Opcional: pon URLs absolutas en `og:image` y agrega `<link rel="canonical" href="https://tu-dominio/...">` en cada página.
+1. Dominio: `https://hulksportsec.com`, sin www (comprado en Namecheap; DNS: registro ALIAS `@` a `apex-loadbalancer.netlify.com` y CNAME `www` a `hulksportsec.netlify.app`). Es el dominio principal en Netlify y `www` redirige a él. Ya está en `sitemap.xml`, `robots.txt`, `og:url`, `og:image`, el canonical de cada página y el JSON-LD; si cambia, búscalo y reemplázalo en esos archivos.
 2. **Netlify:** el proyecto `hulksportsec` publica la rama `main` de GitHub en cada push. En Build settings, "Build command" debe quedar vacío (el sitio no tiene build). `netlify.toml` fija la carpeta publicada y bloquea con 404 los archivos internos.
 3. **Vercel:** `npx vercel` dentro de la carpeta (framework: Other, sin build).
 4. **GitHub Pages:** sube la carpeta a un repo y activa Pages en la rama principal, carpeta raíz.
@@ -109,23 +110,24 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 - Existencia de un grupo femenino activo en jiu-jitsu.
 - Fernando Cárdenas Jr.: tecnólogo en fisioterapia, entrenador y preparador físico profesional (indicación del usuario, 01/11/2026).
 - Nombre del servicio de terapia: Rehabilitación Integral (confirmado por el usuario, 01/11/2026; sin "BIC", a pedido del usuario).
-- Gimnasio de dos pisos con área de cardio; Fernando Cárdenas Jr. fue oficial de la comisión del evento durante la pelea de exhibición de jiu-jitsu de Marlon "Chito" Vera en Ecuador (corregido el 01/11/2026: el propietario aclaró que no fue su head coach) y graduó a cinturón azul a Mayton Perea, actual peleador de UFC (indicación del usuario, 01/11/2026).
+- Gimnasio de dos pisos con área de cardio; Fernando Cárdenas Jr. fue oficial de la comisión del evento durante la pelea de exhibición de jiu-jitsu de Marlon "Chito" Vera en Ecuador (acompañó a los peleadores en su salida al octágono y levantó la mano de los ganadores; corregido el 01/11/2026: el propietario aclaró que no fue su head coach) y graduó a cinturón azul a Mayton Perea, actual peleador de UFC (indicación del usuario, 01/11/2026).
 - Horario de clases 2026 (flyer enviado por el cliente) y dirección.
+- Precios publicados (flyers enviados por el usuario, 01/11/2026): membresías de jiu-jitsu para adultos, mensual $65, trimestral $165, semestral $300 y anual $550, sin matrícula y con pago con tarjeta; promo del gimnasio de 3 meses por $75, válida hasta el 15 de noviembre (año 2026 asumido: el flyer usa el logo nuevo). Open mat para visitantes, $7 por sesión (agregado por el equipo, commit de Dennys593, 01/11/2026).
 
 ### Histórico o vencido (se conserva, no se muestra como vigente)
 
 - Horario del gimnasio de nov 2024 (L-V 05:00-21:00; sábados y feriados 08:00-14:00) y el de 2024 anterior.
-- Ningún precio se muestra en el sitio (a pedido del usuario, 01/11/2026): las dos páginas solo invitan a preguntarlos por WhatsApp. El de $150 (3 meses Jiu-Jitsu + Gym, sep 2025) y los seminarios a $10 (2026) quedan registrados en `content/inventario.md`.
+- No publicados: $150 (3 meses Jiu-Jitsu + Gym, sep 2025) y seminarios a $10 (2026), registrados en `content/inventario.md`.
 - Precios de $140 (Black Friday 2024) y $75 (gym, hasta el 15 oct 2025), ya vencidos; $50/mes de niños (2023) y gym a $35 (sede anterior).
 - Referencias antiguas a Muay Thai (logo, instalaciones de 2023, vacacional infantil de 2026) y a spinning (instalaciones de 2023).
 
 ### Pendiente de verificación (por confirmar con el cliente)
 
-1. **Precios y condiciones:** precios vigentes 2026 de jiu-jitsu, gym, niños, MMA y combos; matrícula y permanencia; si la clase de prueba sigue siendo gratis (se anunció así en feb 2025).
+1. **Precios y condiciones:** que el flyer de membresías de jiu-jitsu (sin fecha ni logo nuevo) siga vigente; precios de gym regular, niños, MMA y combos; permanencia; si la clase de prueba sigue siendo gratis (se anunció así en feb 2025).
 2. **Horarios:**
    - Horarios extra 2026: BJJ ejecutivo de 11:00 (L-V) y el de 13:00 (L-M-V, 2x1).
    - Horario del gimnasio (referencial según Google, 31 oct 2026: L-V 06:00-21:00, sábado 08:00-14:00, domingo cerrado) y comportamiento en feriados.
-   - Open mat de sábado (en 2023: 08:00, $5 invitados).
+   - Open mat de sábado: el sitio dice 08:00 y $7 por sesión para visitantes (agregado por el equipo el 01/11/2026; en 2023 eran $5).
    - Si las clases son mixtas y si existe un horario exclusivo para el grupo femenino.
 3. **Servicios e instalaciones:**
    - Muay Thai: no se encontró en la revisión del 31/10/2026 (esto no prueba que no exista); ¿se sigue dando?
@@ -135,24 +137,27 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
    - Vigencia de las instalaciones listadas en 2023 (800 m², cancha de básquet y ecuavóley, área verde, "tren superior e inferior", "cross training y TRX") y fuente de "peso libre y máquinas".
 4. **Terapia física:** servicios específicos de fisioterapia que ofrece actualmente Hulk Sports y quién los atiende (el equipo envió una propuesta de servicios que **no está confirmada** y no se publica); además, días y horas, valor por sesión, modalidad, disponibilidad y cupos, convenios con seguros, qué traer y cómo se agenda.
 5. **Equipo:**
+   - Campeones: permiso de Britany Cárdenas (y de su representante si es menor), Mateo Cordero y Fabio para publicar sus fotos y nombres; apellido de Fabio; si "Donovan" es @donovan_cardenas.
    - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima.
    - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
    - Rol de Fernando en el evento de Chito Vera: resuelto el 01/11/2026. El propietario aclaró que fue oficial de la comisión del evento, en línea con la credencial de la foto ("COMMISSION"); no fue su head coach. Falta confirmar si se puede nombrar el evento.
 6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usa el logo oficial horizontal de 1280×620 px entregado el 01/11/2026; un vector permitiría más nitidez y fondo transparente).
-7. **Publicación:** dominio (reemplazar `TU-DOMINIO` en `sitemap.xml` y `robots.txt`, y poner `canonical` y `og:image` absolutos).
+7. **Publicación:** listo (dominio conectado y proyecto público). Si cambias el dominio principal a www en Netlify, cambia también las URLs del sitio (punto 1 de "Publicar").
 
 ## Decisiones tomadas sin preguntar
 
 - **Navegador:** se usó Claude in Chrome con tu sesión de Instagram. Chrome bloqueó las descargas múltiples; las fotos y el reel se pasaron por el portapapeles en lugar de archivos.
+- **Nuestros campeones (02/11/2026):** a pedido expreso del usuario se usaron fotos de @fabiodasilvajj (dos publicaciones que él indicó), @brit_bjj y @mateoc95. Es la única excepción a la regla de abajo; fuentes y datos en `content/inventario.md`. El permiso de imagen de los competidores es responsabilidad del cliente (Britany compite en juvenil).
+- **Cabecera:** seis enlaces (Horarios, Instalaciones, Profesores, Nuestros campeones, Preguntas frecuentes y Ubicación). Hasta 1199 px van en una segunda fila bajo el logo; en celular esa fila se desliza y un degradado a la derecha avisa que hay más.
 - **Solo contenido de @hulk.sports:** se descartaron posts de colaboración de otras cuentas, imágenes marcadas como "Contenido de IA" y las destacadas (tienen unas 250 semanas y son de la sede anterior en Cipreses).
 - **Horario base:** el flyer 2026 que enviaste manda. Los horarios de 11:00 y 13:00 anunciados después aparecen aparte como "confirmar".
-- **Precios:** no hay lista vigente; se muestra "Por confirmar" y una tabla con lo último publicado, con fecha y estado (vencida / por confirmar).
+- **Precios:** se publican solo los de los flyers del 01/11/2026 (membresías de jiu-jitsu para adultos y promo del gym) y el open mat; para lo demás, el botón "Preguntar precios" abre WhatsApp.
 - **Video:** un solo reel (`DUOCQl_kb0m`, el que enviaste) recortado en tramos sin textos superpuestos. Las capturas fijas del mismo reel sirven de fotos del gym y del tatami.
 - **Archivo .ics:** se quitó el botón "Agregar a mi calendario" de la página 2 (1 nov 2026) y con él su código.
 - **Duración de clases:** la que muestra la pizarra (06:00-07:30, 17:00-18:00, 18:30-20:00, 20:00-21:00).
 - **Tipografía:** Archivo (Google Fonts, licencia OFL) autoalojada, una sola familia con eje de ancho para las tres voces.
 - **Skills:** `frontend-design` no está instalado en este equipo y la carpeta de referencias de `impeccable` viene vacía; se aplicaron `design-taste-frontend`, `emil-design-eng` y los principios de `impeccable` (pasada única de QA con correcciones en lote).
-- **JSON-LD:** sin horarios de atención ni precios, porque no están confirmados.
+- **JSON-LD:** sin horarios de atención (por confirmar) ni precios (se ven en la página, pero la lista todavía está incompleta).
 
 ## Decisiones de contenido de la Etapa 1
 

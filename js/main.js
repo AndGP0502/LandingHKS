@@ -38,6 +38,17 @@
     a.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg);
   });
 
+  // ---- Cabecera en celular: la fila de enlaces se desliza; un degradado avisa que hay más ----
+  var nav = document.querySelector('.nav');
+  if (nav) {
+    var marcarNav = function () {
+      nav.classList.toggle('hay-mas', nav.scrollWidth - nav.clientWidth - nav.scrollLeft > 2);
+    };
+    nav.addEventListener('scroll', marcarNav, { passive: true });
+    window.addEventListener('resize', marcarNav);
+    marcarNav();
+  }
+
   // ---- Tema claro / oscuro: sigue al sistema hasta que el visitante elige ----
   var raiz = document.documentElement;
   var temaSistema = window.matchMedia('(prefers-color-scheme: dark)');
@@ -74,6 +85,12 @@
   function aMin(h) { var s = h.split(':'); return +s[0] * 60 + +s[1]; }
   function aHora(m) { return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
   var hoy = ahora();
+
+  // ---- Promociones con fecha de fin (data-vence="AAAA-MM-DD", último día válido): se ocultan solas al día siguiente ----
+  var fechaHoy = new Intl.DateTimeFormat('en-CA', { timeZone: CONFIG.zona, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+  document.querySelectorAll('[data-vence]').forEach(function (el) {
+    if (fechaHoy > el.getAttribute('data-vence')) el.hidden = true;
+  });
 
   function estadoGym() {
     var r = CONFIG.gym[hoy.dia];
