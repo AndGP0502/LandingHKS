@@ -4,7 +4,7 @@
 Diales: variación 7 · movimiento 4 · densidad 5 (la información manda).
 
 ## 1. Concepto
-**"La pared del tatami."** En el local, todo es tatami blanco, paredes blancas y un zócalo negro corrido; encima, el logo pintado con su segmento rojo bajo la "H". El sitio se arma igual: fondo claro, una franja negra que sostiene los datos y un único rojo que marca lo que importa (hoy, la acción principal).
+**"La pared del tatami."** En el local, todo es tatami blanco, paredes blancas y un zócalo negro corrido; encima, el logo pintado. El logo oficial nuevo (entregado el 01/11/2026) es horizontal, con fondo negro, letras blancas y detalles rojos, y su segmento rojo queda en la parte superior de la "H". El sitio se arma igual: fondo claro, una franja negra que sostiene los datos y un único rojo que marca lo que importa (hoy, la acción principal).
 
 ## 2. Paleta (tokens en `css/styles.css`)
 | Token | Claro | Oscuro | Origen |

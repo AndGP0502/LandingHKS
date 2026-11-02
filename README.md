@@ -7,7 +7,7 @@ index.html                Página 1: lo esencial (hero, hoy, precios, dirección
 horarios-y-planes.html    Página 2: pizarra de horarios, precios (botón a WhatsApp), gym, terapia, profesores, FAQ, ubicación
 css/styles.css            Tokens (colores, tipografía) y estilos
 js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, videos, mapa
-assets/                   logo/, fotos/ (WebP + fuente/), videos/, fonts/, og-hulk-sports.jpg
+assets/                   logo/ (logo oficial horizontal, monograma HS e iconos; fuente/), fotos/ (WebP + fuente/), videos/, fonts/, og-hulk-sports-nuevo.jpg
 content/inventario.md     Cada dato del sitio con su fuente
 netlify.toml              Netlify: sin build; responde 404 en los archivos internos (ver "Publicar")
 content/fuentes/          Flyer de horario 2026 y captura del perfil que envió el cliente
@@ -138,7 +138,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
    - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima.
    - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
    - Rol exacto de Fernando en el evento de Chito Vera: la credencial de la foto dice "VERA-ALDO" y "COMMISSION"; el sitio dice "head coach" según lo indicado.
-6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usó la versión de 192 px que enviaste).
+6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usa el logo oficial horizontal de 1280×620 px entregado el 01/11/2026; un vector permitiría más nitidez y fondo transparente).
 7. **Publicación:** dominio (reemplazar `TU-DOMINIO` en `sitemap.xml` y `robots.txt`, y poner `canonical` y `og:image` absolutos).
 
 ## Decisiones tomadas sin preguntar

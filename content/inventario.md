@@ -16,7 +16,7 @@ Leyenda de fuente: **BIO** = biografía de @hulk.sports (la de @hulkbjj se cita 
 | TikTok | @hulk.sports | Valla del local, REEL-DUOC (seg. 29) |
 | Categoría | Gimnasio/centro de fitness | BIO |
 | Servicios en la bio | Jiu jitsu · Gimnasio · Terapia física y deportiva · Parqueaderos | BIO (consultada el 31/10/2026) |
-| Logo | Círculo con "H" en forma de barra y discos, segmento rojo abajo, textos "HULK SPORTS" y "JIU JITSU · MUAY THAI & GYM" | CHAT (imagen 1), BIO |
+| Logo | Logo oficial nuevo (entregado por el propietario el 01/11/2026): monograma "HS", "HULK SPORTS" en blanco y "JIU JITSU" en rojo, sobre fondo negro, formato horizontal 1280×620 px. Reemplaza al círculo anterior con "H" de barra y discos y el texto "JIU JITSU · MUAY THAI & GYM" (archivos anteriores conservados en `assets/logo/`). Original en `assets/logo/fuente/logo-oficial-horizontal.png`. | CHAT (imagen 1), propietario |
 | Lema en fachada | "Entrenamiento de alto nivel" | REEL-DUOC (seg. 0) |
 | Fundación del equipo | Dic 2020 (celebraron 3 años en dic 2023) | `Cz_ylc8rhBM` |
 | Linaje | "fiel a nuestro linaje Fernando Soluço" (@solucinho) | `CmUguUMOcs7` |
@@ -155,7 +155,7 @@ Testimonios: la marca no publicó testimonios de clientes. No se usan.
 
 ## Colores (medidos, no supuestos)
 
-- Rojo del logo: muestras dominantes `#E80000`-`#F00000` (logo) y `#E80000` (banda de flyers). Token del sitio: `#D90000` (ajustado para AA sobre fondo claro).
+- Rojo del logo anterior: muestras dominantes `#E80000`-`#F00000` (logo) y `#E80000` (banda de flyers). Token del sitio: `#D90000` (ajustado para AA sobre fondo claro).
 - Negro y blanco del logo; tatami y paredes blancas con zócalo negro en el local (REEL-DUOC, fotos de grilla).
 
 ## Media descargada (solo de @hulk.sports)

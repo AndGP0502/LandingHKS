@@ -191,8 +191,7 @@ p { margin: 0; }
 }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: var(--alto-top); }
 .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; min-height: 44px; }
-.marca img { width: 40px; height: 40px; }
-.marca span { font-stretch: 70%; font-weight: 800; text-transform: uppercase; font-size: 1.15rem; letter-spacing: 0.02em; line-height: 1; }
+.marca img { height: 40px; width: auto; }
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a:not(.btn) {
   display: inline-flex; align-items: center; min-height: 44px; padding-inline: 10px;
@@ -427,7 +426,7 @@ p { margin: 0; }
 .pie { padding-block: 48px 40px; }
 .pie .wrap { display: grid; gap: 32px; }
 .pie-marca { display: flex; gap: 14px; align-items: center; }
-.pie-marca img { width: 56px; height: 56px; }
+.pie-marca img { height: 56px; width: auto; }
 .pie-marca strong { display: block; font-stretch: 70%; font-weight: 800; text-transform: uppercase; font-size: 1.4rem; line-height: 1; }
 .pie h2 { font-size: var(--t-14); color: var(--franja-gris); font-weight: 600; margin-bottom: 10px; }
 .pie ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
