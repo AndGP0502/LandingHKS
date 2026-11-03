@@ -571,7 +571,11 @@ p { margin: 0; }
 .promo-cifra span { display: block; margin-top: 6px; font-size: var(--t-19); font-weight: 600; }
 .promo-fecha { font-size: var(--t-14); color: var(--franja-gris); }
 .precios-otros { margin-bottom: -12px; color: var(--gris); }
-@media (min-width: 768px) { .tarifas-grid { grid-template-columns: 3fr 2fr; gap: 40px; align-items: start; } }
+@media (min-width: 768px) {
+  .tarifas-grid { grid-template-columns: 3fr 2fr; gap: 32px 40px; align-items: start; }
+  /* Adultos a la izquierda; promo y mensualidades a la derecha (si la promo vence, las mensualidades suben) */
+  .tarifas-grid > .tarifas:first-child { grid-row: span 2; }
+}
 .btn-grande { width: min(100%, 380px); min-height: 64px; padding: 16px 32px; font-size: var(--t-19); }
 
 /* Gym página 2 */
@@ -646,8 +650,28 @@ p { margin: 0; }
 .profe-foto { margin: -20px -20px 6px; }
 .profe-foto img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
 .profe h4 { font-size: var(--t-33); }
+.profe-texto { display: grid; gap: 10px; align-content: start; }
+.profe-datos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.profe-datos li { padding: 4px 10px; border: 1px solid var(--filo); font-size: var(--t-14); font-weight: 600; }
+/* Biografía completa: se despliega para no alargar la sección */
+.profe-bio { border-top: 1px solid var(--filo); }
+.profe-bio summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 44px; font-weight: 700; }
+.profe-bio summary::-webkit-details-marker { display: none; }
+.profe-bio summary::after { content: "+"; font-weight: 400; font-size: 1.5rem; line-height: 1; transition: transform 200ms var(--ease-out); }
+.profe-bio[open] summary::after { transform: rotate(45deg); }
+.profe-bio > div { display: grid; gap: 12px; padding-bottom: 8px; }
 @media (min-width: 600px) { .credenciales { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 768px) { .profes { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+@media (min-width: 768px) {
+  .profes { grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  .profe-corto { grid-column: 1 / -1; }
+  .profe-foto img { aspect-ratio: 4 / 3; }
+}
+/* Pantallas anchas: foto a la izquierda y texto a la derecha, para que la foto no quede enorme */
+@media (min-width: 1200px) {
+  .profe-con-foto { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); column-gap: 20px; }
+  .profe-con-foto .profe-foto { margin: -20px 0 0 -20px; }
+  .profe-con-foto .profe-foto img { aspect-ratio: 4 / 5; }
+}
 @media (min-width: 900px) {
   .equipo .wrap { gap: 40px; }
   .coach { grid-template-columns: 5fr 7fr; }

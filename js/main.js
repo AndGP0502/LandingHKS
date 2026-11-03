@@ -23,7 +23,7 @@
       { d: 5, h: '06:00', f: '07:30', n: 'BJJ Gi', t: 'gi' }, { d: 5, h: '17:00', f: '18:00', n: 'BJJ Gi Kids', t: 'ninos' }, { d: 5, h: '18:30', f: '20:00', n: 'BJJ No-Gi', t: 'nogi' }, { d: 5, h: '20:00', f: '21:00', n: 'Sparring', t: 'sparring' }
     ],
     // Horario del gimnasio. [abre, cierra] en minutos. Domingo (0) cerrado: sin entrada.
-    gym: { 1: [360, 1260], 2: [360, 1260], 3: [360, 1260], 4: [360, 1260], 5: [360, 1260], 6: [480, 840] },
+    gym: { 1: [300, 1260], 2: [300, 1260], 3: [300, 1260], 4: [300, 1260], 5: [300, 1260], 6: [480, 840] },
     openMat: '08:00' // sábados
   };
 

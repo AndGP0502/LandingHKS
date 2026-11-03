@@ -58,7 +58,7 @@ Otros horarios anunciados en 2026 que **no** están en el flyer (se muestran com
 | 13:00 L-M-V | Nuevo horario desde el 22 de junio (2026), promo 2x1 solo en ese horario | `DZsvPVXPATP` |
 | 06:00 / 17:00 / 18:30 | Confirmación de horarios adultos y kids (nov 2025) | `DQyC1iDDF3k` |
 
-Horario del gimnasio (vigente en el sitio, **por confirmar**): L-V 06:00-21:00; sábado 08:00-14:00; domingo cerrado. Fuente: ficha de Google de "hulksports jiu jitsu & fitness Gym", consultada el 31 oct 2026; Google indica que puede variar en feriados (no se implementa lógica de feriados). Pendiente de confirmación con el cliente.
+Horario del gimnasio (vigente en el sitio desde el 03/11/2026): L-V **05:00**-21:00; sábado 08:00-14:00; domingo cerrado. La apertura a las 05:00 la cambió el equipo en `index.html` (03/11/2026) y se igualó en `CONFIG.gym` de `js/main.js`. Antes: Fuente: ficha de Google de "hulksports jiu jitsu & fitness Gym", consultada el 31 oct 2026; Google indica que puede variar en feriados (no se implementa lógica de feriados). Pendiente de confirmación con el cliente.
 Histórico (reemplazado): nov 2024, L-V 05:00-21:00; sábados y feriados 08:00-14:00, fuente `DCR46brP55c`. Antes (2024): L-V 06:00-21:00, sáb 08:00-14:00 (`C-59DsTvhLP`).
 Open mat sábados 08:00, invitados $5 — publicado dic 2023 (`C1ulPt7R55E`). Desde el 01/11/2026 el sitio dice $7 por sesión para visitantes (agregado por el equipo, commit de Dennys593).
 
@@ -73,6 +73,8 @@ Publicados desde el 01/11/2026 (flyers enviados por el usuario, guardados en `co
 | Jiu-jitsu adultos, semestral | $300 | ídem |
 | Jiu-jitsu adultos, anual | $550 | ídem |
 | Promo gimnasio, 3 meses | $75, válida hasta el 15 de noviembre | `flyer-promo-gym-75-noviembre.jpg` |
+| Jiu-jitsu niños, mensual | $50 | Indicación del usuario, 03/11/2026 ("inscripción de los niños $50"; el equipo lo escribió como "$50 al mes" en la página 1) |
+| Gimnasio, mensual | $50 | Indicación del usuario, 03/11/2026 ("inscripción mensual al gimnasio") |
 
 - Membresías: "Sin matrícula" y logos de Visa, Mastercard, American Express, Diners Club y Discover. El flyer no tiene fecha ni el logo nuevo: **confirmar que sigue vigente**.
 - Promo del gym: el flyer no dice el año; se asume 2026 porque usa el logo nuevo (entregado el 01/11/2026). En el sitio lleva `data-vence="2026-11-15"` y se oculta sola desde el 16/11/2026. El flyer también dice "más de 40 equipos", "seguimiento personalizado" y "horarios flexibles"; no se publican (no son precios y no están verificados). La foto del flyer no se usa.
@@ -137,7 +139,8 @@ Clase de prueba: "Reserva tu clase de prueba hoy" (`DIHnQGQvq14`, 2025); "clase 
 | Fernando Cárdenas Jr. | Compite en fisicoculturismo (foto `profe-fisicoculturismo`, número 73) | Foto enviada por el usuario, 01/11/2026 |
 | Fernando Cárdenas Jr. | Extensa trayectoria profesional; "vivo exponente del jiu-jitsu en la Sierra del Ecuador"; ha formado a **más de tres campeones actuales que siguen compitiendo** (publicado en su bloque de Profesores) | Indicación del usuario, 02/11/2026. Sin fuente independiente; no se indicó quiénes son esos campeones, así que el sitio no los nombra ni los vincula con "Nuestros campeones" |
 | Cristian Ruales (@cristian.ruales.3) | Profesor de adultos, "faixa preta" (cinturón negro) | flyer y caption `C4f53PPLTMs` (2024) |
-| Donovan | Publicado con el nombre «Donovan» y la etiqueta «Profesor» (el propietario lo agregó a la sección de profesores), sin otros datos | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, función (profesor de qué), grado o cinturón, certificaciones, trayectoria, foto y enlace público. No se publica ninguno de esos datos hasta que se confirmen. |
+| Cristian Ruales | Biografía publicada: instructor, **tres años de cinturón negro**, enseña sobre todo No-Gi a principiantes y avanzados | Biografía entregada por el usuario, 03/11/2026. Se corrigieron solo la redacción y las mayúsculas ("ha desarrollando", "iniciantes", "NOGI") |
+| Donovan Cárdenas | Biografía publicada (03/11/2026, entregada por el usuario): instructor y deportista, 36 años, nacido en Quito, unos 10 años en el jiu-jitsu, **dos años de cinturón negro bajo Fernando Cárdenas «Hulk»**, compite por Hulk Sports (Jiu Jitsu Showdown, AJP Tour Guayaquil International Jiu-Jitsu Championship 2024). Edad (36 años) y cinturón negro, faixa preta, confirmados de nuevo por el usuario el 03/11/2026; la edad se debe actualizar cuando cumpla años. Antes: publicado solo como «Donovan», con la etiqueta «Profesor» | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, función (profesor de qué), grado o cinturón, certificaciones, trayectoria, foto y enlace público. No se publica ninguno de esos datos hasta que se confirmen. |
 | Diana | Instructora de gimnasio (publicada con el nombre «Diana» y ese cargo, en una tarjeta de la sección «Profesores e instructores») | Solicitud del propietario de Hulk Sports, 01/11/2026. **Por confirmar:** apellido, formación, trayectoria, fotografía, enlaces públicos y horarios. No se publica ninguno de esos datos hasta que se confirmen. |
 
 Sección rediseñada el 02/11/2026 (pedido del usuario): se quitó el párrafo de introducción ("Fernando Cárdenas Jr. y biografía hasta la fecha (octubre de 2026)…"). Se conserva "Head Coach de Hulk Sports desde 2020" (confirmado, arriba). La palabra "fundador" de ese párrafo no se publica: ninguna fuente de este inventario la respalda.
@@ -262,7 +265,7 @@ Siete fotos enviadas en el chat del proyecto, con indicación de dónde va cada 
 | gym-piso-principal | Piso principal: musculación de tren superior e inferior | `index.html`, tarjeta Gimnasio; `horarios-y-planes.html`, Gimnasio |
 | profe-chito-vera | Fernando Cárdenas Jr. con Marlon "Chito" Vera | `horarios-y-planes.html`, Profesores, Trayectoria |
 | mayton-perea-azul | Mayton Perea con su certificado de cinturón azul | `horarios-y-planes.html`, Profesores, Trayectoria |
-| donovan | Donovan con gi blanco y cinturón negro en el tatami de Hulk Sports (foto enviada por el propietario, 02/11/2026, con permiso de uso para la web). Recorte 4:5 (0,0,1500,1875 del original de 1500×2000; 480 y 800 px). El original se guardó como `donovan.jpg`, convertido del WebP recibido en el chat. El cinturón visible en la foto no se publica como grado: no hay dato confirmado | `horarios-y-planes.html`, Profesores, tarjeta de Donovan |
+| donovan | Donovan con gi blanco y cinturón negro en el tatami de Hulk Sports (foto enviada por el propietario, 02/11/2026, con permiso de uso para la web). Recorte 4:5 (0,0,1500,1875 del original de 1500×2000; 480 y 800 px). El original se guardó como `donovan.jpg`, convertido del WebP recibido en el chat. El cinturón negro lo confirma su biografía (03/11/2026); la foto por sí sola no respalda el grado | `horarios-y-planes.html`, Profesores, tarjeta de Donovan |
 
 Datos nuevos indicados por el usuario (01/11/2026), publicados:
 - El gimnasio tiene **dos pisos**, con área de cardio incluida.
