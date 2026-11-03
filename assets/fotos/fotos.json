@@ -368,7 +368,7 @@
   "src": "cristian.jpg",
   "recorte": "800,300,4500,4925"
  },
- "campeona-amell": {
+ "profe-amell": {
   "w": 800,
   "h": 1000,
   "widths": [
@@ -377,5 +377,14 @@
   ],
   "src": "amell.webp",
   "recorte": "0,0,960,1200"
+ },
+ "campeona-amell": {
+  "w": 480,
+  "h": 600,
+  "widths": [
+   480
+  ],
+  "src": "amell-podio.webp",
+  "recorte": "334,205,672,627"
  }
 }
