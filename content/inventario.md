@@ -256,6 +256,7 @@ Siete fotos enviadas en el chat del proyecto, con indicación de dónde va cada 
 | gym-piso-principal | Piso principal: musculación de tren superior e inferior | `index.html`, tarjeta Gimnasio; `horarios-y-planes.html`, Gimnasio |
 | profe-chito-vera | Fernando Cárdenas Jr. con Marlon "Chito" Vera | `horarios-y-planes.html`, Profesores, Trayectoria |
 | mayton-perea-azul | Mayton Perea con su certificado de cinturón azul | `horarios-y-planes.html`, Profesores, Trayectoria |
+| donovan | Donovan con gi blanco y cinturón negro en el tatami de Hulk Sports (foto enviada por el propietario, 02/11/2026, con permiso de uso para la web). Recorte 4:5 (0,0,1500,1875 del original de 1500×2000; 480 y 800 px). El original se guardó como `donovan.jpg`, convertido del WebP recibido en el chat. El cinturón visible en la foto no se publica como grado: no hay dato confirmado | `horarios-y-planes.html`, Profesores, tarjeta de Donovan |
 
 Datos nuevos indicados por el usuario (01/11/2026), publicados:
 - El gimnasio tiene **dos pisos**, con área de cardio incluida.

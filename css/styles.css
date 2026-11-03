@@ -642,6 +642,8 @@ p { margin: 0; }
 .profes { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 16px; }
 .profe { display: grid; gap: 10px; align-content: start; padding: 20px; background: var(--placa); border: 1px solid var(--filo); border-top: 6px solid var(--tinta); }
 .profe-rol { color: var(--gris); }
+.profe-foto { margin: -20px -20px 6px; }
+.profe-foto img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
 .profe h4 { font-size: var(--t-33); }
 @media (min-width: 600px) { .credenciales { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 768px) { .profes { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
