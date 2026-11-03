@@ -241,7 +241,8 @@ Fotos del local entregadas por el equipo del proyecto (fuente: material entregad
 | tatami-amplio | Tatami con luces LED hexagonales y paredes acolchadas negras | 1:1 | `index.html`, galería, posición 1 ("Tatami de 100 m²."); `horarios-y-planes.html`, Gimnasio, bajo la lista de zonas (sin recorte) |
 | recepcion | Mostrador de entrada con el logo y el tatami al fondo | 1:1, sin los objetos de limpieza | `index.html`, galería, posición 6 |
 | muro-medallas | Cuatro cuadros de medallas | Solo los cuadros (sin la tira de fotos de niños) | `index.html`, Torneos y seminarios |
-| muro-cinturones | Soporte de cinturones con placa | Solo el soporte (sin certificados ni equipo de oficina). Desde el 02/11/2026 se usa `muro-cinturones-retrato` (3:4, recorte 345,200,1095,1200 del original; 480 y 750 px); las versiones cuadradas de 480 y 720 px quedan sin uso | `horarios-y-planes.html`, Profesores, bloque de Fernando |
+| muro-cinturones | Soporte de cinturones con placa | Solo el soporte (sin certificados ni equipo de oficina). Desde el 02/11/2026 se usa `muro-cinturones-retrato` (3:4, recorte 345,200,1095,1200 del original; 480 y 750 px); las versiones cuadradas de 480 y 720 px quedan sin uso | Sin uso desde el 02/11/2026: la foto principal del bloque de Fernando pasó a `fernando`; los archivos de `muro-cinturones-retrato` se conservan |
+| fernando | Fernando Cárdenas Jr. con gi negro y dos medallas doradas sobre fondo azul de podio (foto enviada por el usuario, 02/11/2026). Recorte 4:5 (0,0,1500,1875 del original de 1500×2000; 480 y 800 px). Las medallas no se atribuyen a ningún torneo ni resultado en el sitio | `horarios-y-planes.html`, Profesores, foto principal del bloque de Fernando |
 
 ### Material entregado por el usuario (1 de noviembre de 2026)
 

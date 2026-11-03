@@ -347,5 +347,15 @@
   ],
   "src": "donovan.jpg",
   "recorte": "0,0,1500,1875"
+ },
+ "fernando": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "fernando.jpg",
+  "recorte": "0,0,1500,1875"
  }
 }
