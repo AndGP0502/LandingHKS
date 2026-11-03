@@ -685,6 +685,15 @@ p { margin: 0; }
   .trayectoria img, .trayectoria-fotos figure:nth-child(3) img { aspect-ratio: 1; object-position: 50% 25%; }
 }
 
+/* Página 404 (sin cabecera ni barra móvil) */
+body.sin-barra { padding-bottom: 0; }
+.no-encontrada { min-height: 100vh; min-height: 100dvh; display: grid; align-items: center; padding-block: 48px; }
+.no-encontrada .wrap { display: grid; gap: 20px; justify-items: start; }
+.no-encontrada .marca { margin-bottom: 16px; }
+.no-encontrada-codigo { font-size: var(--t-14); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rojo-texto); }
+.no-encontrada h1 { font-size: var(--t-76); max-width: 14ch; }
+.no-encontrada .acciones { display: flex; flex-wrap: wrap; gap: 12px; }
+
 /* FAQ */
 .faq { border-top: 1px solid var(--filo); }
 .faq .wrap { display: grid; gap: 28px; }

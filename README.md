@@ -1,6 +1,6 @@
 # Hulk Sports · landing estática
 
-Sitio de 2 páginas en HTML, CSS y JS sin frameworks ni build. Se abre con doble clic en `index.html` y se publica tal cual.
+Sitio de 2 páginas en HTML, CSS y JS sin frameworks. Se abre con doble clic en `index.html`. Para publicar, `scripts/preparar-publicacion.sh` copia solo los archivos públicos a `dist/` (ver "Publicar").
 
 ```
 index.html                Página 1: lo esencial (hero, hoy, precios, dirección, áreas, niños, campeones, torneos, fotos)
@@ -9,7 +9,9 @@ css/styles.css            Tokens (colores, tipografía) y estilos
 js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, videos, mapa
 assets/                   logo/ (logo oficial horizontal, monograma HS e iconos; fuente/), fotos/ (WebP + fuente/), videos/, fonts/, og-hulk-sports-nuevo.jpg
 content/inventario.md     Cada dato del sitio con su fuente
-netlify.toml              Netlify: sin build; responde 404 en los archivos internos (ver "Publicar")
+404.html                  Página "no encontrada" (rutas desde la raíz; Cloudflare la necesita, ver "Publicar")
+scripts/preparar-publicacion.sh  Arma dist/ con lo público; es el build de Cloudflare Pages
+netlify.toml              Configuración del hosting anterior (Netlify); se puede borrar al terminar la mudanza
 content/fuentes/          Flyer de horario 2026, flyers de precios (01/11/2026) y captura del perfil que envió el cliente
 docs/design-brief.md      Concepto, paleta, tipografía, elementos firma, movimiento
 ```
@@ -89,14 +91,17 @@ Los mensajes prellenados por servicio están en `CONFIG.mensajes` (general, prue
 - **Fotos:** agrega la imagen en `assets/fotos/` en WebP con varios anchos y copia el patrón `srcset` de una foto existente. Siempre con `alt`, `width` y `height`.
 - **Colores y tipografía:** tokens al inicio de `css/styles.css` (`--rojo`, `--franja`, etc.).
 
-## Publicar (cuando decidas)
+## Publicar
 
-1. Dominio: `https://hulksportsec.com`, sin www (comprado en Namecheap; DNS: registro ALIAS `@` a `apex-loadbalancer.netlify.com` y CNAME `www` a `hulksportsec.netlify.app`). Es el dominio principal en Netlify y `www` redirige a él. Ya está en `sitemap.xml`, `robots.txt`, `og:url`, `og:image`, el canonical de cada página y el JSON-LD; si cambia, búscalo y reemplázalo en esos archivos.
-2. **Netlify:** el proyecto `hulksportsec` publica la rama `main` de GitHub en cada push. En Build settings, "Build command" debe quedar vacío (el sitio no tiene build). `netlify.toml` fija la carpeta publicada y bloquea con 404 los archivos internos.
-3. **Vercel:** `npx vercel` dentro de la carpeta (framework: Other, sin build).
-4. **GitHub Pages:** sube la carpeta a un repo y activa Pages en la rama principal, carpeta raíz.
+1. **Dominio:** `https://hulksportsec.com`, sin www, comprado en Namecheap. Está en `sitemap.xml`, `robots.txt`, `og:url`, `og:image`, el canonical de cada página y el JSON-LD; si cambia, búscalo y reemplázalo en esos archivos. La página 2 figura como `/horarios-y-planes`, sin `.html`, porque Cloudflare Pages redirige `/horarios-y-planes.html` a esa dirección. Los enlaces internos siguen con `.html` para que el sitio funcione abierto con doble clic.
+2. **Cloudflare Pages (desde el 03/11/2026):** proyecto conectado a la rama `main` del repositorio de GitHub; cada push publica. Configuración del build:
+   - Framework preset: None
+   - Build command: `sh scripts/preparar-publicacion.sh`
+   - Build output directory: `dist`
 
-Las carpetas `content/`, `docs/` y `assets/fotos/fuente/` no son necesarias en producción. En Netlify, `netlify.toml` responde 404 en esas carpetas y en `assets/fotos/fotos.json`, `README.md`, `netlify.toml` y `.gitignore`. En Vercel o GitHub Pages ese archivo no se aplica: habría que excluirlas a mano.
+   El script copia a `dist/` solo las páginas, `css/`, `js/`, `assets/`, `favicon.ico`, `robots.txt` y `sitemap.xml`, y deja fuera `content/`, `docs/`, el README, la configuración y las carpetas `fuente/` y `fotos.json`. Si agregas una página o un archivo público en la raíz, súmalo al script. `404.html` es obligatorio: sin él, Cloudflare responde con la página de inicio en cualquier dirección que no existe. Plan gratis: 500 publicaciones al mes.
+3. **Para ver localmente lo que se publica:** `sh scripts/preparar-publicacion.sh` y luego `python3 -m http.server 8091 --directory dist`.
+4. **Netlify (hosting anterior):** el plan gratis se quedó sin créditos el 02/11/2026 (cada publicación gasta 15 de los 300 del mes) y dejó de publicar. `netlify.toml` queda solo como referencia; cuando el dominio ya cargue desde Cloudflare, se pueden borrar el proyecto de Netlify y ese archivo.
 
 ## Datos por confirmar (para el cliente)
 
@@ -143,7 +148,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
    - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
    - Rol de Fernando en el evento de Chito Vera: resuelto el 01/11/2026. El propietario aclaró que fue oficial de la comisión del evento, en línea con la credencial de la foto ("COMMISSION"); no fue su head coach. Falta confirmar si se puede nombrar el evento.
 6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usa el logo oficial horizontal de 1280×620 px entregado el 01/11/2026; un vector permitiría más nitidez y fondo transparente).
-7. **Publicación:** listo (dominio conectado y proyecto público). Si cambias el dominio principal a www en Netlify, cambia también las URLs del sitio (punto 1 de "Publicar").
+7. **Publicación:** mudanza de Netlify a Cloudflare Pages en curso (03/11/2026): falta crear el proyecto en Cloudflare, pasar el dominio a los servidores de nombre (DNS) de Cloudflare y conectar hulksportsec.com y www (pasos en "Publicar"). Si en el dominio hay correos de reenvío de Namecheap en uso, hay que recrearlos con Email Routing de Cloudflare.
 
 ## Decisiones tomadas sin preguntar
 
