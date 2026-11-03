@@ -34,7 +34,7 @@ Leyenda de fuente: **BIO** = biografía de @hulk.sports (la de @hulkbjj se cita 
 | Enlace WhatsApp antiguo | wa.me/message/WTVQU2XASAPVM1 | posts 2023-2024 |
 | Correo | **Por confirmar** | no publicado |
 | Pagos | La valla del local muestra Visa y Mastercard; en 2023 cobraron seminarios con tarjeta | REEL-DUOC (seg. 29), `C0zSyhaLWsy` |
-| Parqueadero | **Confirmado (sin detalles)**: la biografía actual de @hulk.sports lo lista como servicio ("Parqueaderos"), consultada el 31/10/2026. Los detalles "privado", "videovigilancia" y "amplio" provienen de publicaciones de 2025: vigencia **por confirmar**. Pendientes de detalle: capacidad y costo. El sitio mantiene "privado con videovigilancia" sin marcador de pendiente (decisión de la tarea 1.4) | BIO; `DPMSXSskZod` (2025), `CxvtpilOKLP` |
+| Parqueadero | **Confirmado**: la biografía de @hulk.sports lo lista como servicio ("Parqueaderos"), consultada el 31/10/2026. **30 espacios de estacionamiento con videovigilancia las 24 horas**: indicación del propietario (03/11/2026), **no verificada de forma independiente**; texto publicado: «30 espacios de estacionamiento disponibles, con videovigilancia las 24 horas para mayor seguridad». «Privado» y «amplio» (publicaciones de 2025) **no están confirmados y no se publican**. Pendientes: costo y condiciones de acceso | BIO; indicación del propietario, 03/11/2026 |
 | Dirección anterior (no usar) | Calle de los Cipreses N65-91 y Eucaliptos | posts 2022-2023 |
 
 ## Horarios de clases (vigentes 2026)
@@ -211,7 +211,7 @@ Agregadas el 02/11/2026 a pedido del usuario ("fotos dentro de esa pregunta como
 | ¿Qué ropa llevo a la primera clase? | ropa-primera-clase: pantalón calentador gris y camiseta negra, imagen enviada por el usuario (captura de 377 × 258 px; original en `fuente/ropa-primera-clase.png`, sin la franja oscura de la captura). Parece una foto de catálogo; los derechos de uso son responsabilidad del cliente. |
 | ¿Desde qué edad pueden entrenar los niños? | kids-fila (`kids-reto` se quitó a pedido del usuario) |
 | ¿Hay mujeres entrenando? | femenino, femenino-medallas (ya estaban) |
-| ¿Hay parqueadero? | **Sin foto.** Se revisaron las dos publicaciones que mencionan el parqueadero: `DPMSXSskZod` (flyer y dos videos del tatami) y `CxvtpilOKLP` (flyer), y la parte reciente de la cuadrícula de @hulk.sports. Ninguna muestra el parqueadero. Pendiente: foto del cliente. |
+| ¿Hay parqueadero? | parqueadero (foto enviada por el propietario, 03/11/2026; ya no está "sin foto") |
 | ¿Hay open mat los sábados? | tatami-vacio (no consta que sea de un open mat; el pie dice "El tatami de Hulk Sports.") |
 
 ## Media descargada (solo de @hulk.sports)
@@ -247,6 +247,7 @@ Fotos del local entregadas por el equipo del proyecto (fuente: material entregad
 | muro-cinturones | Soporte de cinturones con placa | Solo el soporte (sin certificados ni equipo de oficina). Desde el 02/11/2026 se usa `muro-cinturones-retrato` (3:4, recorte 345,200,1095,1200 del original; 480 y 750 px); las versiones cuadradas de 480 y 720 px quedan sin uso | Sin uso desde el 02/11/2026: la foto principal del bloque de Fernando pasó a `fernando`; los archivos de `muro-cinturones-retrato` se conservan |
 | fernando | Fernando Cárdenas Jr. con gi negro y dos medallas doradas sobre fondo azul de podio (foto enviada por el usuario, 02/11/2026). Recorte 4:5 (0,0,1500,1875 del original de 1500×2000; 480 y 800 px). Las medallas no se atribuyen a ningún torneo ni resultado en el sitio | `horarios-y-planes.html`, Profesores, foto principal del bloque de Fernando |
 | cristian | Cristian Ruales con camiseta negra de Hulk Sports y los brazos flexionados (foto enviada por el usuario, 02/11/2026; original DNG de iPhone, convertido a JPG sin metadatos; el DNG no se guarda en el repositorio). Recorte 4:5 cerrado, de la cabeza a medio muslo (800,300,4500,4925 del original de 5184×6912; 480 y 800 px). No muestra el cinturón: no respalda ningún grado ni logro | `horarios-y-planes.html`, Profesores, tarjeta de Cristian |
+| parqueadero | Área de estacionamiento con dos palmeras, jardín central y muros blancos; piso de concreto, sin vehículos ni cámaras a la vista (foto enviada por el propietario, 03/11/2026; WebP de 1280×960 conservado sin recomprimir como `parqueadero.webp`; 4:3 completo, sin recorte; 480 y 800 px). La foto no verifica la capacidad ni la videovigilancia | `horarios-y-planes.html`, pregunta frecuente «¿Hay parqueadero?» |
 
 ### Material entregado por el usuario (1 de noviembre de 2026)
 

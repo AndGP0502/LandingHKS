@@ -386,5 +386,14 @@
   ],
   "src": "amell-podio.webp",
   "recorte": "334,205,672,627"
+ },
+ "parqueadero": {
+  "w": 800,
+  "h": 600,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "parqueadero.webp"
  }
 }
