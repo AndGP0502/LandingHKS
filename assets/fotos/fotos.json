@@ -357,5 +357,15 @@
   ],
   "src": "fernando.jpg",
   "recorte": "0,0,1500,1875"
+ },
+ "cristian": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "cristian.jpg",
+  "recorte": "800,300,4500,4925"
  }
 }

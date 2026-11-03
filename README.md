@@ -139,7 +139,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 5. **Equipo:**
    - Campeones: permiso de Britany Cárdenas (y de su representante si es menor), Mateo Cordero y Fabio para publicar sus fotos y nombres; apellido de Fabio; si "Donovan" es @donovan_cardenas.
    - Versiones más grandes de las dos imágenes nuevas de las preguntas frecuentes (grupo con kimono y conjunto calentador): llegaron como capturas de unos 350 px y en pantallas de alta resolución se ven algo suaves. Del conjunto calentador, confirmar que se puede usar (parece foto de catálogo).
-   - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima (Cristian y Diana no tienen foto; Donovan tiene desde el 02/11/2026).
+   - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima (Diana no tiene foto; Donovan y Cristian tienen desde el 02/11/2026).
    - Donovan: su tarjeta dice "Profesor" porque el propietario lo agregó a esa sección; falta saber de qué disciplina, su apellido y su cinturón.
    - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
    - Rol de Fernando en el evento de Chito Vera: resuelto el 01/11/2026. El propietario aclaró que fue oficial de la comisión del evento, en línea con la credencial de la foto ("COMMISSION"); no fue su head coach. Falta confirmar si se puede nombrar el evento.
