@@ -388,7 +388,9 @@ p { margin: 0; }
 .campeon-dato a { color: var(--franja-texto); }
 .campeon-logros { list-style: none; margin: 14px 0 0; padding: 0; border-top: 2px solid var(--rojo); }
 .campeon-logros li { padding: 10px 0; border-bottom: 1px solid #2a2a2a; }
-@media (min-width: 900px) { .campeones-lista { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+.campeon-fotos img:only-child { grid-column: 1 / -1; }
+@media (min-width: 600px) { .campeones-lista { grid-template-columns: repeat(2, 1fr); gap: 40px 32px; } }
+@media (min-width: 1200px) { .campeones-lista { grid-template-columns: repeat(4, 1fr); gap: 32px; } }
 
 /* Resultados */
 .resultados { border-top: 1px solid var(--filo); }

@@ -367,5 +367,15 @@
   ],
   "src": "cristian.jpg",
   "recorte": "800,300,4500,4925"
+ },
+ "campeona-amell": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "amell.webp",
+  "recorte": "0,0,960,1200"
  }
 }
