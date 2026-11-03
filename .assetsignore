@@ -1,0 +1,19 @@
+# Lo que Cloudflare NO publica (misma sintaxis que .gitignore).
+# Si agregas al repositorio una carpeta o un archivo interno, súmalo aquí.
+.git
+.github
+.claude
+.DS_Store
+.gitignore
+.assetsignore
+wrangler.jsonc
+netlify.toml
+README.md
+content/
+docs/
+scripts/
+dist/
+node_modules/
+assets/fotos/fuente/
+assets/logo/fuente/
+assets/fotos/fotos.json

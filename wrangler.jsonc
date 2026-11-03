@@ -1,0 +1,18 @@
+// Cloudflare Workers: sitio estático, sin código de servidor.
+// Cloudflare publica la raíz del repositorio en cada push a main, salvo lo que
+// lista .assetsignore (notas, documentación, fotos originales y configuración).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "landinghks",
+  "compatibility_date": "2026-11-03",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": ".",
+    // Direcciones que no existen: muestra 404.html con estado 404
+    "not_found_handling": "404-page",
+    // /pagina.html redirige a /pagina (por eso el canonical y el sitemap no llevan .html)
+    "html_handling": "auto-trailing-slash"
+  }
+}

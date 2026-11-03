@@ -1,6 +1,6 @@
 # Hulk Sports · landing estática
 
-Sitio de 2 páginas en HTML, CSS y JS sin frameworks. Se abre con doble clic en `index.html`. Para publicar, `scripts/preparar-publicacion.sh` copia solo los archivos públicos a `dist/` (ver "Publicar").
+Sitio de 2 páginas en HTML, CSS y JS sin frameworks ni build. Se abre con doble clic en `index.html`. Se publica en Cloudflare (ver "Publicar").
 
 ```
 index.html                Página 1: lo esencial (hero, hoy, precios, dirección, áreas, niños, campeones, torneos, fotos)
@@ -9,8 +9,9 @@ css/styles.css            Tokens (colores, tipografía) y estilos
 js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, videos, mapa
 assets/                   logo/ (logo oficial horizontal, monograma HS e iconos; fuente/), fotos/ (WebP + fuente/), videos/, fonts/, og-hulk-sports-nuevo.jpg
 content/inventario.md     Cada dato del sitio con su fuente
-404.html                  Página "no encontrada" (rutas desde la raíz; Cloudflare la necesita, ver "Publicar")
-scripts/preparar-publicacion.sh  Arma dist/ con lo público; es el build de Cloudflare Pages
+404.html                  Página "no encontrada" (rutas desde la raíz, porque se muestra en cualquier dirección)
+wrangler.jsonc            Cloudflare: nombre del Worker, carpeta publicada y manejo de 404 y de .html
+.assetsignore             Lo que Cloudflare NO publica (notas, documentación, fotos originales, configuración)
 netlify.toml              Configuración del hosting anterior (Netlify); se puede borrar al terminar la mudanza
 content/fuentes/          Flyer de horario 2026, flyers de precios (01/11/2026) y captura del perfil que envió el cliente
 docs/design-brief.md      Concepto, paleta, tipografía, elementos firma, movimiento
@@ -93,14 +94,14 @@ Los mensajes prellenados por servicio están en `CONFIG.mensajes` (general, prue
 
 ## Publicar
 
-1. **Dominio:** `https://hulksportsec.com`, sin www, comprado en Namecheap. Está en `sitemap.xml`, `robots.txt`, `og:url`, `og:image`, el canonical de cada página y el JSON-LD; si cambia, búscalo y reemplázalo en esos archivos. La página 2 figura como `/horarios-y-planes`, sin `.html`, porque Cloudflare Pages redirige `/horarios-y-planes.html` a esa dirección. Los enlaces internos siguen con `.html` para que el sitio funcione abierto con doble clic.
-2. **Cloudflare Pages (desde el 03/11/2026):** proyecto conectado a la rama `main` del repositorio de GitHub; cada push publica. Configuración del build:
-   - Framework preset: None
-   - Build command: `sh scripts/preparar-publicacion.sh`
-   - Build output directory: `dist`
-
-   El script copia a `dist/` solo las páginas, `css/`, `js/`, `assets/`, `favicon.ico`, `robots.txt` y `sitemap.xml`, y deja fuera `content/`, `docs/`, el README, la configuración y las carpetas `fuente/` y `fotos.json`. Si agregas una página o un archivo público en la raíz, súmalo al script. `404.html` es obligatorio: sin él, Cloudflare responde con la página de inicio en cualquier dirección que no existe. Plan gratis: 500 publicaciones al mes.
-3. **Para ver localmente lo que se publica:** `sh scripts/preparar-publicacion.sh` y luego `python3 -m http.server 8091 --directory dist`.
+1. **Dominio:** `https://hulksportsec.com`, sin www, comprado en Namecheap. Está en `sitemap.xml`, `robots.txt`, `og:url`, `og:image`, el canonical de cada página y el JSON-LD; si cambia, búscalo y reemplázalo en esos archivos. La página 2 figura como `/horarios-y-planes`, sin `.html`, porque Cloudflare redirige `/horarios-y-planes.html` a esa dirección. Los enlaces internos siguen con `.html` para que el sitio funcione abierto con doble clic.
+2. **Cloudflare Workers (desde el 03/11/2026):** proyecto `landinghks` de la cuenta byctherapys, conectado a la rama `main` de GitHub; cada push publica. En el panel, el build queda vacío y el deploy es `npx wrangler deploy`, que lee `wrangler.jsonc`:
+   - Publica la raíz del repositorio, salvo lo que lista `.assetsignore`: `content/`, `docs/`, el README, la configuración, las carpetas `fuente/` y `fotos.json`. **Si agregas al repositorio una carpeta o un archivo interno, súmalo a `.assetsignore`**; si no, quedará público.
+   - Una dirección que no existe muestra `404.html` con estado 404 (`not_found_handling: "404-page"`).
+   - `/pagina.html` redirige a `/pagina` (`html_handling`).
+   - El nombre del Worker en `wrangler.jsonc` (`landinghks`) debe coincidir con el del panel; si no, el build falla.
+   - Plan gratis de Workers: sin límite de publicaciones al mes como el de Netlify.
+3. **Para ver el sitio localmente:** doble clic en `index.html`, o `python3 -m http.server 8080` en esta carpeta.
 4. **Netlify (hosting anterior):** el plan gratis se quedó sin créditos el 02/11/2026 (cada publicación gasta 15 de los 300 del mes) y dejó de publicar. `netlify.toml` queda solo como referencia; cuando el dominio ya cargue desde Cloudflare, se pueden borrar el proyecto de Netlify y ese archivo.
 
 ## Datos por confirmar (para el cliente)
@@ -148,7 +149,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
    - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
    - Rol de Fernando en el evento de Chito Vera: resuelto el 01/11/2026. El propietario aclaró que fue oficial de la comisión del evento, en línea con la credencial de la foto ("COMMISSION"); no fue su head coach. Falta confirmar si se puede nombrar el evento.
 6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usa el logo oficial horizontal de 1280×620 px entregado el 01/11/2026; un vector permitiría más nitidez y fondo transparente).
-7. **Publicación:** mudanza de Netlify a Cloudflare Pages en curso (03/11/2026): falta crear el proyecto en Cloudflare, pasar el dominio a los servidores de nombre (DNS) de Cloudflare y conectar hulksportsec.com y www (pasos en "Publicar"). Si en el dominio hay correos de reenvío de Namecheap en uso, hay que recrearlos con Email Routing de Cloudflare.
+7. **Publicación:** mudanza de Netlify a Cloudflare en curso (03/11/2026). El Worker `landinghks` ya publica desde GitHub; falta pasar el dominio a los servidores de nombre (DNS) de Cloudflare y conectar hulksportsec.com y www al Worker. Si en el dominio hay correos de reenvío de Namecheap en uso, hay que recrearlos con Email Routing de Cloudflare.
 
 ## Decisiones tomadas sin preguntar
 
