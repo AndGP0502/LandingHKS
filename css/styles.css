@@ -613,6 +613,20 @@ p { margin: 0; }
 .terapia ul { list-style: none; margin: 0; padding: 0; }
 .terapia li { padding: 12px 0; border-bottom: 1px solid var(--filo); font-stretch: 110%; font-weight: 350; }
 @media (min-width: 900px) { .terapia .columnas { grid-template-columns: 1fr 1fr; gap: 40px; } }
+.especialista { display: grid; gap: 0; background: var(--placa); border: 1px solid var(--filo); }
+.especialista-foto { margin: 0; }
+.especialista-foto img { display: block; width: 100%; max-width: 320px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
+.especialista-texto { position: relative; display: grid; gap: 14px; align-content: start; padding: 32px 20px 26px; }
+.especialista-texto::before { content: ""; position: absolute; left: 20px; top: 0; width: 64px; height: 6px; background: var(--rojo); }
+.especialista-texto p { max-width: 60ch; }
+.especialista-etiqueta { font-size: var(--t-14); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-stretch: 110%; color: var(--gris); }
+.terapia .especialista h3 { font-size: var(--t-33); font-stretch: 118%; font-weight: 300; line-height: 1.1; letter-spacing: normal; text-transform: none; padding-bottom: 0; border-bottom: 0; }
+@media (min-width: 900px) {
+  .especialista { grid-template-columns: 4fr 8fr; }
+  .especialista-foto img { max-width: none; height: 100%; }
+  .especialista-texto { padding: 40px 36px 36px; align-content: center; }
+  .especialista-texto::before { left: 36px; }
+}
 
 /* Equipo */
 .equipo .wrap { display: grid; gap: 32px; }

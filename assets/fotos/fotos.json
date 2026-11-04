@@ -387,6 +387,16 @@
   "src": "amell-podio.webp",
   "recorte": "334,205,672,627"
  },
+ "leonel-cuichan": {
+  "w": 1071,
+  "h": 1468,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "leonel-cuichan.webp",
+  "nota": "Imagen editada con IA para quitar una marca visible; no es el archivo original de cámara"
+ },
  "parqueadero": {
   "w": 800,
   "h": 600,

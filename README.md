@@ -142,14 +142,15 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
    - Normas del gimnasio y qué ropa llevar a la primera clase (¿prestan kimono?).
    - Vigencia de las instalaciones listadas en 2023 (800 m², cancha de básquet y ecuavóley, área verde, "tren superior e inferior", "cross training y TRX") y fuente de "peso libre y máquinas".
 4. **Terapia física:** servicios específicos de fisioterapia que ofrece actualmente Hulk Sports y quién los atiende (el equipo envió una propuesta de servicios que **no está confirmada** y no se publica); además, días y horas, valor por sesión, modalidad, disponibilidad y cupos, convenios con seguros, qué traer y cómo se agenda.
-5. **Equipo:**
+5. **Lic. Leonel Cuichán (Cambio 19, versión local sin publicar):** validar con el propietario la biografía (título "Lic.", una década de experiencia, ámbito neuro-musculoesquelético, "lidera el área de fisioterapia", evidencia científica, promesas de recuperación) y el permiso de Leonel para publicar su retrato. La foto es una **versión editada con IA** (se quitó una marca visible), no el original de cámara; si se consigue el original, reemplazar `assets/fotos/leonel-cuichan-480.webp` y `-800.webp` desde `assets/fotos/fuente/`.
+6. **Equipo:**
    - Campeones: permiso de Britany Cárdenas (y de su representante si es menor), Mateo Cordero y Fabio para publicar sus fotos y nombres; apellido de Fabio; si Donovan Cárdenas es @donovan_cardenas.
    - Versiones más grandes de las dos imágenes nuevas de las preguntas frecuentes (grupo con kimono y conjunto calentador): llegaron como capturas de unos 350 px y en pantallas de alta resolución se ven algo suaves. Del conjunto calentador, confirmar que se puede usar (parece foto de catálogo).
    - Si el equipo de profesores sigue igual que en 2024; fotos de profesores sin texto encima (Diana no tiene foto; Donovan y Cristian tienen desde el 02/11/2026).
    - Año de obtención del cinturón negro 2.º Dan de Fernando Cárdenas Jr. (el grado consta en la biografía facilitada por el equipo, octubre 2026).
    - Rol de Fernando en el evento de Chito Vera: resuelto el 01/11/2026. El propietario aclaró que fue oficial de la comisión del evento, en línea con la credencial de la foto ("COMMISSION"); no fue su head coach. Falta confirmar si se puede nombrar el evento.
-6. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usa el logo oficial horizontal de 1280×620 px entregado el 01/11/2026; un vector permitiría más nitidez y fondo transparente).
-7. **Publicación:** mudanza de Netlify a Cloudflare en curso (03/11/2026). El Worker `landinghks` ya publica desde GitHub; falta pasar el dominio a los servidores de nombre (DNS) de Cloudflare y conectar hulksportsec.com y www al Worker. Si en el dominio hay correos de reenvío de Namecheap en uso, hay que recrearlos con Email Routing de Cloudflare.
+7. **Contacto y marca:** correo electrónico; confirmar que +593 99 677 0074 sigue siendo el número (último publicado en nov 2024); logo en vector (SVG o PNG grande; se usa el logo oficial horizontal de 1280×620 px entregado el 01/11/2026; un vector permitiría más nitidez y fondo transparente).
+8. **Publicación:** mudanza de Netlify a Cloudflare en curso (03/11/2026). El Worker `landinghks` ya publica desde GitHub; falta pasar el dominio a los servidores de nombre (DNS) de Cloudflare y conectar hulksportsec.com y www al Worker. Si en el dominio hay correos de reenvío de Namecheap en uso, hay que recrearlos con Email Routing de Cloudflare.
 
 ## Decisiones tomadas sin preguntar
 
