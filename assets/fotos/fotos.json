@@ -357,6 +357,16 @@
   "src": "diana-parreno.webp",
   "recorte": "0,0,1200,1500"
  },
+ "daniel-perugachi": {
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   480,
+   800
+  ],
+  "src": "daniel-perugachi.jpg",
+  "recorte": "0,0,960,1200"
+ },
  "donovan": {
   "w": 800,
   "h": 1000,
