@@ -263,8 +263,9 @@ Siete fotos enviadas en el chat del proyecto, con indicación de dónde va cada 
 | noche-equipo | Equipo del horario de la noche | `index.html`, galería: "Horario de la noche", foto 1 (se muestra primero; `adultos-noche` queda como foto 2) |
 | fisio-camillas | Sala de terapia física | `index.html`, tarjeta Terapia; `horarios-y-planes.html`, Terapia |
 | fisio-sala | Sala de terapia física | `horarios-y-planes.html`, Terapia |
-| gym-pecho-biceps | Área de pecho y bíceps del gimnasio | `horarios-y-planes.html`, Gimnasio |
-| gym-piso-principal | Piso principal: musculación de tren superior e inferior | `index.html`, tarjeta Gimnasio; `horarios-y-planes.html`, Gimnasio |
+| gym-pecho-biceps | Área de pecho y bíceps del gimnasio | `index.html`, tarjeta Gimnasio (carrusel); `horarios-y-planes.html`, Gimnasio (carrusel) |
+| gym-cardio | Primer piso visto desde las caminadoras (enviada por el cliente el 03/11/2026) | `index.html`, tarjeta Gimnasio (carrusel); `horarios-y-planes.html`, Gimnasio (carrusel) |
+| gym-piso-principal | Piso principal: musculación de tren superior e inferior | `index.html`, tarjeta Gimnasio (carrusel); `horarios-y-planes.html`, Gimnasio (carrusel) |
 | profe-chito-vera | Fernando Cárdenas Jr. con Marlon "Chito" Vera | `horarios-y-planes.html`, Profesores, Trayectoria |
 | mayton-perea-azul | Mayton Perea con su certificado de cinturón azul | `horarios-y-planes.html`, Profesores, Trayectoria |
 | donovan | Donovan con gi blanco y cinturón negro en el tatami de Hulk Sports (foto enviada por el propietario, 02/11/2026, con permiso de uso para la web). Recorte 4:5 (0,0,1500,1875 del original de 1500×2000; 480 y 800 px). El original se guardó como `donovan.jpg`, convertido del WebP recibido en el chat. El cinturón negro lo confirma su biografía (03/11/2026); la foto por sí sola no respalda el grado | `horarios-y-planes.html`, Profesores, tarjeta de Donovan |

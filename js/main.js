@@ -267,6 +267,59 @@
     a.insertAdjacentHTML('beforeend', '<span class="sr-only"> (abre en otra pestaña)</span>');
   });
 
+  // ---- Carruseles de fotos: las flechas dan la vuelta al llegar al final --
+  document.querySelectorAll('[data-carrusel]').forEach(function (c) {
+    var pista = c.querySelector('.carrusel-pista');
+    var total = pista.children.length;
+    var contador = c.querySelector('.carrusel-contador');
+    var movimiento = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var destino = null; // foto pedida con flecha o teclado mientras la pista se desplaza: permite tocar varias veces seguidas
+    var espera;
+    function actual() { return destino !== null ? destino : Math.round(pista.scrollLeft / pista.clientWidth); }
+    function pintar() { contador.textContent = 'Foto ' + (actual() + 1) + ' de ' + total; }
+    function ir(i) {
+      destino = (i + total) % total;
+      pista.scrollTo({ left: destino * pista.clientWidth, behavior: movimiento.matches ? 'auto' : 'smooth' });
+      pintar();
+      clearTimeout(espera);
+      espera = setTimeout(function () { destino = null; pintar(); }, 600);
+    }
+    c.querySelector('.carrusel-ant').addEventListener('click', function () { ir(actual() - 1); });
+    c.querySelector('.carrusel-sig').addEventListener('click', function () { ir(actual() + 1); });
+    c.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      ir(actual() + (e.key === 'ArrowLeft' ? -1 : 1));
+    });
+    pista.addEventListener('scroll', pintar, { passive: true });
+    // Las fotos ocultas se descargan al acercarse al carrusel, para que no aparezcan en blanco al cambiar
+    if ('IntersectionObserver' in window) {
+      var cerca = new IntersectionObserver(function (entradas) {
+        if (!entradas[0].isIntersecting) return;
+        pista.querySelectorAll('img').forEach(function (img) { img.loading = 'eager'; });
+        cerca.disconnect();
+      }, { rootMargin: '400px' });
+      cerca.observe(c);
+    }
+  });
+
+  // ---- Contador de visitas: cada navegador suma una vez al día. Si el servidor no responde, no se muestra -----
+  var visitas = document.querySelector('[data-visitas]');
+  if (visitas) {
+    var visitaNueva = false;
+    try {
+      visitaNueva = localStorage.getItem('ultimaVisita') !== fechaHoy;
+      if (visitaNueva) localStorage.setItem('ultimaVisita', fechaHoy);
+    } catch (e) {}
+    fetch('/api/visitas', { method: visitaNueva ? 'POST' : 'GET' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        visitas.querySelector('strong').textContent = d.total.toLocaleString('es-EC');
+        visitas.hidden = false;
+      })
+      .catch(function () {});
+  }
+
   // ---- Mapa bajo demanda --------------------------------------------------
   var bMapa = document.querySelector('[data-mapa]');
   if (bMapa) bMapa.addEventListener('click', function () {

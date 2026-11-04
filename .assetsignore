@@ -11,6 +11,8 @@ netlify.toml
 README.md
 content/
 docs/
+src/
+.wrangler/
 scripts/
 dist/
 node_modules/

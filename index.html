@@ -180,7 +180,16 @@
 
         <article class="area area-gym" aria-labelledby="t-gym">
           <div class="media">
-            <img src="assets/fotos/gym-piso-principal-480.webp" srcset="assets/fotos/gym-piso-principal-480.webp 480w, assets/fotos/gym-piso-principal-960.webp 960w" sizes="(min-width: 900px) 40vw, 100vw" width="960" height="1280" alt="Piso principal del gimnasio: máquinas de pierna a la izquierda, bicicletas de spinning a la derecha, piso de césped sintético y luces LED hexagonales en el techo" loading="lazy" decoding="async" data-revelar>
+            <div class="carrusel" data-carrusel role="group" aria-roledescription="carrusel" aria-label="Fotos del gimnasio">
+              <p class="carrusel-contador" aria-live="polite">Foto 1 de 3</p>
+              <ul class="carrusel-pista" tabindex="0" aria-label="Fotos del gimnasio">
+                <li class="carrusel-foto"><img src="assets/fotos/gym-piso-principal-480.webp" srcset="assets/fotos/gym-piso-principal-480.webp 480w, assets/fotos/gym-piso-principal-960.webp 960w" sizes="(min-width: 900px) 40vw, 100vw" width="960" height="1280" alt="Piso principal del gimnasio: máquinas de pierna a la izquierda, bicicletas de spinning a la derecha, piso de césped sintético y luces LED hexagonales en el techo" loading="lazy" decoding="async"></li>
+                <li class="carrusel-foto"><img src="assets/fotos/gym-cardio-480.webp" srcset="assets/fotos/gym-cardio-480.webp 480w, assets/fotos/gym-cardio-960.webp 960w" sizes="(min-width: 900px) 40vw, 100vw" width="960" height="1280" alt="Primer piso visto desde las caminadoras: máquinas de pierna a la izquierda, bicicletas de spinning y espejos a la derecha, piso de césped sintético y luces LED hexagonales en el techo" loading="lazy" decoding="async"></li>
+                <li class="carrusel-foto"><img src="assets/fotos/gym-pecho-biceps-480.webp" srcset="assets/fotos/gym-pecho-biceps-480.webp 480w, assets/fotos/gym-pecho-biceps-960.webp 960w" sizes="(min-width: 900px) 40vw, 100vw" width="960" height="1280" alt="Área de pecho y bíceps: banco con discos, máquinas de pecho iluminadas con luces LED moradas y un mural de Hulk con la frase No excusas" loading="lazy" decoding="async"></li>
+              </ul>
+              <button class="carrusel-flecha carrusel-ant" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <button class="carrusel-flecha carrusel-sig" type="button" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
           </div>
           <div class="cuerpo-area">
             <h3 id="t-gym" class="voz-ritmo">Gimnasio</h3>
@@ -403,6 +412,7 @@
       </ul>
     </div>
   </div>
+  <p class="visitas" data-visitas hidden><span class="visitas-punto" aria-hidden="true"></span>Visitas <strong></strong></p>
 </footer>
 
 <nav class="barra-movil" aria-label="Acciones rápidas">

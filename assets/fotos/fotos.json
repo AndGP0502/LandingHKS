@@ -219,6 +219,15 @@
   ],
   "src": "gym-piso-principal.jpg"
  },
+ "gym-cardio": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   960
+  ],
+  "src": "gym-cardio.jpg"
+ },
  "profe-chito-vera": {
   "w": 960,
   "h": 1280,

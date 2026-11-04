@@ -6,11 +6,12 @@ Sitio de 2 páginas en HTML, CSS y JS sin frameworks ni build. Se abre con doble
 index.html                Página 1: lo esencial (hero, hoy, precios, dirección, áreas, niños, campeones, torneos, fotos)
 horarios-y-planes.html    Página 2: pizarra de horarios, precios (membresías de jiu-jitsu, promo del gym, mensualidades de niños y gimnasio, y botón a WhatsApp), gym, terapia, profesores, FAQ, ubicación
 css/styles.css            Tokens (colores, tipografía) y estilos
-js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, videos, mapa
+js/main.js                Mejoras: WhatsApp, "hoy", abierto ahora, filtro, videos, carrusel de fotos, contador de visitas, mapa
+src/worker.js             Cloudflare: contador de visitas (/api/visitas); no se publica como archivo
 assets/                   logo/ (logo oficial horizontal, monograma HS e iconos; fuente/), fotos/ (WebP + fuente/), videos/, fonts/, og-hulk-sports-nuevo.jpg
 content/inventario.md     Cada dato del sitio con su fuente
 404.html                  Página "no encontrada" (rutas desde la raíz, porque se muestra en cualquier dirección)
-wrangler.jsonc            Cloudflare: nombre del Worker, carpeta publicada y manejo de 404 y de .html
+wrangler.jsonc            Cloudflare: nombre del Worker, carpeta publicada, manejo de 404 y de .html, y almacenamiento del contador
 .assetsignore             Lo que Cloudflare NO publica (notas, documentación, fotos originales, configuración)
 netlify.toml              Configuración del hosting anterior (Netlify); se puede borrar al terminar la mudanza
 content/fuentes/          Flyer de horario 2026, flyers de precios (01/11/2026) y captura del perfil que envió el cliente
@@ -101,6 +102,7 @@ Los mensajes prellenados por servicio están en `CONFIG.mensajes` (general, prue
    - `/pagina.html` redirige a `/pagina` (`html_handling`).
    - El nombre del Worker en `wrangler.jsonc` (`landinghks`) debe coincidir con el del panel; si no, el build falla.
    - Plan gratis de Workers: sin límite de publicaciones al mes como el de Netlify.
+   - **Contador de visitas:** `src/worker.js` atiende solo `/api/visitas`; el resto se sirve como archivos estáticos. El total se guarda en un Durable Object (`ContadorVisitas`), que Cloudflare crea solo al publicar. Empezó en 0 y es real: cada navegador suma una vez al día, sin guardar IP ni cookies. No cambiar el nombre de la clase ni el `tag` de `migrations`, o el total se pierde. Si el servidor no responde, el contador no se muestra. No se ve con doble clic ni con `python3 -m http.server`; para probarlo: `npx wrangler dev`.
 3. **Para ver el sitio localmente:** doble clic en `index.html`, o `python3 -m http.server 8080` en esta carpeta.
 4. **Netlify (hosting anterior):** el plan gratis se quedó sin créditos el 02/11/2026 (cada publicación gasta 15 de los 300 del mes) y dejó de publicar. `netlify.toml` queda solo como referencia; cuando el dominio ya cargue desde Cloudflare, se pueden borrar el proyecto de Netlify y ese archivo.
 

@@ -1,15 +1,23 @@
-// Cloudflare Workers: sitio estático, sin código de servidor.
+// Cloudflare Workers: sitio estático más un Worker mínimo para el contador de visitas (src/worker.js).
 // Cloudflare publica la raíz del repositorio en cada push a main, salvo lo que
 // lista .assetsignore (notas, documentación, fotos originales y configuración).
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "landinghks",
   "compatibility_date": "2026-11-03",
+  "main": "src/worker.js",
   "observability": {
     "enabled": true
   },
+  // Total de visitas: Cloudflare crea este almacenamiento solo al publicar. No cambiar los nombres, o el total se pierde.
+  "durable_objects": {
+    "bindings": [{ "name": "CONTADOR", "class_name": "ContadorVisitas" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ContadorVisitas"] }],
   "assets": {
     "directory": ".",
+    // Solo esta ruta pasa por el Worker; el resto son archivos estáticos
+    "run_worker_first": ["/api/*"],
     // Direcciones que no existen: muestra 404.html con estado 404
     "not_found_handling": "404-page",
     // /pagina.html redirige a /pagina (por eso el canonical y el sitemap no llevan .html)
