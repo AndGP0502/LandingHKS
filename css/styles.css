@@ -700,6 +700,18 @@ p { margin: 0; }
 .profe-bio[open] summary::after { transform: rotate(45deg); }
 .profe-bio > div { display: grid; gap: 12px; padding-bottom: 8px; }
 @media (min-width: 600px) { .credenciales { grid-template-columns: 1fr 1fr; } }
+/* Diana: tarjeta a todo el ancho con detalle desplegable */
+.profe-sub { font-size: var(--t-14); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-stretch: 110%; color: var(--gris); }
+.profe-lista { margin: 8px 0 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.profe-cita { margin: 8px 0 12px; padding-left: 14px; border-left: 3px solid var(--rojo); }
+.profe-cols { display: grid; gap: 18px; }
+.profe-cols > div { display: grid; gap: 8px; align-content: start; }
+@media (min-width: 768px) {
+  .profes .profe-ancho { grid-column: 1 / -1; grid-template-columns: 300px minmax(0, 1fr); column-gap: 28px; }
+  .profe-ancho .profe-foto { margin: -20px 0 0 -20px; }
+  .profe-ancho .profe-foto img { aspect-ratio: 4 / 5; }
+}
+@media (min-width: 900px) { .profe-cols { grid-template-columns: 1fr 1fr; gap: 32px; } }
 @media (min-width: 768px) {
   .profes { grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
   .profe-corto { grid-column: 1 / -1; }
