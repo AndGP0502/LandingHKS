@@ -228,6 +228,16 @@
   ],
   "src": "gym-cardio.jpg"
  },
+ "gym-caminadoras": {
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   960,
+   1440
+  ],
+  "src": "gym-caminadoras.jpg"
+ },
  "profe-chito-vera": {
   "w": 960,
   "h": 1280,
