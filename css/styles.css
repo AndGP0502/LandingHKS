@@ -565,6 +565,7 @@ p { margin: 0; }
 .tarifas-lista { list-style: none; margin: 0; padding: 0; }
 .tarifas-lista li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--filo); font-weight: 600; font-size: var(--t-19); }
 .tarifas-lista strong { font-size: var(--t-33); font-weight: 800; font-stretch: 75%; font-variant-numeric: tabular-nums; line-height: 1; }
+.tarifas-lista strong small { font-size: var(--t-14); font-weight: 600; font-stretch: 100%; color: var(--gris); }
 .tarifas-sello { display: inline-block; margin: 16px 0 10px; padding: 6px 12px; background: var(--rojo); color: var(--sobre-rojo); font-weight: 700; font-stretch: 85%; text-transform: uppercase; letter-spacing: 0.02em; }
 .promo { display: grid; align-content: start; gap: 12px; padding: 24px; background: var(--franja); color: var(--franja-texto); box-shadow: inset 0 0 0 1px var(--franja-filo); }
 .promo[hidden] { display: none; }

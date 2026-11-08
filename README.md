@@ -131,7 +131,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 
 ### Pendiente de verificación (por confirmar con el cliente)
 
-1. **Precios y condiciones:** a qué plan corresponde el gimnasio "desde $35" (página 1), porque la página 2 muestra $50 al mes y la promo de $75 por 3 meses; que el flyer de membresías de jiu-jitsu (sin fecha ni logo nuevo) siga vigente; precios de MMA y combos; si los $50 de niños son mensualidad (así se publicó) o una inscripción aparte; permanencia; si la clase de prueba sigue siendo gratis (se anunció así en feb 2025).
+1. **Precios y condiciones:** a qué plan corresponde el gimnasio "desde $35" (franja de la página 1 y tabla de la página 2; antes la tabla decía $50 al mes) y si la promo de $75 por 3 meses, que equivale a $25 al mes, convive con ese "desde"; que el flyer de membresías de jiu-jitsu (sin fecha ni logo nuevo) siga vigente; precios de MMA y combos; si los $50 de niños son mensualidad (así se publicó) o una inscripción aparte; permanencia; si la clase de prueba sigue siendo gratis (se anunció así en feb 2025).
 2. **Horarios:**
    - Horarios extra 2026: BJJ ejecutivo de 11:00 (L-V) y el de 13:00 (L-M-V, 2x1).
    - Horario del gimnasio: el sitio dice L-V 05:00-21:00, sábado 08:00-14:00, domingo cerrado (apertura a las 05:00 indicada por el equipo el 03/11/2026); falta saber qué pasa en feriados.
@@ -167,7 +167,7 @@ Lista consolidada de la Etapa 1 (31 oct 2026). Es el único lugar donde se resum
 - **Cabecera:** seis enlaces (Horarios, Instalaciones, Profesores, Nuestros campeones, Preguntas frecuentes y Ubicación). Hasta 1199 px van en una segunda fila bajo el logo; en celular esa fila se desliza y un degradado a la derecha avisa que hay más.
 - **Solo contenido de @hulk.sports:** se descartaron posts de colaboración de otras cuentas, imágenes marcadas como "Contenido de IA" y las destacadas (tienen unas 250 semanas y son de la sede anterior en Cipreses).
 - **Horario base:** el flyer 2026 que enviaste manda. Los horarios de 11:00 y 13:00 anunciados después aparecen aparte como "confirmar".
-- **Precios:** se publican los de los flyers del 01/11/2026 (membresías de jiu-jitsu para adultos y promo del gym), las mensualidades de niños y gimnasio ($50 cada una, indicadas por el usuario el 03/11/2026) y el open mat; para lo demás, el botón "Preguntar precios" abre WhatsApp. La página 1 resume, desde el 05/11/2026: jiu-jitsu adultos $65, niños desde $50 y gimnasio desde $35 (indicados por el usuario).
+- **Precios:** se publican los de los flyers del 01/11/2026 (membresías de jiu-jitsu para adultos y promo del gym), la mensualidad de niños ($50, indicada por el usuario el 03/11/2026), el gimnasio "desde $35" (indicado el 05/11/2026; reemplazó los $50 al mes) y el open mat; para lo demás, el botón "Preguntar precios" abre WhatsApp. La página 1 resume, desde el 05/11/2026: jiu-jitsu adultos $65, niños desde $50 y gimnasio desde $35 (indicados por el usuario).
 - **Video:** un solo reel (`DUOCQl_kb0m`, el que enviaste) recortado en tramos sin textos superpuestos. Las capturas fijas del mismo reel sirven de fotos del gym y del tatami.
 - **Archivo .ics:** se quitó el botón "Agregar a mi calendario" de la página 2 (1 nov 2026) y con él su código.
 - **Duración de clases:** la que muestra la pizarra (06:00-07:30, 17:00-18:00, 18:30-20:00, 20:00-21:00).

@@ -74,8 +74,8 @@ Publicados desde el 01/11/2026 (flyers enviados por el usuario, guardados en `co
 | Jiu-jitsu adultos, anual | $550 | ídem |
 | Promo gimnasio, 3 meses | $75, válida hasta el 15 de noviembre | `flyer-promo-gym-75-noviembre.jpg` |
 | Jiu-jitsu niños, mensual | $50 | Indicación del usuario, 03/11/2026 ("inscripción de los niños $50"; el equipo lo escribió como "$50 al mes" en la página 1) |
-| Gimnasio, mensual | $50 | Indicación del usuario, 03/11/2026 ("inscripción mensual al gimnasio"); se muestra en la página 2 |
-| Valores de la página 1 | Jiu-jitsu adultos $65; jiu-jitsu niños desde $50; gimnasio desde $35 | Indicación del usuario, 05/11/2026. Falta confirmar a qué plan corresponden los $35: la página 2 no lo muestra |
+| Gimnasio, mensual | $50 | Indicación del usuario, 03/11/2026 ("inscripción mensual al gimnasio"). Reemplazado el 07/11/2026 por "desde $35"; ya no se muestra |
+| Valores de la página 1 | Jiu-jitsu adultos $65; jiu-jitsu niños desde $50; gimnasio desde $35 | Indicación del usuario, 05/11/2026. Desde el 07/11/2026 la tabla de la página 2 también dice gimnasio "desde $35", para no contradecirse. Falta confirmar a qué plan corresponden los $35 |
 
 - Membresías: "Sin matrícula" y logos de Visa, Mastercard, American Express, Diners Club y Discover. El flyer no tiene fecha ni el logo nuevo: **confirmar que sigue vigente**.
 - Promo del gym: el flyer no dice el año; se asume 2026 porque usa el logo nuevo (entregado el 01/11/2026). En el sitio lleva `data-vence="2026-11-15"` y se oculta sola desde el 16/11/2026. El flyer también dice "más de 40 equipos", "seguimiento personalizado" y "horarios flexibles"; no se publican (no son precios y no están verificados). La foto del flyer no se usa.
