@@ -13,7 +13,7 @@ Leyenda de fuente: **BIO** = biografía de @hulk.sports (la de @hulkbjj se cita 
 | Nombre en el perfil | Hulk Sports Jiu Jitsu & Gimnasio | BIO |
 | Nombre en reels 2026 | HulkSports Jiu Jitsu & Fitness | REEL-DUOC (encabezado) |
 | Usuario | @hulk.sports (también en Threads) | BIO |
-| TikTok | @hulk.sports | Valla del local, REEL-DUOC (seg. 29) |
+| TikTok | @hulk.sports, `https://www.tiktok.com/@hulk.sports` | Valla del local, REEL-DUOC (seg. 29); enlace enviado por el usuario el 07/11/2026. En el pie de ambas páginas, en Ubicación (página 2) y en `sameAs` del JSON-LD |
 | Categoría | Gimnasio/centro de fitness | BIO |
 | Servicios en la bio | Jiu jitsu · Gimnasio · Terapia física y deportiva · Parqueaderos | BIO (consultada el 31/10/2026) |
 | Logo | Logo oficial nuevo (entregado por el propietario el 01/11/2026): monograma "HS", "HULK SPORTS" en blanco y "JIU JITSU" en rojo, sobre fondo negro, formato horizontal 1280×620 px. Reemplaza al círculo anterior con "H" de barra y discos y el texto "JIU JITSU · MUAY THAI & GYM" (archivos anteriores conservados en `assets/logo/`). Original en `assets/logo/fuente/logo-oficial-horizontal.png`. | CHAT (imagen 1), propietario |
